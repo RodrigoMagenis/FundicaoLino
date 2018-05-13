@@ -97,5 +97,28 @@ namespace Fundiçãolino.telas
                 childForm.Close();
             }
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GenericaExluir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GenericoNovo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Genericagerenciarusuario_Click(object sender, EventArgs e)
+        {
+            gnGridUser gridUsuario = new gnGridUser();
+            gridUsuario.MdiParent = this;
+            panel4.Controls.Add(gridUsuario);
+            gridUsuario.Show();
+        }
     }
 }
