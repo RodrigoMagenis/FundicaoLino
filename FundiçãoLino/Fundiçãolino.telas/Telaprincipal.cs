@@ -112,5 +112,13 @@ namespace Fundiçãolino.telas
         {
 
         }
+
+        private void Genericagerenciarusuario_Click(object sender, EventArgs e)
+        {
+            gnGridUser gridUsuario = new gnGridUser();
+            gridUsuario.MdiParent = this;
+            panel4.Controls.Add(gridUsuario);
+            gridUsuario.Show();
+        }
     }
 }
