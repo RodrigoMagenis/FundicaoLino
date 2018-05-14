@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Fundiçãolino.telas.Properties
+namespace Fundicaolino.telas.Properties
 {
 
 
