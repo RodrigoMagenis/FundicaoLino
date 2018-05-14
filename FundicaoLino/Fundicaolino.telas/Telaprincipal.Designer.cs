@@ -1,4 +1,4 @@
-﻿namespace Fundiçãolino.telas
+﻿namespace Fundicaolino.telas
 {
     partial class Telaprincipal
     {
