@@ -31,31 +31,32 @@
             this.components = new System.ComponentModel.Container();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.GenericaProducao = new System.Windows.Forms.Label();
+            this.Genericacontroleemtemporeal = new System.Windows.Forms.Button();
+            this.Genericacadastrarproduto = new System.Windows.Forms.Button();
+            this.Genericacontrole = new System.Windows.Forms.Label();
+            this.GenericaControleQualidade = new System.Windows.Forms.Button();
+            this.Genericaexibirfiladeproducao = new System.Windows.Forms.Button();
+            this.Genericacadastrarprocesso = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.GenericaControleProducao = new System.Windows.Forms.Button();
+            this.Genericagerenciarusuario = new System.Windows.Forms.Button();
+            this.Geniricagerenciargrupo = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.GenericaExluir = new System.Windows.Forms.Button();
             this.GenericaEditar = new System.Windows.Forms.Button();
             this.GeniricaAlterarsituacao = new System.Windows.Forms.Button();
             this.GenericoNovo = new System.Windows.Forms.Button();
-            this.Geniricagerenciargrupo = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Genericagerenciarusuario = new System.Windows.Forms.Button();
-            this.GenericaControleProducao = new System.Windows.Forms.Button();
-            this.GenericaControleQualidade = new System.Windows.Forms.Button();
-            this.Genericacontrole = new System.Windows.Forms.Label();
-            this.Genericacadastrarprocesso = new System.Windows.Forms.Button();
-            this.Genericacadastrarproduto = new System.Windows.Forms.Button();
-            this.GenericaProducao = new System.Windows.Forms.Label();
-            this.Genericaexibirfiladeproducao = new System.Windows.Forms.Button();
-            this.Genericacontroleemtemporeal = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
@@ -65,19 +66,22 @@
             this.panel1.Size = new System.Drawing.Size(777, 491);
             this.panel1.TabIndex = 4;
             // 
-            // panel2
+            // panel4
             // 
-            this.panel2.Controls.Add(this.GenericaExluir);
-            this.panel2.Controls.Add(this.GenericaEditar);
-            this.panel2.Controls.Add(this.GeniricaAlterarsituacao);
-            this.panel2.Controls.Add(this.GenericoNovo);
-            this.panel2.Location = new System.Drawing.Point(0, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(777, 73);
-            this.panel2.TabIndex = 0;
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel4.Location = new System.Drawing.Point(220, 82);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(557, 409);
+            this.panel4.TabIndex = 0;
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel3.Controls.Add(this.GenericaProducao);
             this.panel3.Controls.Add(this.Genericacontroleemtemporeal);
             this.panel3.Controls.Add(this.Genericacadastrarproduto);
@@ -94,12 +98,125 @@
             this.panel3.Size = new System.Drawing.Size(214, 409);
             this.panel3.TabIndex = 0;
             // 
-            // panel4
+            // GenericaProducao
             // 
-            this.panel4.Location = new System.Drawing.Point(220, 82);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(557, 409);
-            this.panel4.TabIndex = 0;
+            this.GenericaProducao.AutoSize = true;
+            this.GenericaProducao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GenericaProducao.Location = new System.Drawing.Point(12, 223);
+            this.GenericaProducao.Name = "GenericaProducao";
+            this.GenericaProducao.Size = new System.Drawing.Size(104, 25);
+            this.GenericaProducao.TabIndex = 10;
+            this.GenericaProducao.Text = "Produção";
+            this.GenericaProducao.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // Genericacontroleemtemporeal
+            // 
+            this.Genericacontroleemtemporeal.Location = new System.Drawing.Point(38, 338);
+            this.Genericacontroleemtemporeal.Name = "Genericacontroleemtemporeal";
+            this.Genericacontroleemtemporeal.Size = new System.Drawing.Size(163, 23);
+            this.Genericacontroleemtemporeal.TabIndex = 8;
+            this.Genericacontroleemtemporeal.Text = "Monitoramento em tempo real";
+            this.Genericacontroleemtemporeal.UseVisualStyleBackColor = true;
+            // 
+            // Genericacadastrarproduto
+            // 
+            this.Genericacadastrarproduto.Location = new System.Drawing.Point(38, 280);
+            this.Genericacadastrarproduto.Name = "Genericacadastrarproduto";
+            this.Genericacadastrarproduto.Size = new System.Drawing.Size(163, 23);
+            this.Genericacadastrarproduto.TabIndex = 8;
+            this.Genericacadastrarproduto.Text = "Cadastrar produtos";
+            this.Genericacadastrarproduto.UseVisualStyleBackColor = true;
+            // 
+            // Genericacontrole
+            // 
+            this.Genericacontrole.AutoSize = true;
+            this.Genericacontrole.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Genericacontrole.Location = new System.Drawing.Point(12, 120);
+            this.Genericacontrole.Name = "Genericacontrole";
+            this.Genericacontrole.Size = new System.Drawing.Size(93, 25);
+            this.Genericacontrole.TabIndex = 10;
+            this.Genericacontrole.Text = "Controle";
+            this.Genericacontrole.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // GenericaControleQualidade
+            // 
+            this.GenericaControleQualidade.Location = new System.Drawing.Point(38, 177);
+            this.GenericaControleQualidade.Name = "GenericaControleQualidade";
+            this.GenericaControleQualidade.Size = new System.Drawing.Size(163, 23);
+            this.GenericaControleQualidade.TabIndex = 8;
+            this.GenericaControleQualidade.Text = "Qualidade";
+            this.GenericaControleQualidade.UseVisualStyleBackColor = true;
+            // 
+            // Genericaexibirfiladeproducao
+            // 
+            this.Genericaexibirfiladeproducao.Location = new System.Drawing.Point(38, 309);
+            this.Genericaexibirfiladeproducao.Name = "Genericaexibirfiladeproducao";
+            this.Genericaexibirfiladeproducao.Size = new System.Drawing.Size(163, 23);
+            this.Genericaexibirfiladeproducao.TabIndex = 8;
+            this.Genericaexibirfiladeproducao.Text = "Exibir fila de produçao";
+            this.Genericaexibirfiladeproducao.UseVisualStyleBackColor = true;
+            // 
+            // Genericacadastrarprocesso
+            // 
+            this.Genericacadastrarprocesso.Location = new System.Drawing.Point(38, 251);
+            this.Genericacadastrarprocesso.Name = "Genericacadastrarprocesso";
+            this.Genericacadastrarprocesso.Size = new System.Drawing.Size(163, 23);
+            this.Genericacadastrarprocesso.TabIndex = 8;
+            this.Genericacadastrarprocesso.Text = "Cadastrar processo";
+            this.Genericacadastrarprocesso.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(148, 25);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Administração";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // GenericaControleProducao
+            // 
+            this.GenericaControleProducao.Location = new System.Drawing.Point(38, 148);
+            this.GenericaControleProducao.Name = "GenericaControleProducao";
+            this.GenericaControleProducao.Size = new System.Drawing.Size(163, 23);
+            this.GenericaControleProducao.TabIndex = 8;
+            this.GenericaControleProducao.Text = "Produção";
+            this.GenericaControleProducao.UseVisualStyleBackColor = true;
+            // 
+            // Genericagerenciarusuario
+            // 
+            this.Genericagerenciarusuario.Location = new System.Drawing.Point(38, 72);
+            this.Genericagerenciarusuario.Name = "Genericagerenciarusuario";
+            this.Genericagerenciarusuario.Size = new System.Drawing.Size(163, 23);
+            this.Genericagerenciarusuario.TabIndex = 8;
+            this.Genericagerenciarusuario.Text = "Gerenciar Usuario";
+            this.Genericagerenciarusuario.UseVisualStyleBackColor = true;
+            this.Genericagerenciarusuario.Click += new System.EventHandler(this.Genericagerenciarusuario_Click);
+            // 
+            // Geniricagerenciargrupo
+            // 
+            this.Geniricagerenciargrupo.Location = new System.Drawing.Point(38, 43);
+            this.Geniricagerenciargrupo.Name = "Geniricagerenciargrupo";
+            this.Geniricagerenciargrupo.Size = new System.Drawing.Size(163, 23);
+            this.Geniricagerenciargrupo.TabIndex = 8;
+            this.Geniricagerenciargrupo.Text = "Gerenciar grupo";
+            this.Geniricagerenciargrupo.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel2.Controls.Add(this.GenericaExluir);
+            this.panel2.Controls.Add(this.GenericaEditar);
+            this.panel2.Controls.Add(this.GeniricaAlterarsituacao);
+            this.panel2.Controls.Add(this.GenericoNovo);
+            this.panel2.Location = new System.Drawing.Point(0, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(777, 73);
+            this.panel2.TabIndex = 0;
             // 
             // GenericaExluir
             // 
@@ -139,111 +256,6 @@
             this.GenericoNovo.UseVisualStyleBackColor = true;
             this.GenericoNovo.Click += new System.EventHandler(this.GenericoNovo_Click);
             // 
-            // Geniricagerenciargrupo
-            // 
-            this.Geniricagerenciargrupo.Location = new System.Drawing.Point(38, 43);
-            this.Geniricagerenciargrupo.Name = "Geniricagerenciargrupo";
-            this.Geniricagerenciargrupo.Size = new System.Drawing.Size(163, 23);
-            this.Geniricagerenciargrupo.TabIndex = 8;
-            this.Geniricagerenciargrupo.Text = "Gerenciar grupo";
-            this.Geniricagerenciargrupo.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(148, 25);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Administração";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // Genericagerenciarusuario
-            // 
-            this.Genericagerenciarusuario.Location = new System.Drawing.Point(38, 72);
-            this.Genericagerenciarusuario.Name = "Genericagerenciarusuario";
-            this.Genericagerenciarusuario.Size = new System.Drawing.Size(163, 23);
-            this.Genericagerenciarusuario.TabIndex = 8;
-            this.Genericagerenciarusuario.Text = "Gerenciar Usuario";
-            this.Genericagerenciarusuario.UseVisualStyleBackColor = true;
-            // 
-            // GenericaControleProducao
-            // 
-            this.GenericaControleProducao.Location = new System.Drawing.Point(38, 148);
-            this.GenericaControleProducao.Name = "GenericaControleProducao";
-            this.GenericaControleProducao.Size = new System.Drawing.Size(163, 23);
-            this.GenericaControleProducao.TabIndex = 8;
-            this.GenericaControleProducao.Text = "Produção";
-            this.GenericaControleProducao.UseVisualStyleBackColor = true;
-            // 
-            // GenericaControleQualidade
-            // 
-            this.GenericaControleQualidade.Location = new System.Drawing.Point(38, 177);
-            this.GenericaControleQualidade.Name = "GenericaControleQualidade";
-            this.GenericaControleQualidade.Size = new System.Drawing.Size(163, 23);
-            this.GenericaControleQualidade.TabIndex = 8;
-            this.GenericaControleQualidade.Text = "Qualidade";
-            this.GenericaControleQualidade.UseVisualStyleBackColor = true;
-            // 
-            // Genericacontrole
-            // 
-            this.Genericacontrole.AutoSize = true;
-            this.Genericacontrole.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Genericacontrole.Location = new System.Drawing.Point(12, 120);
-            this.Genericacontrole.Name = "Genericacontrole";
-            this.Genericacontrole.Size = new System.Drawing.Size(93, 25);
-            this.Genericacontrole.TabIndex = 10;
-            this.Genericacontrole.Text = "Controle";
-            this.Genericacontrole.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // Genericacadastrarprocesso
-            // 
-            this.Genericacadastrarprocesso.Location = new System.Drawing.Point(38, 251);
-            this.Genericacadastrarprocesso.Name = "Genericacadastrarprocesso";
-            this.Genericacadastrarprocesso.Size = new System.Drawing.Size(163, 23);
-            this.Genericacadastrarprocesso.TabIndex = 8;
-            this.Genericacadastrarprocesso.Text = "Cadastrar processo";
-            this.Genericacadastrarprocesso.UseVisualStyleBackColor = true;
-            // 
-            // Genericacadastrarproduto
-            // 
-            this.Genericacadastrarproduto.Location = new System.Drawing.Point(38, 280);
-            this.Genericacadastrarproduto.Name = "Genericacadastrarproduto";
-            this.Genericacadastrarproduto.Size = new System.Drawing.Size(163, 23);
-            this.Genericacadastrarproduto.TabIndex = 8;
-            this.Genericacadastrarproduto.Text = "Cadastrar produtos";
-            this.Genericacadastrarproduto.UseVisualStyleBackColor = true;
-            // 
-            // GenericaProducao
-            // 
-            this.GenericaProducao.AutoSize = true;
-            this.GenericaProducao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GenericaProducao.Location = new System.Drawing.Point(12, 223);
-            this.GenericaProducao.Name = "GenericaProducao";
-            this.GenericaProducao.Size = new System.Drawing.Size(104, 25);
-            this.GenericaProducao.TabIndex = 10;
-            this.GenericaProducao.Text = "Produção";
-            this.GenericaProducao.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // Genericaexibirfiladeproducao
-            // 
-            this.Genericaexibirfiladeproducao.Location = new System.Drawing.Point(38, 309);
-            this.Genericaexibirfiladeproducao.Name = "Genericaexibirfiladeproducao";
-            this.Genericaexibirfiladeproducao.Size = new System.Drawing.Size(163, 23);
-            this.Genericaexibirfiladeproducao.TabIndex = 8;
-            this.Genericaexibirfiladeproducao.Text = "Exibir fila de produçao";
-            this.Genericaexibirfiladeproducao.UseVisualStyleBackColor = true;
-            // 
-            // Genericacontroleemtemporeal
-            // 
-            this.Genericacontroleemtemporeal.Location = new System.Drawing.Point(38, 338);
-            this.Genericacontroleemtemporeal.Name = "Genericacontroleemtemporeal";
-            this.Genericacontroleemtemporeal.Size = new System.Drawing.Size(163, 23);
-            this.Genericacontroleemtemporeal.TabIndex = 8;
-            this.Genericacontroleemtemporeal.Text = "Monitoramento em tempo real";
-            this.Genericacontroleemtemporeal.UseVisualStyleBackColor = true;
-            // 
             // Telaprincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -252,11 +264,12 @@
             this.Controls.Add(this.panel1);
             this.IsMdiContainer = true;
             this.Name = "Telaprincipal";
-            this.Text = "Telaprincipa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
