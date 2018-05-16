@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Fundicaolino.negocio.Models
 {
-    class Class1
+    public class Usuario
     {
+        private long cdUsuario { get; set; }
+        private string nmUsuario { get; set; }
+        private int cdmatricula { get; set; }
+        private long cdgrupo { get; set; }
+        private string nmLogin { get; set; }
+        private int cdSenha { get; set; }
     }
 }

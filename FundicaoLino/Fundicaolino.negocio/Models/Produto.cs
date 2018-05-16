@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Fundicaolino.negocio.Models
 {
-    class Class1
+    public class Produto
     {
+        private long cdProduto { get; set; }
+        private long cdTipoProduto { get; set; }
+        private long cdResponsavel { get; set; }
     }
 }

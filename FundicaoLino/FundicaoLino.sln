@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27428.2027
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fundicaolino.telas", "Fundicaolino.telas\Fundicaolino.telas.csproj", "{0CD2FFEC-7A55-4703-9E03-E82474A495D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fundicaolino.negocio", "Fundicaolino.negocio\Fundicaolino.negocio.csproj", "{D837CFE8-F96C-4CBF-914D-25A4D9D7BB24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{0CD2FFEC-7A55-4703-9E03-E82474A495D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CD2FFEC-7A55-4703-9E03-E82474A495D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CD2FFEC-7A55-4703-9E03-E82474A495D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D837CFE8-F96C-4CBF-914D-25A4D9D7BB24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D837CFE8-F96C-4CBF-914D-25A4D9D7BB24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D837CFE8-F96C-4CBF-914D-25A4D9D7BB24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D837CFE8-F96C-4CBF-914D-25A4D9D7BB24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
