@@ -187,7 +187,7 @@
             // 
             // Genericagerenciarusuario
             // 
-            this.Genericagerenciarusuario.Location = new System.Drawing.Point(38, 72);
+            this.Genericagerenciarusuario.Location = new System.Drawing.Point(12, 72);
             this.Genericagerenciarusuario.Name = "Genericagerenciarusuario";
             this.Genericagerenciarusuario.Size = new System.Drawing.Size(163, 23);
             this.Genericagerenciarusuario.TabIndex = 8;
@@ -197,7 +197,7 @@
             // 
             // Geniricagerenciargrupo
             // 
-            this.Geniricagerenciargrupo.Location = new System.Drawing.Point(38, 43);
+            this.Geniricagerenciargrupo.Location = new System.Drawing.Point(51, 43);
             this.Geniricagerenciargrupo.Name = "Geniricagerenciargrupo";
             this.Geniricagerenciargrupo.Size = new System.Drawing.Size(163, 23);
             this.Geniricagerenciargrupo.TabIndex = 8;
