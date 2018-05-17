@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace Fundicaolino.telas
 {
-    public partial class GnGridGroup : Form
+    public partial class GnGrupoNovo : Form
     {
-        public GnGridGroup()
+        public GnGrupoNovo()
         {
             InitializeComponent();
         }
+
+       
     }
 }

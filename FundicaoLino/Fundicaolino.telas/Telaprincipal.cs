@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Fundicaolino.telas
 {
-    public partial class Telaprincipal : Form
+    public partial class TelaPrincipal : Form
     {
         private int childFormNumber = 0;
 
-        public Telaprincipal()
+        public TelaPrincipal()
         {
             InitializeComponent();
         }
@@ -115,7 +115,7 @@ namespace Fundicaolino.telas
 
         private void Genericagerenciarusuario_Click(object sender, EventArgs e)
         {
-            gnGridUser gridUsuario = new gnGridUser();
+            GnGridUser gridUsuario = new GnGridUser();
             gridUsuario.MdiParent = this;
             panel4.Controls.Add(gridUsuario);
             gridUsuario.Show();

@@ -1,6 +1,6 @@
 ﻿namespace Fundicaolino.telas
 {
-    partial class Telaprincipal
+    partial class TelaPrincipal
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -43,7 +43,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.GenericaControleProducao = new System.Windows.Forms.Button();
             this.Genericagerenciarusuario = new System.Windows.Forms.Button();
-            this.Geniricagerenciargrupo = new System.Windows.Forms.Button();
+            this.Genericagerenciargrupo = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.GenericaExluir = new System.Windows.Forms.Button();
             this.GenericaEditar = new System.Windows.Forms.Button();
@@ -92,7 +92,7 @@
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.GenericaControleProducao);
             this.panel3.Controls.Add(this.Genericagerenciarusuario);
-            this.panel3.Controls.Add(this.Geniricagerenciargrupo);
+            this.panel3.Controls.Add(this.Genericagerenciargrupo);
             this.panel3.Location = new System.Drawing.Point(0, 82);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(214, 409);
@@ -195,14 +195,14 @@
             this.Genericagerenciarusuario.UseVisualStyleBackColor = true;
             this.Genericagerenciarusuario.Click += new System.EventHandler(this.Genericagerenciarusuario_Click);
             // 
-            // Geniricagerenciargrupo
+            // Genericagerenciargrupo
             // 
-            this.Geniricagerenciargrupo.Location = new System.Drawing.Point(38, 43);
-            this.Geniricagerenciargrupo.Name = "Geniricagerenciargrupo";
-            this.Geniricagerenciargrupo.Size = new System.Drawing.Size(163, 23);
-            this.Geniricagerenciargrupo.TabIndex = 8;
-            this.Geniricagerenciargrupo.Text = "Gerenciar grupo";
-            this.Geniricagerenciargrupo.UseVisualStyleBackColor = true;
+            this.Genericagerenciargrupo.Location = new System.Drawing.Point(38, 43);
+            this.Genericagerenciargrupo.Name = "Genericagerenciargrupo";
+            this.Genericagerenciargrupo.Size = new System.Drawing.Size(163, 23);
+            this.Genericagerenciargrupo.TabIndex = 8;
+            this.Genericagerenciargrupo.Text = "Gerenciar grupo";
+            this.Genericagerenciargrupo.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -256,14 +256,14 @@
             this.GenericoNovo.UseVisualStyleBackColor = true;
             this.GenericoNovo.Click += new System.EventHandler(this.GenericoNovo_Click);
             // 
-            // Telaprincipal
+            // TelaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(777, 491);
             this.Controls.Add(this.panel1);
             this.IsMdiContainer = true;
-            this.Name = "Telaprincipal";
+            this.Name = "TelaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
@@ -279,7 +279,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button Geniricagerenciargrupo;
+        private System.Windows.Forms.Button Genericagerenciargrupo;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button GenericaExluir;
         private System.Windows.Forms.Button GenericaEditar;

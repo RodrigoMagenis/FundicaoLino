@@ -1,6 +1,6 @@
 ﻿namespace Fundicaolino.telas
 {
-    partial class gnGridUser
+    partial class GnGridUser
     {
         /// <summary>
         /// Required designer variable.
@@ -29,32 +29,20 @@
         private void InitializeComponent()
         {
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
-            this.gnGridPanelUser = new System.Windows.Forms.Panel();
             this.gnGridFrameUser = new System.Windows.Forms.DataGridView();
             this.idUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nmUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nmGroupUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gnGridPanelUser = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
-            this.gnGridPanelUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gnGridFrameUser)).BeginInit();
+            this.gnGridPanelUser.SuspendLayout();
             this.SuspendLayout();
             // 
             // fileSystemWatcher1
             // 
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
-            // 
-            // gnGridPanelUser
-            // 
-            this.gnGridPanelUser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gnGridPanelUser.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.gnGridPanelUser.Controls.Add(this.gnGridFrameUser);
-            this.gnGridPanelUser.Location = new System.Drawing.Point(12, 12);
-            this.gnGridPanelUser.Name = "gnGridPanelUser";
-            this.gnGridPanelUser.Size = new System.Drawing.Size(642, 445);
-            this.gnGridPanelUser.TabIndex = 0;
             // 
             // gnGridFrameUser
             // 
@@ -71,7 +59,7 @@
             this.gnGridFrameUser.Location = new System.Drawing.Point(0, 0);
             this.gnGridFrameUser.Name = "gnGridFrameUser";
             this.gnGridFrameUser.ReadOnly = true;
-            this.gnGridFrameUser.Size = new System.Drawing.Size(642, 445);
+            this.gnGridFrameUser.Size = new System.Drawing.Size(557, 409);
             this.gnGridFrameUser.TabIndex = 0;
             // 
             // idUser
@@ -95,24 +83,34 @@
             this.nmGroupUser.Name = "nmGroupUser";
             this.nmGroupUser.ReadOnly = true;
             // 
-            // gnGridUser
+            // gnGridPanelUser
+            // 
+            this.gnGridPanelUser.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.gnGridPanelUser.Controls.Add(this.gnGridFrameUser);
+            this.gnGridPanelUser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gnGridPanelUser.Location = new System.Drawing.Point(0, 0);
+            this.gnGridPanelUser.Name = "gnGridPanelUser";
+            this.gnGridPanelUser.Size = new System.Drawing.Size(557, 409);
+            this.gnGridPanelUser.TabIndex = 0;
+            // 
+            // GnGridUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(666, 480);
+            this.ClientSize = new System.Drawing.Size(557, 409);
             this.Controls.Add(this.gnGridPanelUser);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "gnGridUser";
+            this.Name = "GnGridUser";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "GridUsuarios";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
-            this.gnGridPanelUser.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gnGridFrameUser)).EndInit();
+            this.gnGridPanelUser.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace Fundicaolino.telas
 {
-    public partial class GnGridGroup : Form
+    public partial class TelaLogin : Form
     {
-        public GnGridGroup()
+        public TelaLogin()
         {
             InitializeComponent();
+        }
+
+        private void btLogin_Click(object sender, EventArgs e)
+        {
+            TelaPrincipal telaprincipal = new TelaPrincipal();
+            telaprincipal.Show();
+
         }
     }
 }
