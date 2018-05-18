@@ -8,13 +8,13 @@ namespace Fundicaolino.negocio.Models
 {
     public class Grupo
     {
-        private string nomeGrupo { get; set; }
-        private long cdGrupo { get; set; }
-        private Int16 fgGrupo { get; set; }
-        private Int16 permissaousuario { get; set; }
-        private Int16 permissaoproducao { get; set; }
-        private Int16 permissaoqualidade { get; set; }
-        private Int16 permissaoprocesso { get; set; }
-        private Int16 permissaoproduto { get; set; }
+        private string NomeGrupo { get; set; }
+        private long   CdGrupo { get; set; }
+        private Int16  FgGrupo { get; set; }
+        private Int16  Permissaousuario { get; set; }
+        private Int16  Permissaoproducao { get; set; }
+        private Int16  Permissaoqualidade { get; set; }
+        private Int16  Permissaoprocesso { get; set; }
+        private Int16  Permissaoproduto { get; set; }
     }
 }

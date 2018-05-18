@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fundicaolino.negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -114,8 +115,9 @@ namespace Fundicaolino.telas
             switch (tela)
                 {
                 case 1:
-                    gnGridUser teste = new gnGridUser();
-                    teste.Show();
+                    // gnGridUser teste = new gnGridUser();
+                    //teste.Show();
+                   
                     break;
                 case 2:
                     break;

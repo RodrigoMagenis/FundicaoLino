@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Fundicaolino.negocio.Models
 {
-    class TipoProduto
+    public class TipoProduto
     {
-        private long cdTipoProduto { get; set; }
-        private string nmTipoProduto { get; set; }
-        private decimal vlPeso { get; set; }
-        private long cdMateriais { get; set; }
+        private long    CdTipoProduto { get; set; }
+        private string  NmTipoProduto { get; set; }
+        private decimal VlPeso { get; set; }
+        private long    CdMateriais { get; set; }
     }
 
 }
