@@ -10,15 +10,17 @@ using System.Windows.Forms;
 
 namespace Fundicaolino.telas
 {
-    public partial class GnGridUser : Form
+    public partial class TelaLogin : Form
     {
-        public GnGridUser()
+        public TelaLogin()
         {
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btLogin_Click(object sender, EventArgs e)
         {
+            TelaPrincipal telaprincipal = new TelaPrincipal();
+            telaprincipal.Show();
 
         }
     }

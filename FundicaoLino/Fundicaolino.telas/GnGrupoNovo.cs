@@ -10,16 +10,13 @@ using System.Windows.Forms;
 
 namespace Fundicaolino.telas
 {
-    public partial class GnGridUser : Form
+    public partial class GnGrupoNovo : Form
     {
-        public GnGridUser()
+        public GnGrupoNovo()
         {
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+       
     }
 }
