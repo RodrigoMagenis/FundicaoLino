@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.CancelarNovoUsuario = new System.Windows.Forms.Button();
+            this.CancelarCad = new System.Windows.Forms.Button();
             this.SalvarNovoUsuario = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -43,7 +43,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(124, 55);
+            this.label1.Location = new System.Drawing.Point(78, 72);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(227, 25);
             this.label1.TabIndex = 0;
@@ -71,15 +71,15 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Quantidade";
             // 
-            // CancelarNovoUsuario
+            // CancelarCad
             // 
-            this.CancelarNovoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelarNovoUsuario.Location = new System.Drawing.Point(556, 55);
-            this.CancelarNovoUsuario.Name = "CancelarNovoUsuario";
-            this.CancelarNovoUsuario.Size = new System.Drawing.Size(73, 42);
-            this.CancelarNovoUsuario.TabIndex = 9;
-            this.CancelarNovoUsuario.Text = "Cancelar";
-            this.CancelarNovoUsuario.UseVisualStyleBackColor = true;
+            this.CancelarCad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelarCad.Location = new System.Drawing.Point(556, 55);
+            this.CancelarCad.Name = "CancelarCad";
+            this.CancelarCad.Size = new System.Drawing.Size(73, 42);
+            this.CancelarCad.TabIndex = 9;
+            this.CancelarCad.Text = "Cancelar";
+            this.CancelarCad.UseVisualStyleBackColor = true;
             // 
             // SalvarNovoUsuario
             // 
@@ -105,6 +105,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(138, 20);
             this.textBox1.TabIndex = 2;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox3
             // 
@@ -130,7 +131,7 @@
             this.ClientSize = new System.Drawing.Size(818, 423);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.SalvarNovoUsuario);
-            this.Controls.Add(this.CancelarNovoUsuario);
+            this.Controls.Add(this.CancelarCad);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label3);
@@ -152,7 +153,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button CancelarNovoUsuario;
+        private System.Windows.Forms.Button CancelarCad;
         private System.Windows.Forms.Button SalvarNovoUsuario;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;

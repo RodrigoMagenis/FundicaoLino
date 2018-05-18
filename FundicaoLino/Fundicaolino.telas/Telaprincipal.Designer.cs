@@ -209,6 +209,7 @@
             this.Genericagerenciargrupo.TabIndex = 8;
             this.Genericagerenciargrupo.Text = "Gerenciar grupo";
             this.Genericagerenciargrupo.UseVisualStyleBackColor = true;
+            this.Genericagerenciargrupo.Click += new System.EventHandler(this.Genericagerenciargrupo_Click);
             // 
             // panel2
             // 
