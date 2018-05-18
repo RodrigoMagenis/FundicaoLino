@@ -8,11 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Fundiçãolino.telas
+namespace Fundicaolino.telas
 {
     public partial class Telaprincipal : Form
     {
         private int childFormNumber = 0;
+        private int tela;
 
         public Telaprincipal()
         {
@@ -96,6 +97,83 @@ namespace Fundiçãolino.telas
             {
                 childForm.Close();
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GenericaExluir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GenericoNovo_Click(object sender, EventArgs e)
+        {
+            switch (tela)
+                {
+                case 1:
+                    gnGridUser teste = new gnGridUser();
+                    teste.Show();
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+                case 7:
+                    break;
+            }
+        }
+
+        private void Genericagerenciarusuario_Click(object sender, EventArgs e)
+        {
+            gnGridUser gridUsuario = new gnGridUser();
+            gridUsuario.MdiParent = this;
+            panel4.Controls.Add(gridUsuario);
+            gridUsuario.Show();
+            tela = 7;
+        }
+
+        private void Geniricagerenciargrupo_Click(object sender, EventArgs e)
+        {
+            tela = 1;
+        }
+
+        private void GenericaControleProducao_Click(object sender, EventArgs e)
+        {
+            tela = 2;
+        }
+
+        private void GenericaControleQualidade_Click(object sender, EventArgs e)
+        {
+            tela = 3;
+        }
+
+        private void Genericacadastrarprocesso_Click(object sender, EventArgs e)
+        {
+            tela = 4;
+        }
+
+        private void Genericacadastrarproduto_Click(object sender, EventArgs e)
+        {
+            tela = 5;
+        }
+
+        private void Genericaexibirfiladeproducao_MouseCaptureChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Genericacontroleemtemporeal_Click(object sender, EventArgs e)
+        {
+            tela = 6;
         }
     }
 }
