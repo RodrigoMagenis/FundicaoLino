@@ -117,6 +117,7 @@
             this.Genericacontroleemtemporeal.TabIndex = 8;
             this.Genericacontroleemtemporeal.Text = "Monitoramento em tempo real";
             this.Genericacontroleemtemporeal.UseVisualStyleBackColor = true;
+            this.Genericacontroleemtemporeal.Click += new System.EventHandler(this.Genericacontroleemtemporeal_Click);
             // 
             // Genericacadastrarproduto
             // 
@@ -126,6 +127,7 @@
             this.Genericacadastrarproduto.TabIndex = 8;
             this.Genericacadastrarproduto.Text = "Cadastrar produtos";
             this.Genericacadastrarproduto.UseVisualStyleBackColor = true;
+            this.Genericacadastrarproduto.Click += new System.EventHandler(this.Genericacadastrarproduto_Click);
             // 
             // Genericacontrole
             // 
@@ -146,6 +148,7 @@
             this.GenericaControleQualidade.TabIndex = 8;
             this.GenericaControleQualidade.Text = "Qualidade";
             this.GenericaControleQualidade.UseVisualStyleBackColor = true;
+            this.GenericaControleQualidade.Click += new System.EventHandler(this.GenericaControleQualidade_Click);
             // 
             // Genericaexibirfiladeproducao
             // 
@@ -155,6 +158,7 @@
             this.Genericaexibirfiladeproducao.TabIndex = 8;
             this.Genericaexibirfiladeproducao.Text = "Exibir fila de produçao";
             this.Genericaexibirfiladeproducao.UseVisualStyleBackColor = true;
+            this.Genericaexibirfiladeproducao.MouseCaptureChanged += new System.EventHandler(this.Genericaexibirfiladeproducao_MouseCaptureChanged);
             // 
             // Genericacadastrarprocesso
             // 
@@ -164,6 +168,7 @@
             this.Genericacadastrarprocesso.TabIndex = 8;
             this.Genericacadastrarprocesso.Text = "Cadastrar processo";
             this.Genericacadastrarprocesso.UseVisualStyleBackColor = true;
+            this.Genericacadastrarprocesso.Click += new System.EventHandler(this.Genericacadastrarprocesso_Click);
             // 
             // label2
             // 
@@ -184,6 +189,7 @@
             this.GenericaControleProducao.TabIndex = 8;
             this.GenericaControleProducao.Text = "Produção";
             this.GenericaControleProducao.UseVisualStyleBackColor = true;
+            this.GenericaControleProducao.Click += new System.EventHandler(this.GenericaControleProducao_Click);
             // 
             // Genericagerenciarusuario
             // 
@@ -203,6 +209,7 @@
             this.Geniricagerenciargrupo.TabIndex = 8;
             this.Geniricagerenciargrupo.Text = "Gerenciar grupo";
             this.Geniricagerenciargrupo.UseVisualStyleBackColor = true;
+            this.Geniricagerenciargrupo.Click += new System.EventHandler(this.Geniricagerenciargrupo_Click);
             // 
             // panel2
             // 
