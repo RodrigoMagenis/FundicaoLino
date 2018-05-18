@@ -98,6 +98,7 @@
             this.TxIdentificador.Name = "TxIdentificador";
             this.TxIdentificador.Size = new System.Drawing.Size(89, 20);
             this.TxIdentificador.TabIndex = 1;
+            this.TxIdentificador.TextChanged += new System.EventHandler(this.TxIdentificador_TextChanged);
             // 
             // TxNomeUsuario
             // 
@@ -112,6 +113,7 @@
             this.TxMatricula.Name = "TxMatricula";
             this.TxMatricula.Size = new System.Drawing.Size(176, 20);
             this.TxMatricula.TabIndex = 1;
+            this.TxMatricula.TextChanged += new System.EventHandler(this.TxMatricula_TextChanged);
             // 
             // TxGrupodeAcesso
             // 
@@ -119,16 +121,18 @@
             this.TxGrupodeAcesso.Name = "TxGrupodeAcesso";
             this.TxGrupodeAcesso.Size = new System.Drawing.Size(176, 20);
             this.TxGrupodeAcesso.TabIndex = 1;
+            this.TxGrupodeAcesso.TextChanged += new System.EventHandler(this.TxGrupodeAcesso_TextChanged);
             // 
             // CancelarNovoUsuario
             // 
             this.CancelarNovoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelarNovoUsuario.Location = new System.Drawing.Point(570, 63);
+            this.CancelarNovoUsuario.Location = new System.Drawing.Point(558, 63);
             this.CancelarNovoUsuario.Name = "CancelarNovoUsuario";
             this.CancelarNovoUsuario.Size = new System.Drawing.Size(73, 42);
             this.CancelarNovoUsuario.TabIndex = 2;
             this.CancelarNovoUsuario.Text = "Cancelar";
             this.CancelarNovoUsuario.UseVisualStyleBackColor = true;
+            this.CancelarNovoUsuario.Click += new System.EventHandler(this.CancelarNovoUsuario_Click);
             // 
             // SalvarNovoUsuario
             // 
@@ -149,6 +153,7 @@
             this.BtAutoEncremento.TabIndex = 2;
             this.BtAutoEncremento.Text = "AUTO";
             this.BtAutoEncremento.UseVisualStyleBackColor = true;
+            this.BtAutoEncremento.Click += new System.EventHandler(this.BtAutoEncremento_Click);
             // 
             // GnUsuarioNovo
             // 
@@ -170,6 +175,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GnUsuarioNovo";
             this.Text = "GnUsuarioNovo";
+            this.Load += new System.EventHandler(this.GnUsuarioNovo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GnCadProducao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GnCadProducao.Designer.cs">
+      <DependentUpon>GnCadProducao.cs</DependentUpon>
+    </Compile>
     <Compile Include="GnGridGroup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     <Compile Include="TelaPrincipal.Designer.cs">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GnCadProducao.resx">
+      <DependentUpon>GnCadProducao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GnGridGroup.resx">
       <DependentUpon>GnGridGroup.cs</DependentUpon>
     </EmbeddedResource>
