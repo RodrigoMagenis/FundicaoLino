@@ -115,11 +115,15 @@ namespace Fundicaolino.telas
             switch (tela)
                 {
                 case 1:
-                    // gnGridUser teste = new gnGridUser();
+                    //gnGridUser teste = new gnGridUser();
                     //teste.Show();
-                   
+
                     break;
                 case 2:
+                    // GnGridUser gridUsuario = new GnGridUser();
+                    //gridUsuario.MdiParent = this;
+                    //panel4.Controls.Add(gridUsuario);
+                    //gridUsuario.Show();
                     break;
                 case 3:
                     break;
@@ -176,6 +180,11 @@ namespace Fundicaolino.telas
         private void Genericacontroleemtemporeal_Click(object sender, EventArgs e)
         {
             tela = 6;
+        }
+
+        private void Genericagerenciargrupo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

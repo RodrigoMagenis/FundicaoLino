@@ -16,5 +16,35 @@ namespace Fundicaolino.telas
         {
             InitializeComponent();
         }
+
+        private void CancelarNovoUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtAutoEncremento_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxIdentificador_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxMatricula_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxGrupodeAcesso_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GnUsuarioNovo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
