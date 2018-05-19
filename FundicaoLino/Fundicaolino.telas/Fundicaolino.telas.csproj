@@ -141,5 +141,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Fundicaolino.negocio\Fundicaolino.negocio.csproj">
+      <Project>{D837CFE8-F96C-4CBF-914D-25A4D9D7BB24}</Project>
+      <Name>Fundicaolino.negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

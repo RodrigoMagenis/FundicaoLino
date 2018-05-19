@@ -6,10 +6,18 @@ using System.Threading.Tasks;
 
 namespace Fundicaolino.negocio
 {
-    class Program
+    public class Program
     {
+        Banco banco = new Banco();
+        public Program()
+        {
+          banco.SaveChanges();
+            this.banco.SaveChanges();
+        }
+
         static void Main(string[] args)
         {
+           
         }
     }
 }
