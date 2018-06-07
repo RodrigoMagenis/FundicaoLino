@@ -49,6 +49,7 @@
             this.GenericaEditar = new System.Windows.Forms.Button();
             this.GeniricaAlterarsituacao = new System.Windows.Forms.Button();
             this.GenericoNovo = new System.Windows.Forms.Button();
+            this.btCadastraProducao = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -88,6 +89,7 @@
             this.panel3.Controls.Add(this.Genericacontrole);
             this.panel3.Controls.Add(this.GenericaControleQualidade);
             this.panel3.Controls.Add(this.Genericaexibirfiladeproducao);
+            this.panel3.Controls.Add(this.btCadastraProducao);
             this.panel3.Controls.Add(this.Genericacadastrarprocesso);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.GenericaControleProducao);
@@ -111,7 +113,7 @@
             // 
             // Genericacontroleemtemporeal
             // 
-            this.Genericacontroleemtemporeal.Location = new System.Drawing.Point(38, 338);
+            this.Genericacontroleemtemporeal.Location = new System.Drawing.Point(38, 375);
             this.Genericacontroleemtemporeal.Name = "Genericacontroleemtemporeal";
             this.Genericacontroleemtemporeal.Size = new System.Drawing.Size(163, 23);
             this.Genericacontroleemtemporeal.TabIndex = 8;
@@ -121,7 +123,7 @@
             // 
             // Genericacadastrarproduto
             // 
-            this.Genericacadastrarproduto.Location = new System.Drawing.Point(38, 280);
+            this.Genericacadastrarproduto.Location = new System.Drawing.Point(38, 317);
             this.Genericacadastrarproduto.Name = "Genericacadastrarproduto";
             this.Genericacadastrarproduto.Size = new System.Drawing.Size(163, 23);
             this.Genericacadastrarproduto.TabIndex = 8;
@@ -152,17 +154,17 @@
             // 
             // Genericaexibirfiladeproducao
             // 
-            this.Genericaexibirfiladeproducao.Location = new System.Drawing.Point(38, 309);
+            this.Genericaexibirfiladeproducao.Location = new System.Drawing.Point(38, 346);
             this.Genericaexibirfiladeproducao.Name = "Genericaexibirfiladeproducao";
             this.Genericaexibirfiladeproducao.Size = new System.Drawing.Size(163, 23);
             this.Genericaexibirfiladeproducao.TabIndex = 8;
-            this.Genericaexibirfiladeproducao.Text = "Exibir fila de produçao";
+            this.Genericaexibirfiladeproducao.Text = "Exibir fila de produção";
             this.Genericaexibirfiladeproducao.UseVisualStyleBackColor = true;
             this.Genericaexibirfiladeproducao.Click += new System.EventHandler(this.Genericaexibirfiladeproducao_Click);
             // 
             // Genericacadastrarprocesso
             // 
-            this.Genericacadastrarprocesso.Location = new System.Drawing.Point(38, 251);
+            this.Genericacadastrarprocesso.Location = new System.Drawing.Point(38, 288);
             this.Genericacadastrarprocesso.Name = "Genericacadastrarprocesso";
             this.Genericacadastrarprocesso.Size = new System.Drawing.Size(163, 23);
             this.Genericacadastrarprocesso.TabIndex = 8;
@@ -263,6 +265,16 @@
             this.GenericoNovo.UseVisualStyleBackColor = true;
             this.GenericoNovo.Click += new System.EventHandler(this.GenericoNovo_Click);
             // 
+            // btCadastraProducao
+            // 
+            this.btCadastraProducao.Location = new System.Drawing.Point(38, 259);
+            this.btCadastraProducao.Name = "btCadastraProducao";
+            this.btCadastraProducao.Size = new System.Drawing.Size(163, 23);
+            this.btCadastraProducao.TabIndex = 8;
+            this.btCadastraProducao.Text = "Cadastrar Produção";
+            this.btCadastraProducao.UseVisualStyleBackColor = true;
+            this.btCadastraProducao.Click += new System.EventHandler(this.btCadastraProducao_Click);
+            // 
             // TelaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -301,6 +313,7 @@
         private System.Windows.Forms.Button Genericaexibirfiladeproducao;
         private System.Windows.Forms.Button Genericacadastrarprocesso;
         private System.Windows.Forms.Button GenericaControleProducao;
+        private System.Windows.Forms.Button btCadastraProducao;
     }
 }
 

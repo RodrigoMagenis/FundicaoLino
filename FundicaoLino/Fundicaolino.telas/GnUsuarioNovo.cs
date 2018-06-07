@@ -37,9 +37,7 @@ namespace Fundicaolino.telas
 
         private void SalvarNovoUsuario_Click(object sender, EventArgs e)
         {
-            Usuario usuario = new Usuario();
-
-            usuario.cdUsuario
+           
         }
     }
 }

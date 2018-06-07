@@ -51,6 +51,12 @@
     <Compile Include="GnCadProducao.Designer.cs">
       <DependentUpon>GnCadProducao.cs</DependentUpon>
     </Compile>
+    <Compile Include="GnFiladeProducao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GnFiladeProducao.Designer.cs">
+      <DependentUpon>GnFiladeProducao.cs</DependentUpon>
+    </Compile>
     <Compile Include="GnGerProcesso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,9 @@
     </Compile>
     <EmbeddedResource Include="GnCadProducao.resx">
       <DependentUpon>GnCadProducao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GnFiladeProducao.resx">
+      <DependentUpon>GnFiladeProducao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GnGerProcesso.resx">
       <DependentUpon>GnGerProcesso.cs</DependentUpon>

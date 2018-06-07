@@ -30,9 +30,9 @@
         {
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.gnGridFrameUser = new System.Windows.Forms.DataGridView();
-            this.idUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nmUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nmGroupUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nmUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gnGridPanelUser = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gnGridFrameUser)).BeginInit();
@@ -48,7 +48,7 @@
             // 
             this.gnGridFrameUser.AllowUserToAddRows = false;
             this.gnGridFrameUser.AllowUserToDeleteRows = false;
-            this.gnGridFrameUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.gnGridFrameUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gnGridFrameUser.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.gnGridFrameUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gnGridFrameUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -62,12 +62,12 @@
             this.gnGridFrameUser.Size = new System.Drawing.Size(557, 409);
             this.gnGridFrameUser.TabIndex = 0;
             // 
-            // idUser
+            // nmGroupUser
             // 
-            this.idUser.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idUser.HeaderText = "Matrícula";
-            this.idUser.Name = "idUser";
-            this.idUser.ReadOnly = true;
+            this.nmGroupUser.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nmGroupUser.HeaderText = "Grupo de acesso";
+            this.nmGroupUser.Name = "nmGroupUser";
+            this.nmGroupUser.ReadOnly = true;
             // 
             // nmUser
             // 
@@ -76,12 +76,12 @@
             this.nmUser.Name = "nmUser";
             this.nmUser.ReadOnly = true;
             // 
-            // nmGroupUser
+            // idUser
             // 
-            this.nmGroupUser.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nmGroupUser.HeaderText = "Grupo de acesso";
-            this.nmGroupUser.Name = "nmGroupUser";
-            this.nmGroupUser.ReadOnly = true;
+            this.idUser.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idUser.HeaderText = "Matrícula";
+            this.idUser.Name = "idUser";
+            this.idUser.ReadOnly = true;
             // 
             // gnGridPanelUser
             // 
