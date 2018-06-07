@@ -98,7 +98,6 @@
             this.TxIdentificador.Name = "TxIdentificador";
             this.TxIdentificador.Size = new System.Drawing.Size(89, 20);
             this.TxIdentificador.TabIndex = 1;
-            this.TxIdentificador.TextChanged += new System.EventHandler(this.TxIdentificador_TextChanged);
             // 
             // TxNomeUsuario
             // 
@@ -113,7 +112,6 @@
             this.TxMatricula.Name = "TxMatricula";
             this.TxMatricula.Size = new System.Drawing.Size(176, 20);
             this.TxMatricula.TabIndex = 1;
-            this.TxMatricula.TextChanged += new System.EventHandler(this.TxMatricula_TextChanged);
             // 
             // TxGrupodeAcesso
             // 
@@ -121,7 +119,6 @@
             this.TxGrupodeAcesso.Name = "TxGrupodeAcesso";
             this.TxGrupodeAcesso.Size = new System.Drawing.Size(176, 20);
             this.TxGrupodeAcesso.TabIndex = 1;
-            this.TxGrupodeAcesso.TextChanged += new System.EventHandler(this.TxGrupodeAcesso_TextChanged);
             // 
             // CancelarNovoUsuario
             // 

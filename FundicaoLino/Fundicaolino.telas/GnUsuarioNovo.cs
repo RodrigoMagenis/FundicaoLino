@@ -27,21 +27,6 @@ namespace Fundicaolino.telas
 
         }
 
-        private void TxIdentificador_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TxMatricula_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TxGrupodeAcesso_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void GnUsuarioNovo_Load(object sender, EventArgs e)
         {
 
