@@ -10,8 +10,8 @@ namespace Fundicaolino.negocio.Models
     [Table(name: "Producao")]
     public class Producao
     {
-        public long CdProducao { get; set; }
+        public long Id { get; set; }
         public int  QtProduto { get; set; }
-        public long CdProcesso { get; set; }
+        public long IdProcesso { get; set; }
     }
 }

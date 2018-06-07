@@ -10,8 +10,8 @@ namespace Fundicaolino.negocio.Models
     [Table(name: "Processo")]
     public class Processo
     {
-        public long     CdProcesso { get; set; }
-        public String     NmProcesso { get; set; }
+        public long     Id { get; set; }
+        public String   NmProcesso { get; set; }
         public Int16    EtapaProcesso { get; set; }
     }
 }

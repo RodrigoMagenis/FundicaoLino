@@ -38,8 +38,21 @@ namespace Fundicaolino.telas
         private void SalvarNovoUsuario_Click(object sender, EventArgs e)
         {
             Usuario usuario = new Usuario();
+            Boolean resultado;
+            Int64 longConvertido;
 
-            usuario.cdUsuario
+            resultado = Int64.TryParse(TxIdentificador.Text, out longConvertido);
+            if (resultado)
+            {
+                usuario.cdUsuario = longConvertido;
+            }
+            else
+            {
+                usuario.cdUsuario = -1;
+            }
+
+            usuario.nmUsuario = TxNomeUsuario.Text;
+            usuario.cdmatricula = TxM
         }
     }
 }
