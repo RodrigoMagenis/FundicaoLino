@@ -158,7 +158,7 @@
             this.Genericaexibirfiladeproducao.TabIndex = 8;
             this.Genericaexibirfiladeproducao.Text = "Exibir fila de produçao";
             this.Genericaexibirfiladeproducao.UseVisualStyleBackColor = true;
-            this.Genericaexibirfiladeproducao.MouseCaptureChanged += new System.EventHandler(this.Genericaexibirfiladeproducao_MouseCaptureChanged);
+            this.Genericaexibirfiladeproducao.Click += new System.EventHandler(this.Genericaexibirfiladeproducao_Click);
             // 
             // Genericacadastrarprocesso
             // 

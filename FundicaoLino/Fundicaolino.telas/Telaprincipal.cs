@@ -16,6 +16,9 @@ namespace Fundicaolino.telas
         private int childFormNumber = 0;
         private int tela;
 
+        //Definição das tela globais
+        GnGridUser gridUsuario = new GnGridUser();
+
         public TelaPrincipal()
         {
             InitializeComponent();
@@ -120,10 +123,11 @@ namespace Fundicaolino.telas
 
                     break;
                 case 2:
-                    // GnGridUser gridUsuario = new GnGridUser();
-                    //gridUsuario.MdiParent = this;
-                    //panel4.Controls.Add(gridUsuario);
-                    //gridUsuario.Show();
+                    gridUsuario.Close();
+                    GnUsuarioNovo telaNovoUsuario = new GnUsuarioNovo();
+                    telaNovoUsuario.MdiParent = this ;
+                    panel4.Controls.Add(telaNovoUsuario);
+                    telaNovoUsuario.Show();
                     break;
                 case 3:
                     break;
@@ -138,53 +142,49 @@ namespace Fundicaolino.telas
             }
         }
 
-        private void Genericagerenciarusuario_Click(object sender, EventArgs e)
-        {
-            GnGridUser gridUsuario = new GnGridUser();
-            gridUsuario.MdiParent = this;
-            panel4.Controls.Add(gridUsuario);
-            gridUsuario.Show();
-            tela = 7;
-        }
+        
 
-        private void Geniricagerenciargrupo_Click(object sender, EventArgs e)
+        private void Genericagerenciargrupo_Click(object sender, EventArgs e)
         {
             tela = 1;
         }
 
-        private void GenericaControleProducao_Click(object sender, EventArgs e)
+        private void Genericagerenciarusuario_Click(object sender, EventArgs e)
         {
+            gridUsuario.MdiParent = this;
+            panel4.Controls.Add(gridUsuario);
+            gridUsuario.Show();
             tela = 2;
         }
 
-        private void GenericaControleQualidade_Click(object sender, EventArgs e)
+        private void GenericaControleProducao_Click(object sender, EventArgs e)
         {
             tela = 3;
         }
 
-        private void Genericacadastrarprocesso_Click(object sender, EventArgs e)
+        private void GenericaControleQualidade_Click(object sender, EventArgs e)
         {
             tela = 4;
         }
 
-        private void Genericacadastrarproduto_Click(object sender, EventArgs e)
+        private void Genericacadastrarprocesso_Click(object sender, EventArgs e)
         {
             tela = 5;
         }
 
-        private void Genericaexibirfiladeproducao_MouseCaptureChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Genericacontroleemtemporeal_Click(object sender, EventArgs e)
+        private void Genericacadastrarproduto_Click(object sender, EventArgs e)
         {
             tela = 6;
         }
 
-        private void Genericagerenciargrupo_Click(object sender, EventArgs e)
+        private void Genericaexibirfiladeproducao_Click(object sender, EventArgs e)
         {
+            tela = 7;
+        }
 
+        private void Genericacontroleemtemporeal_Click(object sender, EventArgs e)
+        {
+            tela = 8;
         }
     }
 }
