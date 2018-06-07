@@ -140,6 +140,7 @@
             this.SalvarNovoUsuario.TabIndex = 2;
             this.SalvarNovoUsuario.Text = "Salvar";
             this.SalvarNovoUsuario.UseVisualStyleBackColor = true;
+            this.SalvarNovoUsuario.Click += new System.EventHandler(this.SalvarNovoUsuario_Click);
             // 
             // BtAutoEncremento
             // 
