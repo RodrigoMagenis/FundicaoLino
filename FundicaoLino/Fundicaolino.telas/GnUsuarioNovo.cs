@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fundicaolino.negocio.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace Fundicaolino.telas
 {
     public partial class GnUsuarioNovo : Form
     {
+        public Usuario UsuarioSelecionado { get; set; }
+
         public GnUsuarioNovo()
         {
             InitializeComponent();
@@ -30,6 +33,13 @@ namespace Fundicaolino.telas
         private void GnUsuarioNovo_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void SalvarNovoUsuario_Click(object sender, EventArgs e)
+        {
+            Usuario usuario = new Usuario();
+
+            usuario.cdUsuario
         }
     }
 }
