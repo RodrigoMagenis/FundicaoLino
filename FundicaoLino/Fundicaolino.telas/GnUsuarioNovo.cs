@@ -40,19 +40,38 @@ namespace Fundicaolino.telas
             Usuario usuario = new Usuario();
             Boolean resultado;
             Int64 longConvertido;
+            Int32 intConvertido;
 
             resultado = Int64.TryParse(TxIdentificador.Text, out longConvertido);
             if (resultado)
             {
-                usuario.cdUsuario = longConvertido;
+                usuario.Id = longConvertido;
             }
             else
             {
-                usuario.cdUsuario = -1;
+                usuario.Id = -1;
             }
 
-            usuario.nmUsuario = TxNomeUsuario.Text;
-            usuario.cdmatricula = TxM
+            usuario.NmUsuario = TxNomeUsuario.Text;
+
+            resultado = Int32.TryParse(TxMatricula.Text, out intConvertido);
+            if (resultado)
+            {
+                usuario.Idmatricula = intConvertido;
+            }
+            else
+            {
+                usuario.Idmatricula = -1;
+            }
+
+            resultado = Int64.TryParse(TxGrupodeAcesso.Text, out longConvertido);
+            if (resultado)
+            {
+                usuario.Idgrupo = longConvertido;
+            }
+
+            
+            //TODO Chamada do gerenciador e inclusão no banco
         }
     }
 }
