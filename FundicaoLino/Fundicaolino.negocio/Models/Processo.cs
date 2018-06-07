@@ -12,6 +12,6 @@ namespace Fundicaolino.negocio.Models
     {
         public long     Id { get; set; }
         public String   NmProcesso { get; set; }
-        public Int16    EtapaProcesso { get; set; }
+        public Int16    EtapaProcesso { get; set; } // por exemplo inserir material; realizar inspeção
     }
 }
