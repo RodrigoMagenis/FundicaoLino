@@ -13,5 +13,6 @@ namespace Fundicaolino.negocio.Models
         public long Id { get; set; }
         public int  QtProduto { get; set; }
         public long IdProcesso { get; set; }
+        public DateTime DtProducao { get; set; }
     }
 }
