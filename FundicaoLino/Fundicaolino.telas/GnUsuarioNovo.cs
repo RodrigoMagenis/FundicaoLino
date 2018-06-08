@@ -37,6 +37,7 @@ namespace Fundicaolino.telas
 
         private void SalvarNovoUsuario_Click(object sender, EventArgs e)
         {
+           
             Usuario usuario = new Usuario();
             Boolean resultado;
             Int64 longConvertido;
