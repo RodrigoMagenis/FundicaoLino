@@ -36,6 +36,7 @@
             this.IdMatricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdGrupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NmLogin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FgUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gnGridFrameUser)).BeginInit();
             this.gnGridPanelUser.SuspendLayout();
@@ -58,7 +59,8 @@
             this.NmUsuario,
             this.IdMatricula,
             this.IdGrupo,
-            this.NmLogin});
+            this.NmLogin,
+            this.FgUsuario});
             this.gnGridFrameUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gnGridFrameUser.Location = new System.Drawing.Point(0, 0);
             this.gnGridFrameUser.Name = "gnGridFrameUser";
@@ -114,6 +116,13 @@
             this.NmLogin.Name = "NmLogin";
             this.NmLogin.ReadOnly = true;
             // 
+            // FgUsuario
+            // 
+            this.FgUsuario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FgUsuario.HeaderText = "Status";
+            this.FgUsuario.Name = "FgUsuario";
+            this.FgUsuario.ReadOnly = true;
+            // 
             // GridUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -146,5 +155,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn IdMatricula;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdGrupo;
         private System.Windows.Forms.DataGridViewTextBoxColumn NmLogin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FgUsuario;
     }
 }

@@ -30,8 +30,9 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdTipoProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdResponsavel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NmTipoProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VlPeso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdMateriais = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,8 +43,9 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
-            this.IdTipoProduto,
-            this.IdResponsavel});
+            this.NmTipoProduto,
+            this.VlPeso,
+            this.IdMateriais});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
@@ -59,21 +61,29 @@
             this.Id.Name = "Id";
             this.Id.ReadOnly = true;
             // 
-            // IdTipoProduto
+            // NmTipoProduto
             // 
-            this.IdTipoProduto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.IdTipoProduto.DataPropertyName = "IdTipoProduto";
-            this.IdTipoProduto.HeaderText = "Codigo produto";
-            this.IdTipoProduto.Name = "IdTipoProduto";
-            this.IdTipoProduto.ReadOnly = true;
+            this.NmTipoProduto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NmTipoProduto.DataPropertyName = "NmTipoProduto";
+            this.NmTipoProduto.HeaderText = "Nome Produto";
+            this.NmTipoProduto.Name = "NmTipoProduto";
+            this.NmTipoProduto.ReadOnly = true;
             // 
-            // IdResponsavel
+            // VlPeso
             // 
-            this.IdResponsavel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.IdResponsavel.DataPropertyName = "IdResponsavel";
-            this.IdResponsavel.HeaderText = "Codigo responsavel";
-            this.IdResponsavel.Name = "IdResponsavel";
-            this.IdResponsavel.ReadOnly = true;
+            this.VlPeso.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.VlPeso.DataPropertyName = "VlPeso";
+            this.VlPeso.HeaderText = "Peso";
+            this.VlPeso.Name = "VlPeso";
+            this.VlPeso.ReadOnly = true;
+            // 
+            // IdMateriais
+            // 
+            this.IdMateriais.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.IdMateriais.DataPropertyName = "IdMateriais";
+            this.IdMateriais.HeaderText = "Codigo Material";
+            this.IdMateriais.Name = "IdMateriais";
+            this.IdMateriais.ReadOnly = true;
             // 
             // GridProduto
             // 
@@ -94,7 +104,8 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdTipoProduto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdResponsavel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NmTipoProduto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VlPeso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdMateriais;
     }
 }
