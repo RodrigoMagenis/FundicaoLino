@@ -38,8 +38,40 @@ namespace Fundicaolino.telas
         private void SalvarNovoUsuario_Click(object sender, EventArgs e)
         {
             Usuario usuario = new Usuario();
+            Boolean resultado;
+            Int64 longConvertido;
+            Int32 intConvertido;
 
-            usuario.cdUsuario
+            resultado = Int64.TryParse(TxIdentificador.Text, out longConvertido);
+            if (resultado)
+            {
+                usuario.Id = longConvertido;
+            }
+            else
+            {
+                usuario.Id = -1;
+            }
+
+            usuario.NmUsuario = TxNomeUsuario.Text;
+
+            resultado = Int32.TryParse(TxMatricula.Text, out intConvertido);
+            if (resultado)
+            {
+                usuario.Idmatricula = intConvertido;
+            }
+            else
+            {
+                usuario.Idmatricula = -1;
+            }
+
+            resultado = Int64.TryParse(TxGrupodeAcesso.Text, out longConvertido);
+            if (resultado)
+            {
+                usuario.Idgrupo = longConvertido;
+            }
+
+            
+            //TODO Chamada do gerenciador e inclusão no banco
         }
     }
 }

@@ -10,11 +10,11 @@ namespace Fundicaolino.negocio.Models
     [Table(name: "Usuario")]
     public class Usuario
     {
-        public long cdUsuario { get; set; }
-        public string nmUsuario { get; set; }
-        public int cdmatricula { get; set; }
-        public long cdgrupo { get; set; }
-        public string nmLogin { get; set; }
-        public int cdSenha { get; set; }
+        public long Id { get; set; }
+        public string NmUsuario { get; set; }
+        public int Idmatricula { get; set; }
+        public long Idgrupo { get; set; }
+        public string NmLogin { get; set; }
+        public int IdSenha { get; set; }
     }
 }

@@ -11,7 +11,7 @@ namespace Fundicaolino.negocio.Models
     public class Grupo
     {
         public string NomeGrupo { get; set; }
-        public long   CdGrupo { get; set; }
+        public long   Id { get; set; }
         public Int16  FgGrupo { get; set; }
         public Int16  Permissaousuario { get; set; }
         public Int16  Permissaoproducao { get; set; }
