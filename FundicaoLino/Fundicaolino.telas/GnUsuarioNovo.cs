@@ -1,4 +1,5 @@
-﻿using Fundicaolino.negocio.Models;
+﻿using Fundicaolino.negocio;
+using Fundicaolino.negocio.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,6 +39,66 @@ namespace Fundicaolino.telas
         private void SalvarNovoUsuario_Click(object sender, EventArgs e)
         {
            
+            Usuario usuario = new Usuario();
+            Boolean resultado;
+            Int64 longConvertido;
+            Int32 intConvertido;
+
+            resultado = Int64.TryParse(TxIdentificador.Text, out longConvertido);
+            if (resultado)
+            {
+                usuario.Id = longConvertido;
+            }
+            else
+            {
+                usuario.Id = -1;
+            }
+
+            usuario.NmUsuario = TxNomeUsuario.Text;
+
+            resultado = Int32.TryParse(TxMatricula.Text, out intConvertido);
+            if (resultado)
+            {
+                usuario.Idmatricula = intConvertido;
+            }
+            else
+            {
+                usuario.Idmatricula = -1;
+            }
+
+            resultado = Int64.TryParse(TxGrupodeAcesso.Text, out longConvertido);
+            if (resultado)
+            {
+                usuario.Idgrupo = longConvertido;
+            }
+
+            Validacao validacao;
+            if (UsuarioSelecionado == null)
+            {
+                validacao = Program.Gerenciador.AdicionarUsuario(usuario);
+            }
+            else
+            {
+                validacao = Program.Gerenciador.AlterarUsuario(usuario);
+            }
+
+            if (!validacao.Valido)
+            {
+                String mensagemValidacao = "";
+                foreach(var chave in validacao.Mensagens.Keys)
+                {
+                    String msg = validacao.Mensagens[chave];
+                    mensagemValidacao += msg;
+                    mensagemValidacao += Environment.NewLine;
+                }
+                MessageBox.Show(mensagemValidacao);
+            }
+            else
+            {
+                MessageBox.Show("Cliente salvo com sucesso");
+            }
+
+            this.Close();
         }
     }
 }
