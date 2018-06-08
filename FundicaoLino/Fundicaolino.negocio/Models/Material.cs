@@ -7,11 +7,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Fundicaolino.negocio.Models
 {
-    [Table(name: "Produto")]
-    public class Produto
+    [Table(name: "Material")]
+    public class Material
     {
-        public long CdProduto { get; set; }
-        public long CdTipoProduto { get; set; }
-        public long CdResponsavel { get; set; }
+        public long    CdMaterial { get; set; }
+        public string  NmMaterial { get; set; }
+        public decimal VlPesoMaterial { get; set; }
     }
 }

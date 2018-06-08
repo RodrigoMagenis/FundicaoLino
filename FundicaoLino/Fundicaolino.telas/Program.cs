@@ -16,7 +16,7 @@ namespace Fundicaolino.telas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Telaprincipal());
+            Application.Run(new TelaLogin());
         }
     }
 }

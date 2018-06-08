@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fundicaolino.negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,12 +11,18 @@ using System.Windows.Forms;
 
 namespace Fundicaolino.telas
 {
-    public partial class Telaprincipal : Form
+    public partial class TelaPrincipal : Form
     {
         private int childFormNumber = 0;
         private int tela;
 
-        public Telaprincipal()
+        //Definição das tela globais
+         GnGridGroup gridGroup = new GnGridGroup();/*Tela = 1*/
+         GnGridUser gridUsuario = new GnGridUser();/*Tela = 2*/                                   
+         GnCadProducao gridCadastraProducao = new GnCadProducao();/*Tela = 5*/
+         GnFiladeProducao gridFilaProducao = new GnFiladeProducao();  /*Tela = 8*/
+
+        public TelaPrincipal()
         {
             InitializeComponent();
         }
@@ -114,66 +121,90 @@ namespace Fundicaolino.telas
             switch (tela)
                 {
                 case 1:
-                    gnGridUser teste = new gnGridUser();
-                    teste.Show();
+                    
+
                     break;
                 case 2:
+                    gridUsuario.Close();
+                    GnUsuarioNovo telaNovoUsuario = new GnUsuarioNovo();
+                    telaNovoUsuario.MdiParent = this ;
+                    panel4.Controls.Add(telaNovoUsuario);
+                    telaNovoUsuario.Show();
                     break;
                 case 3:
                     break;
                 case 4:
                     break;
-                case 5:
+                case 5:                    
                     break;
                 case 6:
                     break;
                 case 7:
                     break;
+                case 8:
+                    break;
+                case 9:
+                    break;
             }
+        }
+
+        
+
+        private void Genericagerenciargrupo_Click(object sender, EventArgs e)
+        {
+            gridGroup.MdiParent = this;
+            panel4.Controls.Add(gridGroup);
+            gridGroup.Show();
+            tela = 1;
         }
 
         private void Genericagerenciarusuario_Click(object sender, EventArgs e)
         {
-            gnGridUser gridUsuario = new gnGridUser();
             gridUsuario.MdiParent = this;
             panel4.Controls.Add(gridUsuario);
             gridUsuario.Show();
-            tela = 7;
-        }
-
-        private void Geniricagerenciargrupo_Click(object sender, EventArgs e)
-        {
-            tela = 1;
+            tela = 2;
         }
 
         private void GenericaControleProducao_Click(object sender, EventArgs e)
         {
-            tela = 2;
+            tela = 3;
         }
 
         private void GenericaControleQualidade_Click(object sender, EventArgs e)
         {
-            tela = 3;
+            tela = 4;
         }
-
+        private void btCadastraProducao_Click(object sender, EventArgs e)
+        {
+            gridCadastraProducao.MdiParent = this;
+            panel4.Controls.Add(gridCadastraProducao);
+            gridCadastraProducao.Show();
+            tela = 5;
+        }
         private void Genericacadastrarprocesso_Click(object sender, EventArgs e)
         {
-            tela = 4;
+            tela = 6;
         }
 
         private void Genericacadastrarproduto_Click(object sender, EventArgs e)
         {
-            tela = 5;
+            tela = 7;
         }
 
-        private void Genericaexibirfiladeproducao_MouseCaptureChanged(object sender, EventArgs e)
+        private void Genericaexibirfiladeproducao_Click(object sender, EventArgs e)
         {
-
+            gridFilaProducao.MdiParent = this;
+            panel4.Controls.Add(gridFilaProducao);
+            gridFilaProducao.Show();
+            tela = 8;
         }
 
         private void Genericacontroleemtemporeal_Click(object sender, EventArgs e)
         {
-            tela = 6;
+            tela = 9;
         }
+
+      
     }
 }

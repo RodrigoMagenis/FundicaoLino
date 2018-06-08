@@ -45,22 +45,82 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="gnGridUser.cs">
+    <Compile Include="GnCadProducao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="gnGridUser.Designer.cs">
-      <DependentUpon>gnGridUser.cs</DependentUpon>
+    <Compile Include="GnCadProducao.Designer.cs">
+      <DependentUpon>GnCadProducao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GnFiladeProducao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GnFiladeProducao.Designer.cs">
+      <DependentUpon>GnFiladeProducao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GnGerProcesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GnGerProcesso.Designer.cs">
+      <DependentUpon>GnGerProcesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GnGridGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GnGridGroup.Designer.cs">
+      <DependentUpon>GnGridGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GnGridUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GnGridUser.Designer.cs">
+      <DependentUpon>GnGridUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GnGrupoNovo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GnGrupoNovo.Designer.cs">
+      <DependentUpon>GnGrupoNovo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GnUsuarioNovo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GnUsuarioNovo.Designer.cs">
+      <DependentUpon>GnUsuarioNovo.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Telaprincipal.cs">
+    <Compile Include="TelaLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telaprincipal.Designer.cs">
-      <DependentUpon>Telaprincipal.cs</DependentUpon>
+    <Compile Include="TelaLogin.Designer.cs">
+      <DependentUpon>TelaLogin.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="gnGridUser.resx">
-      <DependentUpon>gnGridUser.cs</DependentUpon>
+    <Compile Include="TelaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaPrincipal.Designer.cs">
+      <DependentUpon>TelaPrincipal.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GnCadProducao.resx">
+      <DependentUpon>GnCadProducao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GnFiladeProducao.resx">
+      <DependentUpon>GnFiladeProducao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GnGerProcesso.resx">
+      <DependentUpon>GnGerProcesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GnGridGroup.resx">
+      <DependentUpon>GnGridGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GnGridUser.resx">
+      <DependentUpon>GnGridUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GnGrupoNovo.resx">
+      <DependentUpon>GnGrupoNovo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GnUsuarioNovo.resx">
+      <DependentUpon>GnUsuarioNovo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -71,8 +131,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Telaprincipal.resx">
-      <DependentUpon>Telaprincipal.cs</DependentUpon>
+    <EmbeddedResource Include="TelaLogin.resx">
+      <DependentUpon>TelaLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaPrincipal.resx">
+      <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -86,6 +149,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Fundicaolino.negocio\Fundicaolino.negocio.csproj">
+      <Project>{D837CFE8-F96C-4CBF-914D-25A4D9D7BB24}</Project>
+      <Name>Fundicaolino.negocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

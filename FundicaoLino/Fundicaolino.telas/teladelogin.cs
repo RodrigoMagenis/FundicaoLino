@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace Fundicaolino.telas
 {
-    public partial class GnGridUser : Form
+    public partial class teladelogin : Form
     {
-        public GnGridUser()
+        public teladelogin()
         {
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void NomeUsuario_Click(object sender, EventArgs e)
         {
 
         }

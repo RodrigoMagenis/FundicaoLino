@@ -1,18 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Fundicaolino.negocio.Models
 {
+    [Table(name: "Usuario")]
     public class Usuario
     {
-        private long cdUsuario { get; set; }
-        private string nmUsuario { get; set; }
-        private int cdmatricula { get; set; }
-        private long cdgrupo { get; set; }
-        private string nmLogin { get; set; }
-        private int cdSenha { get; set; }
+        public long cdUsuario { get; set; }
+        public string nmUsuario { get; set; }
+        public int cdmatricula { get; set; }
+        public long cdgrupo { get; set; }
+        public string nmLogin { get; set; }
+        public int cdSenha { get; set; }
     }
 }

@@ -7,11 +7,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Fundicaolino.negocio.Models
 {
-    [Table(name: "Produto")]
-    public class Produto
+    [Table(name: "Producao")]
+    public class Producao
     {
-        public long CdProduto { get; set; }
-        public long CdTipoProduto { get; set; }
-        public long CdResponsavel { get; set; }
+        public long CdProducao { get; set; }
+        public int  QtProduto { get; set; }
+        public long CdProcesso { get; set; }
     }
 }
