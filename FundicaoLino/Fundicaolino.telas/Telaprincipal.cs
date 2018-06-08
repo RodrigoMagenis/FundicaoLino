@@ -17,9 +17,9 @@ namespace Fundicaolino.telas
         private int tela;
 
         //Definição das tela globais
-         GnGridGroup gridGroup = new GnGridGroup();/*Tela = 1*/
-         GnGridUser gridUsuario = new GnGridUser();/*Tela = 2*/                                   
-         GnCadProducao gridCadastraProducao = new GnCadProducao();/*Tela = 5*/
+         GridGroup gridGroup = new GridGroup();/*Tela = 1*/
+         GridUser gridUsuario = new GridUser();/*Tela = 2*/                                   
+        /*Tela = 5*/
          GnFiladeProducao gridFilaProducao = new GnFiladeProducao();  /*Tela = 8*/
 
         public TelaPrincipal()
@@ -135,9 +135,17 @@ namespace Fundicaolino.telas
                     break;
                 case 4:
                     break;
-                case 5:                    
+                case 5:
+                    GnCadProducao CadastraNovaProducao = new GnCadProducao();
+                    CadastraNovaProducao.MdiParent = this;
+                    panel4.Controls.Add(CadastraNovaProducao);
+                    CadastraNovaProducao.Show();
                     break;
                 case 6:
+                    GnGerProcesso cadastraNovoProcesso = new GnGerProcesso();
+                    cadastraNovoProcesso.MdiParent = this;
+                    panel4.Controls.Add(cadastraNovoProcesso);
+                    cadastraNovoProcesso.Show();
                     break;
                 case 7:
                     break;
@@ -177,9 +185,7 @@ namespace Fundicaolino.telas
         }
         private void btCadastraProducao_Click(object sender, EventArgs e)
         {
-            gridCadastraProducao.MdiParent = this;
-            panel4.Controls.Add(gridCadastraProducao);
-            gridCadastraProducao.Show();
+            
             tela = 5;
         }
         private void Genericacadastrarprocesso_Click(object sender, EventArgs e)

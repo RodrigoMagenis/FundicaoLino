@@ -63,17 +63,17 @@
     <Compile Include="GnGerProcesso.Designer.cs">
       <DependentUpon>GnGerProcesso.cs</DependentUpon>
     </Compile>
-    <Compile Include="GnGridGroup.cs">
+    <Compile Include="GridGroup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GnGridGroup.Designer.cs">
-      <DependentUpon>GnGridGroup.cs</DependentUpon>
+    <Compile Include="GridGroup.Designer.cs">
+      <DependentUpon>GridGroup.cs</DependentUpon>
     </Compile>
-    <Compile Include="GnGridUser.cs">
+    <Compile Include="GridUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GnGridUser.Designer.cs">
-      <DependentUpon>GnGridUser.cs</DependentUpon>
+    <Compile Include="GridUser.Designer.cs">
+      <DependentUpon>GridUser.cs</DependentUpon>
     </Compile>
     <Compile Include="GnGrupoNovo.cs">
       <SubType>Form</SubType>
@@ -86,6 +86,24 @@
     </Compile>
     <Compile Include="GnUsuarioNovo.Designer.cs">
       <DependentUpon>GnUsuarioNovo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridProcesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GridProcesso.Designer.cs">
+      <DependentUpon>GridProcesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridProducao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GridProducao.Designer.cs">
+      <DependentUpon>GridProducao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GridProduto.Designer.cs">
+      <DependentUpon>GridProduto.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -110,17 +128,26 @@
     <EmbeddedResource Include="GnGerProcesso.resx">
       <DependentUpon>GnGerProcesso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GnGridGroup.resx">
-      <DependentUpon>GnGridGroup.cs</DependentUpon>
+    <EmbeddedResource Include="GridGroup.resx">
+      <DependentUpon>GridGroup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GnGridUser.resx">
-      <DependentUpon>GnGridUser.cs</DependentUpon>
+    <EmbeddedResource Include="GridUser.resx">
+      <DependentUpon>GridUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GnGrupoNovo.resx">
       <DependentUpon>GnGrupoNovo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GnUsuarioNovo.resx">
       <DependentUpon>GnUsuarioNovo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridProcesso.resx">
+      <DependentUpon>GridProcesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridProducao.resx">
+      <DependentUpon>GridProducao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridProduto.resx">
+      <DependentUpon>GridProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
