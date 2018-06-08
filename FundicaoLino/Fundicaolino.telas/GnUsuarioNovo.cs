@@ -44,15 +44,15 @@ namespace Fundicaolino.telas
             Int64 longConvertido;
             Int32 intConvertido;
 
-            resultado = Int64.TryParse(TxIdentificador.Text, out longConvertido);
-            if (resultado)
-            {
-                usuario.Id = longConvertido;
-            }
-            else
-            {
-                usuario.Id = -1;
-            }
+            //resultado = int64.tryparse(txidentificador.text, out longconvertido);
+            //if (resultado)
+            //{
+            //    usuario.id = longconvertido;
+            //}
+            //else
+            //{
+            //    usuario.id = -1;
+            //}
 
             usuario.NmUsuario = TxNomeUsuario.Text;
 
