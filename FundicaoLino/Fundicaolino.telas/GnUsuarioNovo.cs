@@ -1,4 +1,5 @@
-﻿using Fundicaolino.negocio.Models;
+﻿using Fundicaolino.negocio;
+using Fundicaolino.negocio.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -71,8 +72,33 @@ namespace Fundicaolino.telas
                 usuario.Idgrupo = longConvertido;
             }
 
-            
-            //TODO Chamada do gerenciador e inclusão no banco
+            Validacao validacao;
+            if (UsuarioSelecionado == null)
+            {
+                validacao = Program.Gerenciador.AdicionarUsuario(usuario);
+            }
+            else
+            {
+                validacao = Program.Gerenciador.AlterarUsuario(usuario);
+            }
+
+            if (!validacao.Valido)
+            {
+                String mensagemValidacao = "";
+                foreach(var chave in validacao.Mensagens.Keys)
+                {
+                    String msg = validacao.Mensagens[chave];
+                    mensagemValidacao += msg;
+                    mensagemValidacao += Environment.NewLine;
+                }
+                MessageBox.Show(mensagemValidacao);
+            }
+            else
+            {
+                MessageBox.Show("Cliente salvo com sucesso");
+            }
+
+            this.Close();
         }
     }
 }
