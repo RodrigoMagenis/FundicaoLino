@@ -16,16 +16,6 @@ namespace Fundicaolino.telas
         private int childFormNumber = 0;
         private int tela;
 
-        //Definição das tela globais
-         GridGrupo gridGrupo = new GridGrupo();/*Tela = 1*/
-         GridUsuario gridUsuario = new GridUsuario();/*Tela = 2*/
-         //                                            /*Tela = 3*/
-           //                                          /*Tela = 4*/
-        GridProducao gridProducao = new GridProducao(); /*Tela = 5*/
-        GridProcesso gridProcesso = new GridProcesso();/*Tela = 6*/
-        GridProduto gridProduto = new GridProduto();/*Tela = 7*/
-        GridFiladeProducao gridFilaProducao = new GridFiladeProducao();  /*Tela = 8*/
-
         public TelaPrincipal()
         {
             InitializeComponent();
@@ -125,11 +115,14 @@ namespace Fundicaolino.telas
             switch (tela)
                 {
                 case 1:
-                    
-
+                    //gridGrupo.Close();
+                    GnGrupoNovo telaNovoGrupo = new GnGrupoNovo();
+                    telaNovoGrupo.MdiParent = this;
+                    panel4.Controls.Add(telaNovoGrupo);
+                    telaNovoGrupo.Show();
                     break;
                 case 2:
-                    gridUsuario.Close();
+                    //gridUsuario.Close();
                     GnUsuarioNovo telaNovoUsuario = new GnUsuarioNovo();
                     telaNovoUsuario.MdiParent = this ;
                     panel4.Controls.Add(telaNovoUsuario);
@@ -142,21 +135,21 @@ namespace Fundicaolino.telas
                     ///////////////////////////////////////////////////////////////////////FAZER///////////////////////////////////////////////////
                     break;
                 case 5:
-                    gridProducao.Close();
+                    //gridProducao.Close();
                     GnCadProducao CadastraNovaProducao = new GnCadProducao();
                     CadastraNovaProducao.MdiParent = this;
                     panel4.Controls.Add(CadastraNovaProducao);
                     CadastraNovaProducao.Show();
                     break;
                 case 6:
-                    gridProcesso.Close();
+                    //gridProcesso.Close();
                     GnGerProcesso cadastraNovoProcesso = new GnGerProcesso();
                     cadastraNovoProcesso.MdiParent = this;
                     panel4.Controls.Add(cadastraNovoProcesso);
                     cadastraNovoProcesso.Show();
                     break;
                 case 7:
-                    gridProduto.Close();
+                    //gridProduto.Close();
                     CadastraTipoProduto cadastraNovoProduto = new CadastraTipoProduto();
                     cadastraNovoProduto.MdiParent = this;
                     panel4.Controls.Add(cadastraNovoProduto);
@@ -171,10 +164,11 @@ namespace Fundicaolino.telas
             }
         }
 
-        
+
 
         private void Genericagerenciargrupo_Click(object sender, EventArgs e)
         {
+            GridGrupo gridGrupo = new GridGrupo();
             gridGrupo.MdiParent = this;
             panel4.Controls.Add(gridGrupo);
             gridGrupo.Show();
@@ -183,6 +177,7 @@ namespace Fundicaolino.telas
 
         private void Genericagerenciarusuario_Click(object sender, EventArgs e)
         {
+            GridUsuario gridUsuario = new GridUsuario();
             gridUsuario.MdiParent = this;
             panel4.Controls.Add(gridUsuario);
             gridUsuario.Show();
@@ -191,7 +186,7 @@ namespace Fundicaolino.telas
 
         private void GenericaControleProducao_Click(object sender, EventArgs e)
         {
-           
+            ///////////////////////////////////////////////////////////////////////FAZER///////////////////////////////////////////////////
             tela = 3;
         }
 
@@ -202,6 +197,7 @@ namespace Fundicaolino.telas
         }
         private void btCadastraProducao_Click(object sender, EventArgs e)
         {
+            GridProducao gridProducao = new GridProducao();
             gridProducao.MdiParent = this;
             panel4.Controls.Add(gridProducao);
             gridProducao.Show();
@@ -209,6 +205,7 @@ namespace Fundicaolino.telas
         }
         private void Genericacadastrarprocesso_Click(object sender, EventArgs e)
         {
+            GridProcesso gridProcesso = new GridProcesso();
             gridProcesso.MdiParent = this;
             panel4.Controls.Add(gridProcesso);
             gridProcesso.Show();
@@ -217,6 +214,7 @@ namespace Fundicaolino.telas
 
         private void Genericacadastrarproduto_Click(object sender, EventArgs e)
         {
+            GridProduto gridProduto = new GridProduto();
             gridProduto.MdiParent = this;
             panel4.Controls.Add(gridProduto);
             gridProduto.Show();
@@ -225,6 +223,7 @@ namespace Fundicaolino.telas
 
         private void Genericaexibirfiladeproducao_Click(object sender, EventArgs e)
         {
+            GridFiladeProducao gridFilaProducao = new GridFiladeProducao();
             gridFilaProducao.MdiParent = this;
             panel4.Controls.Add(gridFilaProducao);
             gridFilaProducao.Show();
