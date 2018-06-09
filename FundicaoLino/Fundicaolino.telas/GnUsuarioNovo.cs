@@ -82,23 +82,33 @@ namespace Fundicaolino.telas
                 validacao = Program.Gerenciador.AlterarUsuario(usuario);
             }
 
-            if (!validacao.Valido)
+            try
             {
-                String mensagemValidacao = "";
-                foreach(var chave in validacao.Mensagens.Keys)
+
+                if (!validacao.Valido)
                 {
-                    String msg = validacao.Mensagens[chave];
-                    mensagemValidacao += msg;
-                    mensagemValidacao += Environment.NewLine;
+                    String mensagemValidacao = "";
+                    foreach (var chave in validacao.Mensagens.Keys)
+                    {
+                        String msg = validacao.Mensagens[chave];
+                        mensagemValidacao += msg;
+                        mensagemValidacao += Environment.NewLine;
+                    }
+                    MessageBox.Show(mensagemValidacao);
                 }
-                MessageBox.Show(mensagemValidacao);
-            }
-            else
-            {
-                MessageBox.Show("Cliente salvo com sucesso");
+
+                else
+                {
+                    MessageBox.Show("Usuário salvo com sucesso");
+                    this.Close();
+                }
+
             }
 
-            this.Close();
+            catch
+            {
+                MessageBox.Show("Ocorreu uma falha grave, contate um administrador");
+            }
         }
     }
 }
