@@ -51,7 +51,7 @@
             // 
             this.gnGridFrameUser.AllowUserToAddRows = false;
             this.gnGridFrameUser.AllowUserToDeleteRows = false;
-            this.gnGridFrameUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gnGridFrameUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.gnGridFrameUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gnGridFrameUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -65,7 +65,7 @@
             this.gnGridFrameUser.Name = "gnGridFrameUser";
             this.gnGridFrameUser.ReadOnly = true;
             this.gnGridFrameUser.Size = new System.Drawing.Size(557, 409);
-            this.gnGridFrameUser.TabIndex = 0;
+            this.gnGridFrameUser.TabIndex = 1;
             // 
             // Id
             // 
@@ -97,6 +97,7 @@
             this.IdGrupo.HeaderText = "Grupo";
             this.IdGrupo.Name = "IdGrupo";
             this.IdGrupo.ReadOnly = true;
+            this.IdGrupo.Width = 61;
             // 
             // NmLogin
             // 
@@ -104,6 +105,7 @@
             this.NmLogin.HeaderText = "Login";
             this.NmLogin.Name = "NmLogin";
             this.NmLogin.ReadOnly = true;
+            this.NmLogin.Width = 58;
             // 
             // FgUsuario
             // 
