@@ -40,7 +40,6 @@
             this.gnGridFrameUser.AllowUserToAddRows = false;
             this.gnGridFrameUser.AllowUserToDeleteRows = false;
             this.gnGridFrameUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.gnGridFrameUser.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.gnGridFrameUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gnGridFrameUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
