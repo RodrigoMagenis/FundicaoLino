@@ -78,9 +78,42 @@ namespace Fundicaolino.negocio
             }
             return validacao;
         }
+        public Validacao AdicionarGrupo(Grupo grupo)
+        {
+            Validacao validacao = new Validacao();
+            if (String.IsNullOrEmpty(grupo.NomeGrupo))
+            {
+                validacao.Mensagens.Add("nome", "Requer um nome de Grupo");
+            }
+            if (validacao.Valido)
+            {
+                this.banco.Grupos.Add(grupo);
+                this.banco.SaveChanges();
+            }
+            return validacao;
+        }
+        public Validacao AlterarGrupo (Grupo GrupoAlterado)
+        {
+            Validacao validacao = new Validacao();
+            Grupo GrupoBanco = BuscaGrupoPorId(GrupoAlterado.Id);
+            if (String.IsNullOrEmpty(GrupoAlterado.NomeGrupo))
+            {
+                validacao.Mensagens.Add("nome", "Requer um nome de Grupo");
+            }
+            if (validacao.Valido)
+            {
+                GrupoBanco.NomeGrupo = GrupoAlterado.NomeGrupo;
+                this.banco.SaveChanges();
+            }
+            return validacao;
+        }
         public Usuario BuscaUsuarioPorId(long Id)
         {
             return this.banco.Usuarios.Where(u => u.Id == Id).FirstOrDefault();
+        }
+        public Grupo BuscaGrupoPorId(long Id)
+        {
+            return this.banco.Grupos.Where(g => g.Id == Id).FirstOrDefault();
         }
         
     }
