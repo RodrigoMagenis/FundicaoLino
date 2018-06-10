@@ -30,13 +30,13 @@
         {
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.gnGridFrameUser = new System.Windows.Forms.DataGridView();
-            this.gnGridPanelUser = new System.Windows.Forms.Panel();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NmUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdMatricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdGrupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NmLogin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FgUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gnGridPanelUser = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gnGridFrameUser)).BeginInit();
             this.gnGridPanelUser.SuspendLayout();
@@ -52,7 +52,6 @@
             this.gnGridFrameUser.AllowUserToAddRows = false;
             this.gnGridFrameUser.AllowUserToDeleteRows = false;
             this.gnGridFrameUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gnGridFrameUser.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.gnGridFrameUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gnGridFrameUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -67,16 +66,6 @@
             this.gnGridFrameUser.ReadOnly = true;
             this.gnGridFrameUser.Size = new System.Drawing.Size(557, 409);
             this.gnGridFrameUser.TabIndex = 0;
-            // 
-            // gnGridPanelUser
-            // 
-            this.gnGridPanelUser.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.gnGridPanelUser.Controls.Add(this.gnGridFrameUser);
-            this.gnGridPanelUser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gnGridPanelUser.Location = new System.Drawing.Point(0, 0);
-            this.gnGridPanelUser.Name = "gnGridPanelUser";
-            this.gnGridPanelUser.Size = new System.Drawing.Size(557, 409);
-            this.gnGridPanelUser.TabIndex = 0;
             // 
             // Id
             // 
@@ -122,6 +111,16 @@
             this.FgUsuario.HeaderText = "Status";
             this.FgUsuario.Name = "FgUsuario";
             this.FgUsuario.ReadOnly = true;
+            // 
+            // gnGridPanelUser
+            // 
+            this.gnGridPanelUser.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.gnGridPanelUser.Controls.Add(this.gnGridFrameUser);
+            this.gnGridPanelUser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gnGridPanelUser.Location = new System.Drawing.Point(0, 0);
+            this.gnGridPanelUser.Name = "gnGridPanelUser";
+            this.gnGridPanelUser.Size = new System.Drawing.Size(557, 409);
+            this.gnGridPanelUser.TabIndex = 0;
             // 
             // GridUsuario
             // 
