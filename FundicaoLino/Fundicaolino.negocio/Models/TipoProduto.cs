@@ -10,10 +10,10 @@ namespace Fundicaolino.negocio.Models
     [Table(name: "TipoProduto")]
     public class TipoProduto
     {
-        public long    Id { get; set; }
-        public string  NmTipoProduto { get; set; }
-        public decimal VlPeso { get; set; }
-        public long    IdMateriais { get; set; }
+        public long                  Id { get; set; }
+        public string                NmTipoProduto { get; set; }
+        public decimal               VlPeso { get; set; }
+        public ICollection<Material> Materiais { get; set; }
     }
 
 }
