@@ -29,10 +29,10 @@ namespace Fundicaolino.negocio
                 validacao.Mensagens.Add("matricula", "Essa matricula já está em uso");
             }
 
-            if (String.IsNullOrEmpty(usuario.Idgrupo.ToString()))
-            {
-                validacao.Mensagens.Add("grupo", "Requer um grupo de acesso");
-            }
+            //if (String.IsNullOrEmpty(usuario.GrupoUsuario.Id.ToString()))
+            //{
+            //    validacao.Mensagens.Add("grupo", "Requer um grupo de acesso");
+            //}
 
             if (validacao.Valido)
             {

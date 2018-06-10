@@ -13,5 +13,6 @@ namespace Fundicaolino.negocio.Models
         public long     Id { get; set; }
         public String   NmProcesso { get; set; }
         // #Feature Inserir uma coleção de etapas de processos que possuam id e nome
+        // #Feature Inserir Status do processo (ativo ou não)
     }
 }
