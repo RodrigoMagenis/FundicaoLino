@@ -39,6 +39,7 @@
             this.Genericacontrole = new System.Windows.Forms.Label();
             this.GenericaControleQualidade = new System.Windows.Forms.Button();
             this.Genericaexibirfiladeproducao = new System.Windows.Forms.Button();
+            this.btCadastraProducao = new System.Windows.Forms.Button();
             this.Genericacadastrarprocesso = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.GenericaControleProducao = new System.Windows.Forms.Button();
@@ -49,7 +50,6 @@
             this.GenericaEditar = new System.Windows.Forms.Button();
             this.GeniricaAlterarsituacao = new System.Windows.Forms.Button();
             this.GenericoNovo = new System.Windows.Forms.Button();
-            this.btCadastraProducao = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -162,6 +162,16 @@
             this.Genericaexibirfiladeproducao.UseVisualStyleBackColor = true;
             this.Genericaexibirfiladeproducao.Click += new System.EventHandler(this.Genericaexibirfiladeproducao_Click);
             // 
+            // btCadastraProducao
+            // 
+            this.btCadastraProducao.Location = new System.Drawing.Point(38, 259);
+            this.btCadastraProducao.Name = "btCadastraProducao";
+            this.btCadastraProducao.Size = new System.Drawing.Size(163, 23);
+            this.btCadastraProducao.TabIndex = 8;
+            this.btCadastraProducao.Text = "Cadastrar Produção";
+            this.btCadastraProducao.UseVisualStyleBackColor = true;
+            this.btCadastraProducao.Click += new System.EventHandler(this.btCadastraProducao_Click);
+            // 
             // Genericacadastrarprocesso
             // 
             this.Genericacadastrarprocesso.Location = new System.Drawing.Point(38, 288);
@@ -264,16 +274,6 @@
             this.GenericoNovo.Text = "Novo";
             this.GenericoNovo.UseVisualStyleBackColor = true;
             this.GenericoNovo.Click += new System.EventHandler(this.GenericoNovo_Click);
-            // 
-            // btCadastraProducao
-            // 
-            this.btCadastraProducao.Location = new System.Drawing.Point(38, 259);
-            this.btCadastraProducao.Name = "btCadastraProducao";
-            this.btCadastraProducao.Size = new System.Drawing.Size(163, 23);
-            this.btCadastraProducao.TabIndex = 8;
-            this.btCadastraProducao.Text = "Cadastrar Produção";
-            this.btCadastraProducao.UseVisualStyleBackColor = true;
-            this.btCadastraProducao.Click += new System.EventHandler(this.btCadastraProducao_Click);
             // 
             // TelaPrincipal
             // 

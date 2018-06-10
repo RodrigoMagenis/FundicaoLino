@@ -10,8 +10,8 @@ namespace Fundicaolino.negocio.Models
     [Table(name: "Produto")]
     public class Produto
     {
-        public long CdProduto { get; set; }
-        public long CdTipoProduto { get; set; }
-        public long CdResponsavel { get; set; }
+        public long                         Id { get; set; }
+        public TipoProduto                  TipoProduto { get; set; }
+        public virtual ICollection<Usuario> Responsavel { get; set; }
     }
 }
