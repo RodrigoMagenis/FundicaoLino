@@ -67,10 +67,10 @@ namespace Fundicaolino.telas
             }
 
             resultado = Int64.TryParse(TxGrupodeAcesso.Text, out longConvertido);
-            if (resultado)
-            {
-                usuario.Idgrupo = longConvertido;
-            }
+            //if (resultado)
+            //{
+            //    usuario.Idgrupo = longConvertido;
+            //}
 
             Validacao validacao;
             if (UsuarioSelecionado == null)
