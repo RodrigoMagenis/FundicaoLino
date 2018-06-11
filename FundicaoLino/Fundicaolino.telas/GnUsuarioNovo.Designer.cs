@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GnUsuarioNovo));
             this.NovoUsuario = new System.Windows.Forms.Label();
             this.NovoIdentificador = new System.Windows.Forms.Label();
             this.NovoNomeUsuario = new System.Windows.Forms.Label();
@@ -36,132 +37,123 @@
             this.TxIdentificador = new System.Windows.Forms.TextBox();
             this.TxNomeUsuario = new System.Windows.Forms.TextBox();
             this.TxMatricula = new System.Windows.Forms.TextBox();
-            this.TxGrupodeAcesso = new System.Windows.Forms.TextBox();
             this.CancelarNovoUsuario = new System.Windows.Forms.Button();
             this.SalvarNovoUsuario = new System.Windows.Forms.Button();
             this.BtAutoEncremento = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btEsquerda = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // NovoUsuario
             // 
-            this.NovoUsuario.AutoSize = true;
-            this.NovoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NovoUsuario.Location = new System.Drawing.Point(148, 69);
+            resources.ApplyResources(this.NovoUsuario, "NovoUsuario");
             this.NovoUsuario.Name = "NovoUsuario";
-            this.NovoUsuario.Size = new System.Drawing.Size(142, 25);
-            this.NovoUsuario.TabIndex = 0;
-            this.NovoUsuario.Text = "Novo Usuario";
             // 
             // NovoIdentificador
             // 
-            this.NovoIdentificador.AutoSize = true;
-            this.NovoIdentificador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NovoIdentificador.Location = new System.Drawing.Point(121, 127);
+            resources.ApplyResources(this.NovoIdentificador, "NovoIdentificador");
             this.NovoIdentificador.Name = "NovoIdentificador";
-            this.NovoIdentificador.Size = new System.Drawing.Size(101, 20);
-            this.NovoIdentificador.TabIndex = 0;
-            this.NovoIdentificador.Text = "Identificador:";
             // 
             // NovoNomeUsuario
             // 
-            this.NovoNomeUsuario.AutoSize = true;
-            this.NovoNomeUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NovoNomeUsuario.Location = new System.Drawing.Point(115, 160);
+            resources.ApplyResources(this.NovoNomeUsuario, "NovoNomeUsuario");
             this.NovoNomeUsuario.Name = "NovoNomeUsuario";
-            this.NovoNomeUsuario.Size = new System.Drawing.Size(111, 20);
-            this.NovoNomeUsuario.TabIndex = 0;
-            this.NovoNomeUsuario.Text = "Nome usuário:";
             // 
             // NovoMatricula
             // 
-            this.NovoMatricula.AutoSize = true;
-            this.NovoMatricula.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NovoMatricula.Location = new System.Drawing.Point(149, 194);
+            resources.ApplyResources(this.NovoMatricula, "NovoMatricula");
             this.NovoMatricula.Name = "NovoMatricula";
-            this.NovoMatricula.Size = new System.Drawing.Size(77, 20);
-            this.NovoMatricula.TabIndex = 0;
-            this.NovoMatricula.Text = "Matrícula:";
             // 
             // NovoGrupodeAcesso
             // 
-            this.NovoGrupodeAcesso.AutoSize = true;
-            this.NovoGrupodeAcesso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NovoGrupodeAcesso.Location = new System.Drawing.Point(91, 231);
+            resources.ApplyResources(this.NovoGrupodeAcesso, "NovoGrupodeAcesso");
             this.NovoGrupodeAcesso.Name = "NovoGrupodeAcesso";
-            this.NovoGrupodeAcesso.Size = new System.Drawing.Size(135, 20);
-            this.NovoGrupodeAcesso.TabIndex = 0;
-            this.NovoGrupodeAcesso.Text = "Grupo de acesso:";
             // 
             // TxIdentificador
             // 
-            this.TxIdentificador.Location = new System.Drawing.Point(229, 126);
+            resources.ApplyResources(this.TxIdentificador, "TxIdentificador");
             this.TxIdentificador.Name = "TxIdentificador";
-            this.TxIdentificador.Size = new System.Drawing.Size(89, 20);
-            this.TxIdentificador.TabIndex = 1;
             // 
             // TxNomeUsuario
             // 
-            this.TxNomeUsuario.Location = new System.Drawing.Point(228, 160);
+            resources.ApplyResources(this.TxNomeUsuario, "TxNomeUsuario");
             this.TxNomeUsuario.Name = "TxNomeUsuario";
-            this.TxNomeUsuario.Size = new System.Drawing.Size(176, 20);
-            this.TxNomeUsuario.TabIndex = 1;
             // 
             // TxMatricula
             // 
-            this.TxMatricula.Location = new System.Drawing.Point(228, 196);
+            resources.ApplyResources(this.TxMatricula, "TxMatricula");
             this.TxMatricula.Name = "TxMatricula";
-            this.TxMatricula.Size = new System.Drawing.Size(176, 20);
-            this.TxMatricula.TabIndex = 1;
-            // 
-            // TxGrupodeAcesso
-            // 
-            this.TxGrupodeAcesso.Location = new System.Drawing.Point(228, 233);
-            this.TxGrupodeAcesso.Name = "TxGrupodeAcesso";
-            this.TxGrupodeAcesso.Size = new System.Drawing.Size(176, 20);
-            this.TxGrupodeAcesso.TabIndex = 1;
             // 
             // CancelarNovoUsuario
             // 
-            this.CancelarNovoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelarNovoUsuario.Location = new System.Drawing.Point(558, 63);
+            resources.ApplyResources(this.CancelarNovoUsuario, "CancelarNovoUsuario");
             this.CancelarNovoUsuario.Name = "CancelarNovoUsuario";
-            this.CancelarNovoUsuario.Size = new System.Drawing.Size(73, 42);
-            this.CancelarNovoUsuario.TabIndex = 2;
-            this.CancelarNovoUsuario.Text = "Cancelar";
             this.CancelarNovoUsuario.UseVisualStyleBackColor = true;
             this.CancelarNovoUsuario.Click += new System.EventHandler(this.CancelarNovoUsuario_Click);
             // 
             // SalvarNovoUsuario
             // 
-            this.SalvarNovoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SalvarNovoUsuario.Location = new System.Drawing.Point(649, 63);
+            resources.ApplyResources(this.SalvarNovoUsuario, "SalvarNovoUsuario");
             this.SalvarNovoUsuario.Name = "SalvarNovoUsuario";
-            this.SalvarNovoUsuario.Size = new System.Drawing.Size(74, 42);
-            this.SalvarNovoUsuario.TabIndex = 2;
-            this.SalvarNovoUsuario.Text = "Salvar";
             this.SalvarNovoUsuario.UseVisualStyleBackColor = true;
             this.SalvarNovoUsuario.Click += new System.EventHandler(this.SalvarNovoUsuario_Click);
             // 
             // BtAutoEncremento
             // 
-            this.BtAutoEncremento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtAutoEncremento.Location = new System.Drawing.Point(324, 121);
+            resources.ApplyResources(this.BtAutoEncremento, "BtAutoEncremento");
             this.BtAutoEncremento.Name = "BtAutoEncremento";
-            this.BtAutoEncremento.Size = new System.Drawing.Size(73, 28);
-            this.BtAutoEncremento.TabIndex = 2;
-            this.BtAutoEncremento.Text = "AUTO";
             this.BtAutoEncremento.UseVisualStyleBackColor = true;
             this.BtAutoEncremento.Click += new System.EventHandler(this.BtAutoEncremento_Click);
             // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.BtAutoEncremento_Click);
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToOrderColumns = true;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1});
+            resources.ApplyResources(this.dataGridView2, "dataGridView2");
+            this.dataGridView2.Name = "dataGridView2";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // btEsquerda
+            // 
+            resources.ApplyResources(this.btEsquerda, "btEsquerda");
+            this.btEsquerda.Name = "btEsquerda";
+            this.btEsquerda.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            resources.ApplyResources(this.comboBox1, "comboBox1");
+            this.comboBox1.Name = "comboBox1";
+            // 
             // GnUsuarioNovo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btEsquerda);
+            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.SalvarNovoUsuario);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.BtAutoEncremento);
             this.Controls.Add(this.CancelarNovoUsuario);
-            this.Controls.Add(this.TxGrupodeAcesso);
             this.Controls.Add(this.TxMatricula);
             this.Controls.Add(this.TxNomeUsuario);
             this.Controls.Add(this.TxIdentificador);
@@ -172,8 +164,9 @@
             this.Controls.Add(this.NovoUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GnUsuarioNovo";
-            this.Text = "GnUsuarioNovo";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.GnUsuarioNovo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,9 +182,13 @@
         private System.Windows.Forms.TextBox TxIdentificador;
         private System.Windows.Forms.TextBox TxNomeUsuario;
         private System.Windows.Forms.TextBox TxMatricula;
-        private System.Windows.Forms.TextBox TxGrupodeAcesso;
         private System.Windows.Forms.Button CancelarNovoUsuario;
         private System.Windows.Forms.Button SalvarNovoUsuario;
         private System.Windows.Forms.Button BtAutoEncremento;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.Button btEsquerda;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

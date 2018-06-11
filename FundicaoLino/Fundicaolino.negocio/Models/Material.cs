@@ -10,8 +10,9 @@ namespace Fundicaolino.negocio.Models
     [Table(name: "Material")]
     public class Material
     {
-        public long    CdMaterial { get; set; }
+        public long    Id { get; set; }
         public string  NmMaterial { get; set; }
         public decimal VlPesoMaterial { get; set; }
+        // #Feature Adicionar status do material (ativo ou não)
     }
 }

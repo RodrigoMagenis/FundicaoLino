@@ -1,6 +1,6 @@
 ﻿namespace Fundicaolino.telas
 {
-    partial class GnGridGroup
+    partial class GridFiladeProducao
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.gnGridFrameUser = new System.Windows.Forms.DataGridView();
-            this.idUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nmUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nmGroupUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DtProducao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdProducao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NmProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QtProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gnGridFrameUser)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,50 +41,60 @@
             this.gnGridFrameUser.AllowUserToAddRows = false;
             this.gnGridFrameUser.AllowUserToDeleteRows = false;
             this.gnGridFrameUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.gnGridFrameUser.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.gnGridFrameUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gnGridFrameUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idUser,
-            this.nmUser,
-            this.nmGroupUser});
+            this.DtProducao,
+            this.IdProducao,
+            this.NmProduto,
+            this.QtProduto});
             this.gnGridFrameUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gnGridFrameUser.Location = new System.Drawing.Point(0, 0);
             this.gnGridFrameUser.Name = "gnGridFrameUser";
             this.gnGridFrameUser.ReadOnly = true;
-            this.gnGridFrameUser.Size = new System.Drawing.Size(557, 409);
+            this.gnGridFrameUser.Size = new System.Drawing.Size(800, 450);
             this.gnGridFrameUser.TabIndex = 1;
             // 
-            // idUser
+            // DtProducao
             // 
-            this.idUser.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idUser.HeaderText = "Matrícula";
-            this.idUser.Name = "idUser";
-            this.idUser.ReadOnly = true;
+            this.DtProducao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DtProducao.DataPropertyName = "DtProducao";
+            this.DtProducao.HeaderText = "Data";
+            this.DtProducao.Name = "DtProducao";
+            this.DtProducao.ReadOnly = true;
             // 
-            // nmUser
+            // IdProducao
             // 
-            this.nmUser.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nmUser.HeaderText = "Nome de Usuário";
-            this.nmUser.Name = "nmUser";
-            this.nmUser.ReadOnly = true;
+            this.IdProducao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.IdProducao.DataPropertyName = "IdProducao";
+            this.IdProducao.HeaderText = "Codigo Produção";
+            this.IdProducao.Name = "IdProducao";
+            this.IdProducao.ReadOnly = true;
             // 
-            // nmGroupUser
+            // NmProduto
             // 
-            this.nmGroupUser.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nmGroupUser.HeaderText = "Grupo de acesso";
-            this.nmGroupUser.Name = "nmGroupUser";
-            this.nmGroupUser.ReadOnly = true;
+            this.NmProduto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NmProduto.DataPropertyName = "NmProduto";
+            this.NmProduto.HeaderText = "Nome Produto";
+            this.NmProduto.Name = "NmProduto";
+            this.NmProduto.ReadOnly = true;
             // 
-            // GnGridGroup
+            // QtProduto
+            // 
+            this.QtProduto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.QtProduto.HeaderText = "Quantidade Produto";
+            this.QtProduto.Name = "QtProduto";
+            this.QtProduto.ReadOnly = true;
+            // 
+            // GridFiladeProducao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(557, 409);
-            this.ControlBox = false;
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.gnGridFrameUser);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "GnGridGroup";
-            this.Text = "GnGridGroup";
+            this.Name = "GridFiladeProducao";
+            this.Text = "GnFiladeProducao";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.gnGridFrameUser)).EndInit();
             this.ResumeLayout(false);
@@ -93,8 +104,9 @@
         #endregion
 
         private System.Windows.Forms.DataGridView gnGridFrameUser;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idUser;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nmUser;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nmGroupUser;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DtProducao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdProducao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NmProduto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn QtProduto;
     }
 }

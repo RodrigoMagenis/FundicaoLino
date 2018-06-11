@@ -32,7 +32,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -45,17 +52,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CadastraTipoProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastraTipoProduto.Designer.cs">
+      <DependentUpon>CadastraTipoProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="GnCadProducao.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GnCadProducao.Designer.cs">
       <DependentUpon>GnCadProducao.cs</DependentUpon>
     </Compile>
-    <Compile Include="GnFiladeProducao.cs">
+    <Compile Include="GridFiladeProducao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GnFiladeProducao.Designer.cs">
-      <DependentUpon>GnFiladeProducao.cs</DependentUpon>
+    <Compile Include="GridFiladeProducao.Designer.cs">
+      <DependentUpon>GridFiladeProducao.cs</DependentUpon>
     </Compile>
     <Compile Include="GnGerProcesso.cs">
       <SubType>Form</SubType>
@@ -63,17 +76,17 @@
     <Compile Include="GnGerProcesso.Designer.cs">
       <DependentUpon>GnGerProcesso.cs</DependentUpon>
     </Compile>
-    <Compile Include="GnGridGroup.cs">
+    <Compile Include="GridGrupo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GnGridGroup.Designer.cs">
-      <DependentUpon>GnGridGroup.cs</DependentUpon>
+    <Compile Include="GridGrupo.Designer.cs">
+      <DependentUpon>GridGrupo.cs</DependentUpon>
     </Compile>
-    <Compile Include="GnGridUser.cs">
+    <Compile Include="GridUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GnGridUser.Designer.cs">
-      <DependentUpon>GnGridUser.cs</DependentUpon>
+    <Compile Include="GridUsuario.Designer.cs">
+      <DependentUpon>GridUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="GnGrupoNovo.cs">
       <SubType>Form</SubType>
@@ -86,6 +99,24 @@
     </Compile>
     <Compile Include="GnUsuarioNovo.Designer.cs">
       <DependentUpon>GnUsuarioNovo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridProcesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GridProcesso.Designer.cs">
+      <DependentUpon>GridProcesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridProducao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GridProducao.Designer.cs">
+      <DependentUpon>GridProducao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GridProduto.Designer.cs">
+      <DependentUpon>GridProduto.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -101,26 +132,38 @@
     <Compile Include="TelaPrincipal.Designer.cs">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CadastraTipoProduto.resx">
+      <DependentUpon>CadastraTipoProduto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GnCadProducao.resx">
       <DependentUpon>GnCadProducao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GnFiladeProducao.resx">
-      <DependentUpon>GnFiladeProducao.cs</DependentUpon>
+    <EmbeddedResource Include="GridFiladeProducao.resx">
+      <DependentUpon>GridFiladeProducao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GnGerProcesso.resx">
       <DependentUpon>GnGerProcesso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GnGridGroup.resx">
-      <DependentUpon>GnGridGroup.cs</DependentUpon>
+    <EmbeddedResource Include="GridGrupo.resx">
+      <DependentUpon>GridGrupo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GnGridUser.resx">
-      <DependentUpon>GnGridUser.cs</DependentUpon>
+    <EmbeddedResource Include="GridUsuario.resx">
+      <DependentUpon>GridUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GnGrupoNovo.resx">
       <DependentUpon>GnGrupoNovo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GnUsuarioNovo.resx">
       <DependentUpon>GnUsuarioNovo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridProcesso.resx">
+      <DependentUpon>GridProcesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridProducao.resx">
+      <DependentUpon>GridProducao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridProduto.resx">
+      <DependentUpon>GridProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -137,6 +180,7 @@
     <EmbeddedResource Include="TelaPrincipal.resx">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

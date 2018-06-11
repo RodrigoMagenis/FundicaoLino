@@ -1,6 +1,6 @@
 ﻿namespace Fundicaolino.telas
 {
-    partial class GnFiladeProducao
+    partial class GridGrupo
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,9 @@
         private void InitializeComponent()
         {
             this.gnGridFrameUser = new System.Windows.Forms.DataGridView();
-            this.DtProducao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdProducao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NmProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QtProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomeGrupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FgGrupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gnGridFrameUser)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,60 +40,52 @@
             this.gnGridFrameUser.AllowUserToAddRows = false;
             this.gnGridFrameUser.AllowUserToDeleteRows = false;
             this.gnGridFrameUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.gnGridFrameUser.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.gnGridFrameUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gnGridFrameUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.DtProducao,
-            this.IdProducao,
-            this.NmProduto,
-            this.QtProduto});
+            this.Id,
+            this.NomeGrupo,
+            this.FgGrupo});
             this.gnGridFrameUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gnGridFrameUser.Location = new System.Drawing.Point(0, 0);
             this.gnGridFrameUser.Name = "gnGridFrameUser";
             this.gnGridFrameUser.ReadOnly = true;
-            this.gnGridFrameUser.Size = new System.Drawing.Size(800, 450);
+            this.gnGridFrameUser.Size = new System.Drawing.Size(557, 409);
             this.gnGridFrameUser.TabIndex = 1;
             // 
-            // DtProducao
+            // Id
             // 
-            this.DtProducao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DtProducao.DataPropertyName = "DtProducao";
-            this.DtProducao.HeaderText = "Data";
-            this.DtProducao.Name = "DtProducao";
-            this.DtProducao.ReadOnly = true;
+            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "ID";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
             // 
-            // IdProducao
+            // NomeGrupo
             // 
-            this.IdProducao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.IdProducao.DataPropertyName = "IdProducao";
-            this.IdProducao.HeaderText = "Codigo Produção";
-            this.IdProducao.Name = "IdProducao";
-            this.IdProducao.ReadOnly = true;
+            this.NomeGrupo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NomeGrupo.DataPropertyName = "NomeGrupo";
+            this.NomeGrupo.HeaderText = "Nome grupo";
+            this.NomeGrupo.Name = "NomeGrupo";
+            this.NomeGrupo.ReadOnly = true;
             // 
-            // NmProduto
+            // FgGrupo
             // 
-            this.NmProduto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NmProduto.DataPropertyName = "NmProduto";
-            this.NmProduto.HeaderText = "Nome Produto";
-            this.NmProduto.Name = "NmProduto";
-            this.NmProduto.ReadOnly = true;
+            this.FgGrupo.DataPropertyName = "FgGrupo";
+            this.FgGrupo.HeaderText = "Status";
+            this.FgGrupo.Name = "FgGrupo";
+            this.FgGrupo.ReadOnly = true;
+            this.FgGrupo.Width = 62;
             // 
-            // QtProduto
-            // 
-            this.QtProduto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.QtProduto.HeaderText = "Quantidade Produto";
-            this.QtProduto.Name = "QtProduto";
-            this.QtProduto.ReadOnly = true;
-            // 
-            // GnFiladeProducao
+            // GridGrupo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(557, 409);
+            this.ControlBox = false;
             this.Controls.Add(this.gnGridFrameUser);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "GnFiladeProducao";
-            this.Text = "GnFiladeProducao";
+            this.Name = "GridGrupo";
+            this.Text = "GnGridGroup";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.gnGridFrameUser)).EndInit();
             this.ResumeLayout(false);
@@ -104,9 +95,8 @@
         #endregion
 
         private System.Windows.Forms.DataGridView gnGridFrameUser;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DtProducao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdProducao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NmProduto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn QtProduto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NomeGrupo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FgGrupo;
     }
 }
