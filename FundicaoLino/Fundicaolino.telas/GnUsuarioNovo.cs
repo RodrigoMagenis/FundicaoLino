@@ -66,10 +66,10 @@ namespace Fundicaolino.telas
                 usuario.Idmatricula = -1;
             }
 
-            resultado = Int64.TryParse(TxGrupodeAcesso.Text, out longConvertido);
-            if (resultado)
+            //resultado = Int64.TryParse(TxGrupodeAcesso.Text, out longConvertido);
+           // if (resultado)
             {
-                usuario.Idgrupo = longConvertido;
+            //    usuario.Idgrupo = longConvertido;
             }
 
             Validacao validacao;
