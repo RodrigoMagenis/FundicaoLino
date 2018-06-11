@@ -12,11 +12,11 @@ namespace Fundicaolino.negocio.Models
     {
         public string NomeGrupo { get; set; }
         public long   Id { get; set; }
-        public Int16  FgGrupo { get; set; }
-        public Int16  Permissaousuario { get; set; }
-        public Int16  Permissaoproducao { get; set; }
-        public Int16  Permissaoqualidade { get; set; }
-        public Int16  Permissaoprocesso { get; set; }
-        public Int16  Permissaoproduto { get; set; }
+        public Boolean  FgGrupo { get; set; }
+        public Boolean Permissaousuario { get; set; }
+        public Boolean Permissaoproducao { get; set; }
+        public Boolean Permissaoqualidade { get; set; }
+        public Boolean Permissaoprocesso { get; set; }
+        public Boolean Permissaoproduto { get; set; }
     }
 }

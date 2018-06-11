@@ -28,7 +28,7 @@ namespace Fundicaolino.telas
 
         private void BtAutoEncremento_Click(object sender, EventArgs e)
         {
-
+            TxMatricula.Text = Convert.ToString(Program.Gerenciador.NovaMatricula());
         }
 
         private void GnUsuarioNovo_Load(object sender, EventArgs e)
@@ -41,7 +41,7 @@ namespace Fundicaolino.telas
            
             Usuario usuario = new Usuario();
             Boolean resultado;
-            Int64 longConvertido;
+            Int64 longConvertido;--
             Int32 intConvertido;
 
             //resultado = int64.tryparse(txidentificador.text, out longconvertido);
@@ -66,11 +66,18 @@ namespace Fundicaolino.telas
                 usuario.Idmatricula = -1;
             }
 
+            //ConcertoTelaNovoUsuario-e-NovoGrupo
             //resultado = Int64.TryParse(TxGrupodeAcesso.Text, out longConvertido);
            // if (resultado)
-            {
+         //   {
             //    usuario.Idgrupo = longConvertido;
-            }
+       //     }
+
+           // resultado = Int64.TryParse(TxGrupodeAcesso.Text, out longConvertido);
+            //if (resultado)
+            //{
+            //    usuario.Idgrupo = longConvertido;
+            //}
 
             Validacao validacao;
             if (UsuarioSelecionado == null)
@@ -82,23 +89,33 @@ namespace Fundicaolino.telas
                 validacao = Program.Gerenciador.AlterarUsuario(usuario);
             }
 
-            if (!validacao.Valido)
+            try
             {
-                String mensagemValidacao = "";
-                foreach(var chave in validacao.Mensagens.Keys)
+
+                if (!validacao.Valido)
                 {
-                    String msg = validacao.Mensagens[chave];
-                    mensagemValidacao += msg;
-                    mensagemValidacao += Environment.NewLine;
+                    String mensagemValidacao = "";
+                    foreach (var chave in validacao.Mensagens.Keys)
+                    {
+                        String msg = validacao.Mensagens[chave];
+                        mensagemValidacao += msg;
+                        mensagemValidacao += Environment.NewLine;
+                    }
+                    MessageBox.Show(mensagemValidacao);
                 }
-                MessageBox.Show(mensagemValidacao);
-            }
-            else
-            {
-                MessageBox.Show("Cliente salvo com sucesso");
+
+                else
+                {
+                    MessageBox.Show("Usuário salvo com sucesso");
+                    this.Close();
+                }
+
             }
 
-            this.Close();
+            catch
+            {
+                MessageBox.Show("Ocorreu uma falha grave, contate um administrador");
+            }
         }
     }
 }

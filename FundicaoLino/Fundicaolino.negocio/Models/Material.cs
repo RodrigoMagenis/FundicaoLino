@@ -13,5 +13,6 @@ namespace Fundicaolino.negocio.Models
         public long    Id { get; set; }
         public string  NmMaterial { get; set; }
         public decimal VlPesoMaterial { get; set; }
+        // #Feature Adicionar status do material (ativo ou não)
     }
 }

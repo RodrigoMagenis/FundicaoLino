@@ -10,8 +10,9 @@ namespace Fundicaolino.negocio.Models
     [Table(name: "Produto")]
     public class Produto
     {
-        public long Id { get; set; }
-        public long IdTipoProduto { get; set; }
-        public long IdResponsavel { get; set; }
+        public long                         Id { get; set; }
+        public TipoProduto                  TipoProduto { get; set; }
+        public virtual ICollection<Usuario> Responsavel { get; set; }
+        // #Feature vincula o processo (ou etapa) a data de término
     }
 }
