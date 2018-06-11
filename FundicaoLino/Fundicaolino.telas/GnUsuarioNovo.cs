@@ -41,7 +41,7 @@ namespace Fundicaolino.telas
            
             Usuario usuario = new Usuario();
             Boolean resultado;
-            Int64 longConvertido;
+            Int64 longConvertido;--
             Int32 intConvertido;
 
             //resultado = int64.tryparse(txidentificador.text, out longconvertido);
@@ -66,7 +66,14 @@ namespace Fundicaolino.telas
                 usuario.Idmatricula = -1;
             }
 
-            resultado = Int64.TryParse(TxGrupodeAcesso.Text, out longConvertido);
+            //ConcertoTelaNovoUsuario-e-NovoGrupo
+            //resultado = Int64.TryParse(TxGrupodeAcesso.Text, out longConvertido);
+           // if (resultado)
+         //   {
+            //    usuario.Idgrupo = longConvertido;
+       //     }
+
+           // resultado = Int64.TryParse(TxGrupodeAcesso.Text, out longConvertido);
             //if (resultado)
             //{
             //    usuario.Idgrupo = longConvertido;

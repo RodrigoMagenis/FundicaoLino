@@ -29,7 +29,7 @@ namespace Fundicaolino.negocio
                 validacao.Mensagens.Add("matricula", "Requer uma matrícula");
             }
 
-            if (this.banco.Usuarios.Where(x => x.Idmatricula == usuario.Idmatricula).Any() && validacao.Mensagens.Count == 0)
+            if (banco.Usuarios.Where(x => x.Idmatricula == usuario.Idmatricula).Any() && validacao.Mensagens.Count == 0)
             {
                 validacao.Mensagens.Add("matricula", "Essa matricula já está em uso");
             }
