@@ -58,6 +58,7 @@
             resources.ApplyResources(this.BtnSave, "BtnSave");
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.UseVisualStyleBackColor = true;
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // NmGroup
             // 

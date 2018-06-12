@@ -15,8 +15,9 @@ namespace Fundicaolino.negocio.Models
         public Boolean  FgGrupo { get; set; }
         public Boolean Permissaousuario { get; set; }
         public Boolean Permissaoproducao { get; set; }
-        public Boolean Permissaoqualidade { get; set; }
         public Boolean Permissaoprocesso { get; set; }
         public Boolean Permissaoproduto { get; set; }
+        public Boolean Permissaocontroleproducao { get; set; }
+        public Boolean Permissaoqualidade { get; set; }
     }
 }
