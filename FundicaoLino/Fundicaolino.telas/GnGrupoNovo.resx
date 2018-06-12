@@ -141,7 +141,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BtnCancel.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="NvGrupo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -171,7 +171,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;NvGrupo.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="BtnSave.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -199,7 +199,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BtnSave.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="NmGroup.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -232,7 +232,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;NmGroup.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="TxNameGroup.Location" type="System.Drawing.Point, System.Drawing">
     <value>227, 116</value>
@@ -256,111 +256,183 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TxNameGroup.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
-  <metadata name="TelasHabilitadas.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="XboxUsuario.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
-  <data name="TelasHabilitadas.HeaderText" xml:space="preserve">
-    <value>Grupos Habilitadas</value>
   </data>
-  <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>425, 190</value>
+  <data name="XboxUsuario.Location" type="System.Drawing.Point, System.Drawing">
+    <value>227, 164</value>
   </data>
-  <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>206, 216</value>
+  <data name="XboxUsuario.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 17</value>
   </data>
-  <data name="dataGridView1.TabIndex" type="System.Int32, mscorlib">
+  <data name="XboxUsuario.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;dataGridView1.Name" xml:space="preserve">
-    <value>dataGridView1</value>
+  <data name="XboxUsuario.Text" xml:space="preserve">
+    <value>Tela de usuários</value>
   </data>
-  <data name="&gt;&gt;dataGridView1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;XboxUsuario.Name" xml:space="preserve">
+    <value>XboxUsuario</value>
   </data>
-  <data name="&gt;&gt;dataGridView1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;XboxUsuario.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;XboxUsuario.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;XboxUsuario.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
-  <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="XboxControleProducao.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
-    <value>Grupos Existentes</value>
   </data>
-  <data name="dataGridView2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>112, 190</value>
-  </data>
-  <data name="dataGridView2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>206, 216</value>
-  </data>
-  <data name="dataGridView2.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;dataGridView2.Name" xml:space="preserve">
-    <value>dataGridView2</value>
-  </data>
-  <data name="&gt;&gt;dataGridView2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridView2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;dataGridView2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="btEsquerda.Location" type="System.Drawing.Point, System.Drawing">
-    <value>347, 284</value>
-  </data>
-  <data name="btEsquerda.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 36</value>
-  </data>
-  <data name="btEsquerda.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="btEsquerda.Text" xml:space="preserve">
-    <value>&lt;</value>
-  </data>
-  <data name="&gt;&gt;btEsquerda.Name" xml:space="preserve">
-    <value>btEsquerda</value>
-  </data>
-  <data name="&gt;&gt;btEsquerda.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btEsquerda.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btEsquerda.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="btDireita.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="XboxControleProducao.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btDireita.Location" type="System.Drawing.Point, System.Drawing">
-    <value>347, 242</value>
+  <data name="XboxControleProducao.Location" type="System.Drawing.Point, System.Drawing">
+    <value>227, 187</value>
   </data>
-  <data name="btDireita.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 36</value>
+  <data name="XboxControleProducao.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 17</value>
   </data>
-  <data name="btDireita.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="XboxControleProducao.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
-  <data name="btDireita.Text" xml:space="preserve">
-    <value>&gt;</value>
+  <data name="XboxControleProducao.Text" xml:space="preserve">
+    <value>Tela de controle da produção</value>
   </data>
-  <data name="&gt;&gt;btDireita.Name" xml:space="preserve">
-    <value>btDireita</value>
+  <data name="&gt;&gt;XboxControleProducao.Name" xml:space="preserve">
+    <value>XboxControleProducao</value>
   </data>
-  <data name="&gt;&gt;btDireita.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;XboxControleProducao.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btDireita.Parent" xml:space="preserve">
+  <data name="&gt;&gt;XboxControleProducao.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;btDireita.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;XboxControleProducao.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="XboxControleQualidade.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="XboxControleQualidade.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="XboxControleQualidade.Location" type="System.Drawing.Point, System.Drawing">
+    <value>227, 210</value>
+  </data>
+  <data name="XboxControleQualidade.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 17</value>
+  </data>
+  <data name="XboxControleQualidade.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="XboxControleQualidade.Text" xml:space="preserve">
+    <value>Tela de controle da qualidade</value>
+  </data>
+  <data name="&gt;&gt;XboxControleQualidade.Name" xml:space="preserve">
+    <value>XboxControleQualidade</value>
+  </data>
+  <data name="&gt;&gt;XboxControleQualidade.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;XboxControleQualidade.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;XboxControleQualidade.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="XboxProducao.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="XboxProducao.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="XboxProducao.Location" type="System.Drawing.Point, System.Drawing">
+    <value>226, 233</value>
+  </data>
+  <data name="XboxProducao.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 17</value>
+  </data>
+  <data name="XboxProducao.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="XboxProducao.Text" xml:space="preserve">
+    <value>Tela de Gerenciamento de produções</value>
+  </data>
+  <data name="&gt;&gt;XboxProducao.Name" xml:space="preserve">
+    <value>XboxProducao</value>
+  </data>
+  <data name="&gt;&gt;XboxProducao.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;XboxProducao.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;XboxProducao.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="XboxProcesso.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="XboxProcesso.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="XboxProcesso.Location" type="System.Drawing.Point, System.Drawing">
+    <value>226, 256</value>
+  </data>
+  <data name="XboxProcesso.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 17</value>
+  </data>
+  <data name="XboxProcesso.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="XboxProcesso.Text" xml:space="preserve">
+    <value>Tela de Gerenciamento de processos</value>
+  </data>
+  <data name="&gt;&gt;XboxProcesso.Name" xml:space="preserve">
+    <value>XboxProcesso</value>
+  </data>
+  <data name="&gt;&gt;XboxProcesso.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;XboxProcesso.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;XboxProcesso.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="XboxProduto.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="XboxProduto.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="XboxProduto.Location" type="System.Drawing.Point, System.Drawing">
+    <value>226, 279</value>
+  </data>
+  <data name="XboxProduto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 17</value>
+  </data>
+  <data name="XboxProduto.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="XboxProduto.Text" xml:space="preserve">
+    <value>Tela de Gerenciamento de produtos</value>
+  </data>
+  <data name="&gt;&gt;XboxProduto.Name" xml:space="preserve">
+    <value>XboxProduto</value>
+  </data>
+  <data name="&gt;&gt;XboxProduto.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;XboxProduto.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;XboxProduto.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -374,18 +446,6 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>GrupoNovo</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn1</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TelasHabilitadas.Name" xml:space="preserve">
-    <value>TelasHabilitadas</value>
-  </data>
-  <data name="&gt;&gt;TelasHabilitadas.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>GnGrupoNovo</value>
