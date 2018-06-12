@@ -34,14 +34,12 @@
             this.BtnSave = new System.Windows.Forms.Button();
             this.NmGroup = new System.Windows.Forms.Label();
             this.TxNameGroup = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.btEsquerda = new System.Windows.Forms.Button();
-            this.btDireita = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TelasHabilitadas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.XboxUsuario = new System.Windows.Forms.CheckBox();
+            this.XboxControleProducao = new System.Windows.Forms.CheckBox();
+            this.XboxControleQualidade = new System.Windows.Forms.CheckBox();
+            this.XboxProducao = new System.Windows.Forms.CheckBox();
+            this.XboxProcesso = new System.Windows.Forms.CheckBox();
+            this.XboxProduto = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // BtnCancel
@@ -71,56 +69,52 @@
             resources.ApplyResources(this.TxNameGroup, "TxNameGroup");
             this.TxNameGroup.Name = "TxNameGroup";
             // 
-            // dataGridView1
+            // XboxUsuario
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TelasHabilitadas});
-            resources.ApplyResources(this.dataGridView1, "dataGridView1");
-            this.dataGridView1.Name = "dataGridView1";
+            resources.ApplyResources(this.XboxUsuario, "XboxUsuario");
+            this.XboxUsuario.Name = "XboxUsuario";
+            this.XboxUsuario.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
+            // XboxControleProducao
             // 
-            this.dataGridView2.AllowUserToOrderColumns = true;
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1});
-            resources.ApplyResources(this.dataGridView2, "dataGridView2");
-            this.dataGridView2.Name = "dataGridView2";
+            resources.ApplyResources(this.XboxControleProducao, "XboxControleProducao");
+            this.XboxControleProducao.Name = "XboxControleProducao";
+            this.XboxControleProducao.UseVisualStyleBackColor = true;
             // 
-            // btEsquerda
+            // XboxControleQualidade
             // 
-            resources.ApplyResources(this.btEsquerda, "btEsquerda");
-            this.btEsquerda.Name = "btEsquerda";
-            this.btEsquerda.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.XboxControleQualidade, "XboxControleQualidade");
+            this.XboxControleQualidade.Name = "XboxControleQualidade";
+            this.XboxControleQualidade.UseVisualStyleBackColor = true;
             // 
-            // btDireita
+            // XboxProducao
             // 
-            resources.ApplyResources(this.btDireita, "btDireita");
-            this.btDireita.Name = "btDireita";
-            this.btDireita.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.XboxProducao, "XboxProducao");
+            this.XboxProducao.Name = "XboxProducao";
+            this.XboxProducao.UseVisualStyleBackColor = true;
             // 
-            // dataGridViewTextBoxColumn1
+            // XboxProcesso
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            resources.ApplyResources(this.XboxProcesso, "XboxProcesso");
+            this.XboxProcesso.Name = "XboxProcesso";
+            this.XboxProcesso.UseVisualStyleBackColor = true;
             // 
-            // TelasHabilitadas
+            // XboxProduto
             // 
-            resources.ApplyResources(this.TelasHabilitadas, "TelasHabilitadas");
-            this.TelasHabilitadas.Name = "TelasHabilitadas";
+            resources.ApplyResources(this.XboxProduto, "XboxProduto");
+            this.XboxProduto.Name = "XboxProduto";
+            this.XboxProduto.UseVisualStyleBackColor = true;
             // 
             // GnGrupoNovo
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btDireita);
-            this.Controls.Add(this.btEsquerda);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.XboxProduto);
+            this.Controls.Add(this.XboxProcesso);
+            this.Controls.Add(this.XboxProducao);
+            this.Controls.Add(this.XboxControleQualidade);
+            this.Controls.Add(this.XboxControleProducao);
+            this.Controls.Add(this.XboxUsuario);
             this.Controls.Add(this.TxNameGroup);
             this.Controls.Add(this.NmGroup);
             this.Controls.Add(this.NvGrupo);
@@ -129,8 +123,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GnGrupoNovo";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,11 +135,11 @@
         private System.Windows.Forms.Button BtnSave;
         private System.Windows.Forms.Label NmGroup;
         private System.Windows.Forms.TextBox TxNameGroup;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Button btEsquerda;
-        private System.Windows.Forms.Button btDireita;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TelasHabilitadas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.CheckBox XboxUsuario;
+        private System.Windows.Forms.CheckBox XboxControleProducao;
+        private System.Windows.Forms.CheckBox XboxControleQualidade;
+        private System.Windows.Forms.CheckBox XboxProducao;
+        private System.Windows.Forms.CheckBox XboxProcesso;
+        private System.Windows.Forms.CheckBox XboxProduto;
     }
 }
