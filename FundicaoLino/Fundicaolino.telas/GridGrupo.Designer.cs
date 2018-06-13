@@ -28,29 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gnGridFrameUser = new System.Windows.Forms.DataGridView();
+            this.dgGrupo = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomeGrupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FgGrupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.gnGridFrameUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgGrupo)).BeginInit();
             this.SuspendLayout();
             // 
-            // gnGridFrameUser
+            // dgGrupo
             // 
-            this.gnGridFrameUser.AllowUserToAddRows = false;
-            this.gnGridFrameUser.AllowUserToDeleteRows = false;
-            this.gnGridFrameUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.gnGridFrameUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gnGridFrameUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgGrupo.AllowUserToAddRows = false;
+            this.dgGrupo.AllowUserToDeleteRows = false;
+            this.dgGrupo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dgGrupo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgGrupo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.NomeGrupo,
             this.FgGrupo});
-            this.gnGridFrameUser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gnGridFrameUser.Location = new System.Drawing.Point(0, 0);
-            this.gnGridFrameUser.Name = "gnGridFrameUser";
-            this.gnGridFrameUser.ReadOnly = true;
-            this.gnGridFrameUser.Size = new System.Drawing.Size(557, 409);
-            this.gnGridFrameUser.TabIndex = 1;
+            this.dgGrupo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgGrupo.Location = new System.Drawing.Point(0, 0);
+            this.dgGrupo.Name = "dgGrupo";
+            this.dgGrupo.ReadOnly = true;
+            this.dgGrupo.Size = new System.Drawing.Size(557, 409);
+            this.dgGrupo.TabIndex = 1;
             // 
             // Id
             // 
@@ -82,19 +82,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(557, 409);
             this.ControlBox = false;
-            this.Controls.Add(this.gnGridFrameUser);
+            this.Controls.Add(this.dgGrupo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GridGrupo";
             this.Text = "GnGridGroup";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.gnGridFrameUser)).EndInit();
+            this.Load += new System.EventHandler(this.GridGrupo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgGrupo)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView gnGridFrameUser;
+        private System.Windows.Forms.DataGridView dgGrupo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn NomeGrupo;
         private System.Windows.Forms.DataGridViewTextBoxColumn FgGrupo;
