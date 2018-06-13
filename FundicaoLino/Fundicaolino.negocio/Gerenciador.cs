@@ -115,6 +115,10 @@ namespace Fundicaolino.negocio
         {
             return this.banco.Grupos.Where(g => g.Id == Id).FirstOrDefault();
         }
+        public List<Grupo> TodosOsGrupos()
+        {
+            return this.banco.Grupos.ToList();
+        }
 
         public int NovaMatricula()
         {
