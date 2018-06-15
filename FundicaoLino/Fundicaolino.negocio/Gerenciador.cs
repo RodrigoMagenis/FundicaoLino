@@ -62,10 +62,6 @@ namespace Fundicaolino.negocio
             {
                 validacao.Mensagens.Add("matricula", "Requer uma matrícula");
             }
-            //if (String.IsNullOrEmpty(UsuarioAlterado.Idgrupo.ToString()))
-            //{
-            //    validacao.Mensagens.Add("grupo", "Requer um grupo de acesso");
-            //}
 
             if (validacao.Valido)
             {
@@ -73,7 +69,7 @@ namespace Fundicaolino.negocio
                 UsuarioBanco.Idmatricula = UsuarioAlterado.Idmatricula;
                 UsuarioBanco.NmUsuario = UsuarioAlterado.NmUsuario;
                 UsuarioBanco.NmLogin = UsuarioAlterado.NmLogin;
-                UsuarioBanco.IdSenha = UsuarioAlterado.IdSenha;
+                UsuarioBanco.NmSenha = UsuarioAlterado.NmSenha;
                 this.banco.SaveChanges();
             }
             return validacao;
@@ -115,9 +111,16 @@ namespace Fundicaolino.negocio
         {
             return this.banco.Grupos.Where(g => g.Id == Id).FirstOrDefault();
         }
+
+        /* Retorna todos os resultados - Usado nas grids */
         public List<Grupo> TodosOsGrupos()
         {
-            return this.banco.Grupos.ToList();
+                return this.banco.Grupos.ToList();
+        }
+
+        public List<Usuario> TodosOsUsuarios()
+        {
+            return this.banco.Usuarios.ToList();
         }
 
         public int NovaMatricula()
