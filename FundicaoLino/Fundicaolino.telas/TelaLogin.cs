@@ -21,8 +21,7 @@ namespace Fundicaolino.telas
         {
             TelaPrincipal telaprincipal = new TelaPrincipal();
             telaprincipal.Show();
-           
-            
+            this.Hide();
         }
     }
 }
