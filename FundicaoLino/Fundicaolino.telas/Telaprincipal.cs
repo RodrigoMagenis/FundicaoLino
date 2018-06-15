@@ -15,7 +15,7 @@ namespace Fundicaolino.telas
     {
         private int childFormNumber = 0;
         private int tela;
-
+        GridFiladeProducao gridFilaProducao = new GridFiladeProducao();
         public TelaPrincipal()
         {
             InitializeComponent();
@@ -202,6 +202,16 @@ namespace Fundicaolino.telas
             panel4.Controls.Add(gridProducao);
             gridProducao.Show();
             tela = 5;
+            String Nome = "Exibir" + " Produção";
+            Button teste = new Button();
+            teste.Width = 86;
+            teste.Height = 46;
+            teste.Location = new Point(teste.Location.X + 600, teste.Location.Y + 13);
+            teste.Text = Nome;
+            panel2.Controls.Add(teste);
+            teste.Show();
+            panel4.Controls.Remove(gridProducao);
+            panel4.Controls.Add(gridFilaProducao);
         }
         private void Genericacadastrarprocesso_Click(object sender, EventArgs e)
         {
@@ -223,11 +233,11 @@ namespace Fundicaolino.telas
 
         private void Genericaexibirfiladeproducao_Click(object sender, EventArgs e)
         {
-            GridFiladeProducao gridFilaProducao = new GridFiladeProducao();
-            gridFilaProducao.MdiParent = this;
-            panel4.Controls.Add(gridFilaProducao);
-            gridFilaProducao.Show();
-            tela = 8;
+            //GridFiladeProducao gridFilaProducao = new GridFiladeProducao();
+            //gridFilaProducao.MdiParent = this;
+            //panel4.Controls.Add(gridFilaProducao);
+            //gridFilaProducao.Show();
+            //tela = 8;
         }
 
         private void Genericacontroleemtemporeal_Click(object sender, EventArgs e)
