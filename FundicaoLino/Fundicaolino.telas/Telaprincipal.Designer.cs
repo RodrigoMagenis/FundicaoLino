@@ -127,7 +127,7 @@
             this.Genericacadastrarproduto.Name = "Genericacadastrarproduto";
             this.Genericacadastrarproduto.Size = new System.Drawing.Size(163, 23);
             this.Genericacadastrarproduto.TabIndex = 8;
-            this.Genericacadastrarproduto.Text = "Cadastrar produtos";
+            this.Genericacadastrarproduto.Text = "Gerenciar Produtos";
             this.Genericacadastrarproduto.UseVisualStyleBackColor = true;
             this.Genericacadastrarproduto.Click += new System.EventHandler(this.Genericacadastrarproduto_Click);
             // 
@@ -168,7 +168,7 @@
             this.btCadastraProducao.Name = "btCadastraProducao";
             this.btCadastraProducao.Size = new System.Drawing.Size(163, 23);
             this.btCadastraProducao.TabIndex = 8;
-            this.btCadastraProducao.Text = "Cadastrar Produção";
+            this.btCadastraProducao.Text = "Gerenciar Produção";
             this.btCadastraProducao.UseVisualStyleBackColor = true;
             this.btCadastraProducao.Click += new System.EventHandler(this.btCadastraProducao_Click);
             // 
@@ -178,7 +178,7 @@
             this.Genericacadastrarprocesso.Name = "Genericacadastrarprocesso";
             this.Genericacadastrarprocesso.Size = new System.Drawing.Size(163, 23);
             this.Genericacadastrarprocesso.TabIndex = 8;
-            this.Genericacadastrarprocesso.Text = "Cadastrar processo";
+            this.Genericacadastrarprocesso.Text = "Gerenciar Processo";
             this.Genericacadastrarprocesso.UseVisualStyleBackColor = true;
             this.Genericacadastrarprocesso.Click += new System.EventHandler(this.Genericacadastrarprocesso_Click);
             // 
