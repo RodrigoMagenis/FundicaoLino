@@ -33,9 +33,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.CancelarCad = new System.Windows.Forms.Button();
             this.SalvarNovoUsuario = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TxQuantidade = new System.Windows.Forms.TextBox();
+            this.TxIdentificador = new System.Windows.Forms.TextBox();
+            this.TxProcesso = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -59,7 +59,6 @@
             this.label2.Size = new System.Drawing.Size(98, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "ID Produção";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -90,29 +89,28 @@
             this.SalvarNovoUsuario.TabIndex = 10;
             this.SalvarNovoUsuario.Text = "Salvar";
             this.SalvarNovoUsuario.UseVisualStyleBackColor = true;
+            this.SalvarNovoUsuario.Click += new System.EventHandler(this.SalvarNovoUsuario_Click);
             // 
-            // textBox2
+            // TxQuantidade
             // 
-            this.textBox2.Location = new System.Drawing.Point(237, 183);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(138, 20);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.TxQuantidade.Location = new System.Drawing.Point(237, 183);
+            this.TxQuantidade.Name = "TxQuantidade";
+            this.TxQuantidade.Size = new System.Drawing.Size(138, 20);
+            this.TxQuantidade.TabIndex = 4;
             // 
-            // textBox1
+            // TxIdentificador
             // 
-            this.textBox1.Location = new System.Drawing.Point(237, 153);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(138, 20);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.TxIdentificador.Location = new System.Drawing.Point(237, 153);
+            this.TxIdentificador.Name = "TxIdentificador";
+            this.TxIdentificador.Size = new System.Drawing.Size(138, 20);
+            this.TxIdentificador.TabIndex = 2;
             // 
-            // textBox3
+            // TxProcesso
             // 
-            this.textBox3.Location = new System.Drawing.Point(237, 218);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(138, 20);
-            this.textBox3.TabIndex = 6;
+            this.TxProcesso.Location = new System.Drawing.Point(237, 218);
+            this.TxProcesso.Name = "TxProcesso";
+            this.TxProcesso.Size = new System.Drawing.Size(138, 20);
+            this.TxProcesso.TabIndex = 6;
             // 
             // label4
             // 
@@ -132,17 +130,16 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.SalvarNovoUsuario);
             this.Controls.Add(this.CancelarCad);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.TxProcesso);
+            this.Controls.Add(this.TxQuantidade);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxIdentificador);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GnCadProducao";
             this.Text = "GnCadProducao";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.GnCadProducao_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,9 +152,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button CancelarCad;
         private System.Windows.Forms.Button SalvarNovoUsuario;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TxQuantidade;
+        private System.Windows.Forms.TextBox TxIdentificador;
+        private System.Windows.Forms.TextBox TxProcesso;
         private System.Windows.Forms.Label label4;
     }
 }

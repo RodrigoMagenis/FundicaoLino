@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fundicaolino.negocio.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,9 +18,29 @@ namespace Fundicaolino.telas
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void CarregarUsuarios()
         {
+            dgUsuario.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgUsuario.MultiSelect = false;
+            dgUsuario.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgUsuario.AutoGenerateColumns = false;
+            List<Usuario> usuarios = Program.Gerenciador.TodosOsUsuarios();
+            dgUsuario.DataSource = usuarios;
+        }
 
+        private void GridUsuario_Load(object sender, EventArgs e)
+        {
+            CarregarUsuarios();
+        }
+
+        private bool VerificaSelecao()
+        {
+            if (dgUsuario.SelectedRows.Count <= 0)
+            {
+                MessageBox.Show("Selecione uma linha");
+                return false;
+            }
+            return true;
         }
     }
 }

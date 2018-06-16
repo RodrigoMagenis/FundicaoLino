@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fundicaolino.negocio.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,30 @@ namespace Fundicaolino.telas
         public GridProducao()
         {
             InitializeComponent();
+        }
+
+        private void GridProducao_Load(object sender, EventArgs e)
+        {
+            CarregarProducoes();
+        }
+        private void CarregarProducoes()
+        {
+            dgProducao.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgProducao.MultiSelect = false;
+            dgProducao.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgProducao.AutoGenerateColumns = false;
+            List<Producao> producoes = Program.Gerenciador.TodasAsProducoes();
+            dgProducao.DataSource = producoes;
+        }
+
+        private bool VerificaSelecao()
+        {
+            if (dgProducao.SelectedRows.Count <= 0)
+            {
+                MessageBox.Show("Selecione uma linha");
+                return false;
+            }
+            return true;
         }
     }
 }

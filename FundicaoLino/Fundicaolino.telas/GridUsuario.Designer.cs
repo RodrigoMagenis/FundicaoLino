@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
-            this.gnGridFrameUser = new System.Windows.Forms.DataGridView();
+            this.dgUsuario = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NmUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdMatricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,7 +38,7 @@
             this.FgUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gnGridPanelUser = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gnGridFrameUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgUsuario)).BeginInit();
             this.gnGridPanelUser.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,25 +47,25 @@
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
             // 
-            // gnGridFrameUser
+            // dgUsuario
             // 
-            this.gnGridFrameUser.AllowUserToAddRows = false;
-            this.gnGridFrameUser.AllowUserToDeleteRows = false;
-            this.gnGridFrameUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.gnGridFrameUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gnGridFrameUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgUsuario.AllowUserToAddRows = false;
+            this.dgUsuario.AllowUserToDeleteRows = false;
+            this.dgUsuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dgUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgUsuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.NmUsuario,
             this.IdMatricula,
             this.IdGrupo,
             this.NmLogin,
             this.FgUsuario});
-            this.gnGridFrameUser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gnGridFrameUser.Location = new System.Drawing.Point(0, 0);
-            this.gnGridFrameUser.Name = "gnGridFrameUser";
-            this.gnGridFrameUser.ReadOnly = true;
-            this.gnGridFrameUser.Size = new System.Drawing.Size(557, 409);
-            this.gnGridFrameUser.TabIndex = 1;
+            this.dgUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgUsuario.Location = new System.Drawing.Point(0, 0);
+            this.dgUsuario.Name = "dgUsuario";
+            this.dgUsuario.ReadOnly = true;
+            this.dgUsuario.Size = new System.Drawing.Size(557, 409);
+            this.dgUsuario.TabIndex = 1;
             // 
             // Id
             // 
@@ -117,7 +117,7 @@
             // gnGridPanelUser
             // 
             this.gnGridPanelUser.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.gnGridPanelUser.Controls.Add(this.gnGridFrameUser);
+            this.gnGridPanelUser.Controls.Add(this.dgUsuario);
             this.gnGridPanelUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gnGridPanelUser.Location = new System.Drawing.Point(0, 0);
             this.gnGridPanelUser.Name = "gnGridPanelUser";
@@ -139,8 +139,9 @@
             this.ShowInTaskbar = false;
             this.Text = "GridUsuarios";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.GridUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gnGridFrameUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgUsuario)).EndInit();
             this.gnGridPanelUser.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -150,7 +151,7 @@
 
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.Panel gnGridPanelUser;
-        private System.Windows.Forms.DataGridView gnGridFrameUser;
+        private System.Windows.Forms.DataGridView dgUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn NmUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdMatricula;

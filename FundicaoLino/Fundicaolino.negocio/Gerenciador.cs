@@ -16,6 +16,11 @@ namespace Fundicaolino.negocio
             banco.Usuarios.Remove(usuario);
             return validacao;
         }
+
+
+ /*--------------------------------------------------------------------------------------------------------------*/
+
+        /* Adiciona / Altera Usuario */
         public Validacao AdicionarUsuario(Usuario usuario)
         {
             Validacao validacao = new Validacao();
@@ -62,10 +67,6 @@ namespace Fundicaolino.negocio
             {
                 validacao.Mensagens.Add("matricula", "Requer uma matrícula");
             }
-            //if (String.IsNullOrEmpty(UsuarioAlterado.Idgrupo.ToString()))
-            //{
-            //    validacao.Mensagens.Add("grupo", "Requer um grupo de acesso");
-            //}
 
             if (validacao.Valido)
             {
@@ -73,11 +74,15 @@ namespace Fundicaolino.negocio
                 UsuarioBanco.Idmatricula = UsuarioAlterado.Idmatricula;
                 UsuarioBanco.NmUsuario = UsuarioAlterado.NmUsuario;
                 UsuarioBanco.NmLogin = UsuarioAlterado.NmLogin;
-                UsuarioBanco.IdSenha = UsuarioAlterado.IdSenha;
+                UsuarioBanco.NmSenha = UsuarioAlterado.NmSenha;
                 this.banco.SaveChanges();
             }
             return validacao;
         }
+
+ /*--------------------------------------------------------------------------------------------------------------*/
+
+        /* Adiciona / Altera grupo */
         public Validacao AdicionarGrupo(Grupo grupo)
         {
             Validacao validacao = new Validacao();
@@ -107,19 +112,74 @@ namespace Fundicaolino.negocio
             }
             return validacao;
         }
-        public Usuario BuscaUsuarioPorId(long Id)
+        
+
+        /*--------------------------------------------------------------------------------------------------------------*/
+
+        /* Adiciona / Altera Produção */
+        public Validacao AdicionarProducao(Producao producao)
         {
-            return this.banco.Usuarios.Where(u => u.Id == Id).FirstOrDefault();
-        }
-        public Grupo BuscaGrupoPorId(long Id)
-        {
-            return this.banco.Grupos.Where(g => g.Id == Id).FirstOrDefault();
-        }
-        public List<Grupo> TodosOsGrupos()
-        {
-            return this.banco.Grupos.ToList();
+            Validacao validacao = new Validacao();
+            if (String.IsNullOrEmpty(producao.QtProduto.ToString()))
+            {
+                validacao.Mensagens.Add("qtd", "A quantidade não pode ser nula ou vazia");
+            }
+
+            if (producao.QtProduto <= 0 && validacao.Mensagens.Count == 0)
+            {
+                validacao.Mensagens.Add("qtd", "A quantidade não pode ser negativa");
+            }
+            if (validacao.Valido)
+            {
+                this.banco.Producoes.Add(producao);
+                this.banco.SaveChanges();
+            }
+            return validacao;
         }
 
+        public Validacao AlterarProducao(Producao producaoAlterada)
+        {
+            Validacao validacao = new Validacao();
+            Producao producaoBanco = BuscaProducaoPorId(producaoAlterada.Id);
+            if (String.IsNullOrEmpty(producaoAlterada.QtProduto.ToString()))
+            {
+                validacao.Mensagens.Add("qtd", "A quantidade não pode ser nula ou vazia");
+            }
+
+            if (producaoAlterada.QtProduto <= 0 && validacao.Mensagens.Count == 0)
+            {
+                validacao.Mensagens.Add("qtd", "A quantidade não pode ser negativa");
+            }
+            if (validacao.Valido)
+            {
+                producaoBanco.QtProduto = producaoAlterada.QtProduto;
+                this.banco.SaveChanges();
+            }
+            return validacao;
+        }
+
+        /*--------------------------------------------------------------------------------------------------------------*/
+
+        /* Retorna todos os resultados - Usado nas grids */
+        public List<Grupo> TodosOsGrupos()
+        {
+                return this.banco.Grupos.ToList();
+        }
+
+        public List<Usuario> TodosOsUsuarios()
+        {
+            return this.banco.Usuarios.ToList();
+        }
+
+        public List<Producao> TodasAsProducoes()
+        {
+            return this.banco.Producoes.ToList();
+        }
+
+
+        /*--------------------------------------------------------------------------------------------------------------*/
+
+        /* Outros métodos */
         public int NovaMatricula()
         {
             try
@@ -130,6 +190,21 @@ namespace Fundicaolino.negocio
             {
                 return 1;
             }
+        }
+
+        public Usuario BuscaUsuarioPorId(long Id)
+        {
+            return this.banco.Usuarios.Where(u => u.Id == Id).FirstOrDefault();
+        }
+
+        public Grupo BuscaGrupoPorId(long Id)
+        {
+            return this.banco.Grupos.Where(g => g.Id == Id).FirstOrDefault();
+        }
+
+        public Producao BuscaProducaoPorId(long Id)
+        {
+            return this.banco.Producoes.Where(g => g.Id == Id).FirstOrDefault();
         }
     }
 }

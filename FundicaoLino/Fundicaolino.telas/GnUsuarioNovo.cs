@@ -66,20 +66,11 @@ namespace Fundicaolino.telas
                 usuario.Idmatricula = -1;
             }
 
-
-
-            //ConcertoTelaNovoUsuario - e - NovoGrupo
-            //resultado = Int64.TryParse(TxGrupodeAcesso.Text, out longConvertido);
-            //if (resultado)
-            //{
-            //    usuario.Idgrupo = longConvertido;
-            //}
-
-            //resultado = Int64.TryParse(TxGrupodeAcesso.Text, out longConvertido);
-            //if (resultado)
-            //{
-            //    usuario.Idgrupo = longConvertido;
-            //}
+            usuario.NmLogin = TxNomeUsuario.Text;
+            usuario.FgUsuario = true;
+            usuario.NmSenha = "cop12345"; 
+            //#Feature Haverá uma tela de configuração do sistema que permitirá selecionar uma senha padrão
+            //#Feature Haverá relação com o grupo de acesso no cadastro de usuário;
 
             Validacao validacao;
             if (UsuarioSelecionado == null)
@@ -117,6 +108,7 @@ namespace Fundicaolino.telas
             catch
             {
                 MessageBox.Show("Ocorreu uma falha grave, contate um administrador");
+                this.Close();
             }
         }
     }

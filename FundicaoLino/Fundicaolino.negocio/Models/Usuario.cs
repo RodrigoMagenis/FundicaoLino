@@ -15,7 +15,7 @@ namespace Fundicaolino.negocio.Models
         public int                        Idmatricula { get; set; }
         public virtual ICollection<Grupo> GrupoUsuario { get; set; }
         public string                     NmLogin { get; set; }
-        public int                        IdSenha { get; set; }
+        public string                     NmSenha { get; set; }
         public Boolean                    FgUsuario { get; set; }
     }
 }
