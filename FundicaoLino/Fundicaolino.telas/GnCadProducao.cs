@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Fundicaolino.negocio;
+using Fundicaolino.negocio.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,39 +14,86 @@ namespace Fundicaolino.telas
 {
     public partial class GnCadProducao : Form
     {
+        public Usuario ProducaoSelecionada { get; set; }
+
         public GnCadProducao()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void SalvarNovoUsuario_Click(object sender, EventArgs e)
         {
+            Producao producao = new Producao();
+            Boolean resultado;
+            Int64 longConvertido;
+            Int32 intConvertido;
 
-        }
+            resultado = Int64.TryParse(TxIdentificador.Text, out longConvertido);
+            if (resultado)
+            {
+                producao.Id = longConvertido;
+            }
+            else
+            {
+                producao.Id = -1;
+            }
 
-        private void GnCadProducao_Load(object sender, EventArgs e)
-        {
+            resultado = Int32.TryParse(TxQuantidade.Text, out intConvertido);
+            if (resultado)
+            {
+                producao.QtProduto = intConvertido;
+            }
+            else
+            {
+                producao.Id = -1;
+            }
 
-        }
+            producao.FgProducao = 1;
+            producao.DtProducao = DateTime.Now;
 
-        private void label2_Click(object sender, EventArgs e)
-        {
+            //#Feature Haverá ligação com o tipos de produtos
+            //#Feature Haverá ligação com processos
+            //#Feature Poderá selecionar uma data ao invés de apenas a data atual
+            //#Feature A funcionalidade de status da produção será implementada futuramente
 
-        }
+            Validacao validacao;
+            if (ProducaoSelecionada == null)
+            {
+                validacao = Program.Gerenciador.AdicionarProducao(producao);
+            }
+            else
+            {
+                validacao = Program.Gerenciador.AlterarProducao(producao);
+            }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
+            try
+            {
 
-        }
+                if (!validacao.Valido)
+                {
+                    String mensagemValidacao = "";
+                    foreach (var chave in validacao.Mensagens.Keys)
+                    {
+                        String msg = validacao.Mensagens[chave];
+                        mensagemValidacao += msg;
+                        mensagemValidacao += Environment.NewLine;
+                    }
+                    MessageBox.Show(mensagemValidacao);
+                }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
+                else
+                {
+                    MessageBox.Show("Produção salvo com sucesso");
+                    this.Close();
+                }
 
-        }
+            }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
+            catch
+            {
+                MessageBox.Show("Ocorreu uma falha grave, contate um administrador");
+                this.Close();
+            }
         }
     }
 }

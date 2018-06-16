@@ -110,7 +110,6 @@ namespace Fundicaolino.telas
                 MessageBox.Show("Ocorreu uma falha grave, contate um administrador");
                 this.Close();
             }
-
         }
     }
 }
