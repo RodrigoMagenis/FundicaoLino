@@ -112,11 +112,11 @@
     <Compile Include="Producao\GridProducao.Designer.cs">
       <DependentUpon>GridProducao.cs</DependentUpon>
     </Compile>
-    <Compile Include="TipoProduto\GridProduto.cs">
+    <Compile Include="TipoProduto\GridTipoProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TipoProduto\GridProduto.Designer.cs">
-      <DependentUpon>GridProduto.cs</DependentUpon>
+    <Compile Include="TipoProduto\GridTipoProduto.Designer.cs">
+      <DependentUpon>GridTipoProduto.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -162,8 +162,8 @@
     <EmbeddedResource Include="Producao\GridProducao.resx">
       <DependentUpon>GridProducao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TipoProduto\GridProduto.resx">
-      <DependentUpon>GridProduto.cs</DependentUpon>
+    <EmbeddedResource Include="TipoProduto\GridTipoProduto.resx">
+      <DependentUpon>GridTipoProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
