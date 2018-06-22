@@ -51,11 +51,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(92, 128);
+            this.label2.Location = new System.Drawing.Point(40, 128);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 20);
+            this.label2.Size = new System.Drawing.Size(171, 20);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Codigo Produto";
+            this.label2.Text = "Codigo tipo de Produto";
             // 
             // btSalvarProcesso
             // 
@@ -100,11 +100,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(92, 251);
+            this.label4.Location = new System.Drawing.Point(146, 252);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(119, 20);
+            this.label4.Size = new System.Drawing.Size(65, 20);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Codigo Material";
+            this.label4.Text = "Material";
             // 
             // TxNmProduto
             // 
