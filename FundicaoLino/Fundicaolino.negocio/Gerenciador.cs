@@ -17,7 +17,6 @@ namespace Fundicaolino.negocio
             return validacao;
         }
 
-
  /*--------------------------------------------------------------------------------------------------------------*/
 
         /* Adiciona / Altera Usuario */
@@ -160,6 +159,77 @@ namespace Fundicaolino.negocio
 
         /*--------------------------------------------------------------------------------------------------------------*/
 
+        /* Adiciona / Altera Tipo de produto */
+        public Validacao AdicionarTipoProduto(TipoProduto tipoProduto)
+        {
+            Validacao validacao = new Validacao();
+            if (String.IsNullOrEmpty(tipoProduto.NmTipoProduto.ToString()))
+            {
+                validacao.Mensagens.Add("nome", "O nome do tipo do produto deve ser informado");
+            }
+
+            if (banco.TipoProdutos.Where(x => x.NmTipoProduto == tipoProduto.NmTipoProduto).Any() && validacao.Mensagens.Count == 0)
+            {
+                validacao.Mensagens.Add("qtd", "A quantidade não pode ser negativa");
+            }
+
+            if (tipoProduto.VlPeso != Convert.ToDecimal(null))
+            {
+                if(tipoProduto.VlPeso < 0)
+                {
+                    validacao.Mensagens.Add("peso", "O peso deve ser constituido de apenas valores positivos");
+                }
+            }
+            else
+            {
+                tipoProduto.VlPeso = 0;
+            }
+
+            if (validacao.Valido)
+            {
+                this.banco.TipoProdutos.Add(tipoProduto);
+                this.banco.SaveChanges();
+            }
+            return validacao;
+        }
+
+        public Validacao AlterarTipoProduto(TipoProduto tipoProduto)
+        {
+            Validacao validacao = new Validacao();
+            TipoProduto tipoProdutoBanco = BuscaTipoProdutoPorId(tipoProduto.Id);
+            if (String.IsNullOrEmpty(tipoProduto.NmTipoProduto.ToString()))
+            {
+                validacao.Mensagens.Add("nome", "O nome do tipo do produto deve ser informado");
+            }
+
+            if (banco.TipoProdutos.Where(x => x.NmTipoProduto == tipoProduto.NmTipoProduto).Any() && validacao.Mensagens.Count == 0)
+            {
+                validacao.Mensagens.Add("nome", "A quantidade não pode ser negativa");
+            }
+
+            if ( tipoProduto.VlPeso != Convert.ToDecimal ( null ) )
+            {
+                if (tipoProduto.VlPeso < 0)
+                {
+                    validacao.Mensagens.Add("peso", "O peso deve ser constituido de apenas valores positivos");
+                }
+            }
+            else
+            {
+                tipoProduto.VlPeso = 0;
+            }
+
+            if (validacao.Valido)
+            {
+                tipoProdutoBanco.NmTipoProduto = tipoProduto.NmTipoProduto;
+                tipoProdutoBanco.VlPeso = tipoProduto.VlPeso;
+                this.banco.SaveChanges();
+            }
+            return validacao;
+        }
+
+        /*--------------------------------------------------------------------------------------------------------------*/
+
         /* Retorna todos os resultados - Usado nas grids */
         public List<Grupo> TodosOsGrupos()
         {
@@ -205,6 +275,11 @@ namespace Fundicaolino.negocio
         public Producao BuscaProducaoPorId(long Id)
         {
             return this.banco.Producoes.Where(g => g.Id == Id).FirstOrDefault();
+        }
+
+        public TipoProduto BuscaTipoProdutoPorId(long Id)
+        {
+            return this.banco.TipoProdutos.Where(g => g.Id == Id).FirstOrDefault();
         }
     }
 }

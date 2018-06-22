@@ -1,4 +1,5 @@
-﻿using Fundicaolino.negocio.Models;
+﻿using Fundicaolino.negocio;
+using Fundicaolino.negocio.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,8 @@ namespace Fundicaolino.telas
 {
     public partial class CadastraTipoProduto : Form
     {
+        public TipoProduto TipoSelecionado { get; set; }
+
         public CadastraTipoProduto()
         {
             InitializeComponent();
@@ -23,7 +26,7 @@ namespace Fundicaolino.telas
             TipoProduto tipoProduto = new TipoProduto();
             Boolean resultado;
             Int64 longConvertido;
-            Int32 intConvertido;
+            Decimal decimalConvertido;
 
             resultado = Int64.TryParse(TxIdentificador.Text, out longConvertido);
             if (resultado)
@@ -35,32 +38,29 @@ namespace Fundicaolino.telas
                 tipoProduto.Id = -1;
             }
 
-            tipoProduto. = TxNomeUsuario.Text;
+            tipoProduto.NmTipoProduto = TxNmProduto.Text;
 
-            resultado = Int32.TryParse(TxMatricula.Text, out intConvertido);
+            resultado = Decimal.TryParse(TxVlPeso.Text, out decimalConvertido);
             if (resultado)
             {
-                usuario.Idmatricula = intConvertido;
+                tipoProduto.VlPeso = decimalConvertido;
             }
             else
             {
-                usuario.Idmatricula = -1;
+                tipoProduto.VlPeso = -1;
             }
 
-            usuario.NmLogin = TxNomeUsuario.Text;
-            usuario.FgUsuario = true;
-            usuario.NmSenha = "cop12345";
-            //#Feature Haverá uma tela de configuração do sistema que permitirá selecionar uma senha padrão
-            //#Feature Haverá relação com o grupo de acesso no cadastro de usuário;
+            tipoProduto.FgTipoProduto = true;
+            //#Feature Haverá relação com o material
 
             Validacao validacao;
-            if (UsuarioSelecionado == null)
+            if (TipoSelecionado == null)
             {
-                validacao = Program.Gerenciador.AdicionarUsuario(usuario);
+                validacao = Program.Gerenciador.AdicionarTipoProduto(tipoProduto);
             }
             else
             {
-                validacao = Program.Gerenciador.AlterarUsuario(usuario);
+                validacao = Program.Gerenciador.AlterarTipoProduto(tipoProduto);
             }
 
             try
@@ -80,7 +80,7 @@ namespace Fundicaolino.telas
 
                 else
                 {
-                    MessageBox.Show("Usuário salvo com sucesso");
+                    MessageBox.Show("Tipo de produto salvo com sucesso");
                     this.Close();
                 }
 
@@ -92,5 +92,7 @@ namespace Fundicaolino.telas
                 this.Close();
             }
         }
+
+     
     }
 }
