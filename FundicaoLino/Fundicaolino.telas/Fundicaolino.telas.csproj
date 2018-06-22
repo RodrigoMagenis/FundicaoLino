@@ -112,10 +112,10 @@
     <Compile Include="Producao\GridProducao.Designer.cs">
       <DependentUpon>GridProducao.cs</DependentUpon>
     </Compile>
-    <Compile Include="Produto\GridProduto.cs">
+    <Compile Include="TipoProduto\GridProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Produto\GridProduto.Designer.cs">
+    <Compile Include="TipoProduto\GridProduto.Designer.cs">
       <DependentUpon>GridProduto.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -162,7 +162,7 @@
     <EmbeddedResource Include="Producao\GridProducao.resx">
       <DependentUpon>GridProducao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Produto\GridProduto.resx">
+    <EmbeddedResource Include="TipoProduto\GridProduto.resx">
       <DependentUpon>GridProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -199,6 +199,9 @@
       <Project>{D837CFE8-F96C-4CBF-914D-25A4D9D7BB24}</Project>
       <Name>Fundicaolino.negocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Produto\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
