@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Fundicaolino.telas
+namespace Fundicaolino.telas.Produto
 {
-    public partial class GridTipoProduto : Form
+    public partial class GnProdutoNovo : Form
     {
-        public GridTipoProduto()
+        public GnProdutoNovo()
         {
             InitializeComponent();
         }

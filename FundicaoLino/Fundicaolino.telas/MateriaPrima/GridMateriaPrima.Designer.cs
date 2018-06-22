@@ -1,6 +1,6 @@
-﻿namespace Fundicaolino.telas
+﻿namespace Fundicaolino.telas.MateriaPrima
 {
-    partial class GridTipoProduto
+    partial class GridMateriaPrima
     {
         /// <summary>
         /// Required designer variable.
@@ -30,9 +30,8 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NmTipoProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VlPeso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdMateriais = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NmProcesso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EtapaProcesso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,15 +42,14 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
-            this.NmTipoProduto,
-            this.VlPeso,
-            this.IdMateriais});
+            this.NmProcesso,
+            this.EtapaProcesso});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(800, 450);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.Size = new System.Drawing.Size(801, 403);
+            this.dataGridView1.TabIndex = 1;
             // 
             // Id
             // 
@@ -61,39 +59,31 @@
             this.Id.Name = "Id";
             this.Id.ReadOnly = true;
             // 
-            // NmTipoProduto
+            // NmProcesso
             // 
-            this.NmTipoProduto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NmTipoProduto.DataPropertyName = "NmTipoProduto";
-            this.NmTipoProduto.HeaderText = "Nome Produto";
-            this.NmTipoProduto.Name = "NmTipoProduto";
-            this.NmTipoProduto.ReadOnly = true;
+            this.NmProcesso.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NmProcesso.DataPropertyName = "NmMaterial";
+            this.NmProcesso.HeaderText = "Nome Material";
+            this.NmProcesso.Name = "NmProcesso";
+            this.NmProcesso.ReadOnly = true;
             // 
-            // VlPeso
+            // EtapaProcesso
             // 
-            this.VlPeso.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.VlPeso.DataPropertyName = "VlPeso";
-            this.VlPeso.HeaderText = "Peso";
-            this.VlPeso.Name = "VlPeso";
-            this.VlPeso.ReadOnly = true;
+            this.EtapaProcesso.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.EtapaProcesso.DataPropertyName = "VlPesoMaterial";
+            this.EtapaProcesso.HeaderText = "Peso Material";
+            this.EtapaProcesso.Name = "EtapaProcesso";
+            this.EtapaProcesso.ReadOnly = true;
             // 
-            // IdMateriais
-            // 
-            this.IdMateriais.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.IdMateriais.DataPropertyName = "IdMateriais";
-            this.IdMateriais.HeaderText = "Codigo Material";
-            this.IdMateriais.Name = "IdMateriais";
-            this.IdMateriais.ReadOnly = true;
-            // 
-            // GridProduto
+            // GridMateriaPrima
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(801, 403);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "GridProduto";
-            this.Text = "GridProduto";
+            this.Name = "GridMateriaPrima";
+            this.Text = "GridMateriaPrima";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -104,8 +94,7 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NmTipoProduto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn VlPeso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdMateriais;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NmProcesso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EtapaProcesso;
     }
 }
