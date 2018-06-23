@@ -57,7 +57,6 @@
             this.btCancelar.TabIndex = 1;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
-            this.btCancelar.Click += new System.EventHandler(this.button1_Click);
             // 
             // btSalvarProcesso
             // 
@@ -97,7 +96,6 @@
             this.label4.Size = new System.Drawing.Size(60, 20);
             this.label4.TabIndex = 5;
             this.label4.Text = "Etapas";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // textBox1
             // 

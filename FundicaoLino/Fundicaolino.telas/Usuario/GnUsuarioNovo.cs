@@ -28,7 +28,7 @@ namespace Fundicaolino.telas
 
         private void BtAutoEncremento_Click(object sender, EventArgs e)
         {
-            TxMatricula.Text = Convert.ToString(Program.Gerenciador.NovaMatricula());
+           // TxMatricula.Text = Convert.ToString(Program.Gerenciador.NovaMatricula());
         }
 
         private void GnUsuarioNovo_Load(object sender, EventArgs e)

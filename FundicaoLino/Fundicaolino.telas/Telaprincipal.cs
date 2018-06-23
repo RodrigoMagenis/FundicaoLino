@@ -117,14 +117,12 @@ namespace Fundicaolino.telas
             switch (tela)
                 {
                 case 1:
-                    //gridGrupo.Close();
                     GnGrupoNovo telaNovoGrupo = new GnGrupoNovo();
                     telaNovoGrupo.MdiParent = this;
                     panel4.Controls.Add(telaNovoGrupo);
                     telaNovoGrupo.Show();
                     break;
                 case 2:
-                    //gridUsuario.Close();
                     GnUsuarioNovo telaNovoUsuario = new GnUsuarioNovo();
                     telaNovoUsuario.MdiParent = this ;
                     panel4.Controls.Add(telaNovoUsuario);
@@ -137,21 +135,18 @@ namespace Fundicaolino.telas
                     ///////////////////////////////////////////////////////////////////////FAZER///////////////////////////////////////////////////
                     break;
                 case 5:
-                    //gridProducao.Close();
                     GnCadProducao CadastraNovaProducao = new GnCadProducao();
                     CadastraNovaProducao.MdiParent = this;
                     panel4.Controls.Add(CadastraNovaProducao);
                     CadastraNovaProducao.Show();
                     break;
                 case 6:
-                    //gridProcesso.Close();
                     GnGerProcesso cadastraNovoProcesso = new GnGerProcesso();
                     cadastraNovoProcesso.MdiParent = this;
                     panel4.Controls.Add(cadastraNovoProcesso);
                     cadastraNovoProcesso.Show();
                     break;
                 case 7:
-                    //gridProduto.Close();
                     CadastraTipoProduto cadastraNovoTipoProduto = new CadastraTipoProduto();
                     cadastraNovoTipoProduto.MdiParent = this;
                     panel4.Controls.Add(cadastraNovoTipoProduto);

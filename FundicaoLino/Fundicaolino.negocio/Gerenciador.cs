@@ -229,9 +229,65 @@ namespace Fundicaolino.negocio
         }
 
         /*--------------------------------------------------------------------------------------------------------------*/
+        //Adicionar e alterar Materiais
+        public Validacao AdicionarMaterial(Material material)
+        {
+            Validacao validacao = new Validacao();
+            if (String.IsNullOrEmpty(material.NmMaterial.ToString()))
+            {
+                validacao.Mensagens.Add("nome", "O nome do tipo do produto deve ser informado");
+            }
 
-        /* Retorna todos os resultados - Usado nas grids */
-        public List<Grupo> TodosOsGrupos()
+            if (material.VlPesoMaterial != Convert.ToDecimal(null))
+            {
+                if (material.VlPesoMaterial < 0)
+                {
+                    validacao.Mensagens.Add("peso", "O peso deve ser constituido de apenas valores positivos");
+                }
+            }
+            else
+            {
+                material.VlPesoMaterial = 0;
+            }
+
+            if (validacao.Valido)
+            {
+                this.banco.Materiais.Add(material);
+                this.banco.SaveChanges();
+            }
+            return validacao;
+        }
+        public Validacao AlterarMaterial(Material materialAlterado)
+        {
+            Validacao validacao = new Validacao();
+            Material materialBanco = BuscaMaterialPorId(materialAlterado.Id);
+            if (String.IsNullOrEmpty(materialAlterado.NmMaterial.ToString()))
+            {
+                validacao.Mensagens.Add("nome", "O nome do tipo do produto deve ser informado");
+            }
+
+            if (materialAlterado.VlPesoMaterial != Convert.ToDecimal(null))
+            {
+                if (materialAlterado.VlPesoMaterial < 0)
+                {
+                    validacao.Mensagens.Add("peso", "O peso deve ser constituido de apenas valores positivos");
+                }
+            }
+            else
+            {
+                materialAlterado.VlPesoMaterial = 0;
+            }
+
+            if (validacao.Valido)
+            {
+                materialBanco.NmMaterial = materialAlterado.NmMaterial;
+                materialBanco.VlPesoMaterial = materialAlterado.VlPesoMaterial;
+                this.banco.SaveChanges();
+            }
+            return validacao;
+        }
+            /* Retorna todos os resultados - Usado nas grids */
+            public List<Grupo> TodosOsGrupos()
         {
                 return this.banco.Grupos.ToList();
         }
@@ -280,6 +336,10 @@ namespace Fundicaolino.negocio
         public TipoProduto BuscaTipoProdutoPorId(long Id)
         {
             return this.banco.TipoProdutos.Where(g => g.Id == Id).FirstOrDefault();
+        }
+        public Material BuscaMaterialPorId(long Id)
+        {
+            return this.banco.Materiais.Where(g => g.Id == Id).FirstOrDefault();
         }
     }
 }
