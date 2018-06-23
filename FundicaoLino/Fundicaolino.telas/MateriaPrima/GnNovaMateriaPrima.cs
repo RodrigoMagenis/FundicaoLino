@@ -24,7 +24,7 @@ namespace Fundicaolino.telas.MateriaPrima
             Material material = new Material();
             Boolean resultado;
             Int64 longConvertido;
-
+            Int32 intConvertido;
             resultado = Int64.TryParse(tbNmMaterial.Text, out longConvertido);
             if (resultado)
             {
@@ -33,6 +33,14 @@ namespace Fundicaolino.telas.MateriaPrima
             else
             {
                 material.Id = -1;
+            }
+
+            material.NmMaterial = tbNmMaterial.Text;
+            
+            resultado = Int32.TryParse(tbPesoMaterial.Text, out intConvertido);
+            if (resultado)
+            {
+                material.VlPesoMaterial = intConvertido;
             }
 
             Validacao validacao;

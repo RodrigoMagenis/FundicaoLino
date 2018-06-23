@@ -233,9 +233,10 @@ namespace Fundicaolino.negocio
         public Validacao AdicionarMaterial(Material material)
         {
             Validacao validacao = new Validacao();
+           
             if (String.IsNullOrEmpty(material.NmMaterial.ToString()))
             {
-                validacao.Mensagens.Add("nome", "O nome do tipo do produto deve ser informado");
+                validacao.Mensagens.Add("nome", "O nome do Material deve ser informado");
             }
 
             if (material.VlPesoMaterial != Convert.ToDecimal(null))
