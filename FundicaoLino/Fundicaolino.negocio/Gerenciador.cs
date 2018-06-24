@@ -230,6 +230,30 @@ namespace Fundicaolino.negocio
 
         /*--------------------------------------------------------------------------------------------------------------*/
 
+        /* Adiciona produto */
+        public Validacao AdicionarProduto(dbProduto produto)
+        {
+            Validacao validacao = new Validacao();
+            if (produto.Responsavel == null)
+            {
+                validacao.Mensagens.Add("Responsável", "Um usuário responsável pelo produto deve ser informado");
+            }
+
+            if (produto.TPProduto == null)
+            {
+                validacao.Mensagens.Add("Tipo do produto", "Um tipo de produto deve ser informado");
+            }
+
+            if (validacao.Valido)
+            {
+                this.banco.Produtos.Add(produto);
+                this.banco.SaveChanges();
+            }
+            return validacao;
+        }
+
+        /*--------------------------------------------------------------------------------------------------------------*/
+
         /* Retorna todos os resultados - Usado nas grids */
         public List<Grupo> TodosOsGrupos()
         {
@@ -245,6 +269,12 @@ namespace Fundicaolino.negocio
         {
             return this.banco.Producoes.ToList();
         }
+
+        public List<TipoProduto> TodosOsTiposProdutos()
+        {
+            return this.banco.TipoProdutos.ToList();
+        }
+
 
 
         /*--------------------------------------------------------------------------------------------------------------*/
