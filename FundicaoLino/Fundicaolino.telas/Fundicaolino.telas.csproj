@@ -52,6 +52,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MateriaPrima\GnNovaMateriaPrima.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MateriaPrima\GnNovaMateriaPrima.Designer.cs">
+      <DependentUpon>GnNovaMateriaPrima.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MateriaPrima\GridMateriaPrima.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MateriaPrima\GridMateriaPrima.Designer.cs">
+      <DependentUpon>GridMateriaPrima.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produto\GnProdutoNovo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produto\GnProdutoNovo.Designer.cs">
+      <DependentUpon>GnProdutoNovo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produto\GridProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produto\GridProduto.Designer.cs">
+      <DependentUpon>GridProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="TipoProduto\CadastraTipoProduto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,11 +136,11 @@
     <Compile Include="Producao\GridProducao.Designer.cs">
       <DependentUpon>GridProducao.cs</DependentUpon>
     </Compile>
-    <Compile Include="TipoProduto\GridProduto.cs">
+    <Compile Include="TipoProduto\GridTipoProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TipoProduto\GridProduto.Designer.cs">
-      <DependentUpon>GridProduto.cs</DependentUpon>
+    <Compile Include="TipoProduto\GridTipoProduto.Designer.cs">
+      <DependentUpon>GridTipoProduto.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -132,6 +156,18 @@
     <Compile Include="TelaPrincipal.Designer.cs">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="MateriaPrima\GnNovaMateriaPrima.resx">
+      <DependentUpon>GnNovaMateriaPrima.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MateriaPrima\GridMateriaPrima.resx">
+      <DependentUpon>GridMateriaPrima.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produto\GnProdutoNovo.resx">
+      <DependentUpon>GnProdutoNovo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produto\GridProduto.resx">
+      <DependentUpon>GridProduto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TipoProduto\CadastraTipoProduto.resx">
       <DependentUpon>CadastraTipoProduto.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,8 +198,8 @@
     <EmbeddedResource Include="Producao\GridProducao.resx">
       <DependentUpon>GridProducao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TipoProduto\GridProduto.resx">
-      <DependentUpon>GridProduto.cs</DependentUpon>
+    <EmbeddedResource Include="TipoProduto\GridTipoProduto.resx">
+      <DependentUpon>GridTipoProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -200,8 +236,6 @@
       <Name>Fundicaolino.negocio</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Produto\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
