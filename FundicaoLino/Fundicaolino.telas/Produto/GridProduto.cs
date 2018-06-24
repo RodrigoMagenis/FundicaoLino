@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Fundicaolino.telas
+namespace Fundicaolino.telas.Produto
 {
-    public partial class CadastraTipoProduto : Form
+    public partial class GridProduto : Form
     {
-        public CadastraTipoProduto()
+        public GridProduto()
         {
             InitializeComponent();
         }

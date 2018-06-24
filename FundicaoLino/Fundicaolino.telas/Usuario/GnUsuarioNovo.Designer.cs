@@ -43,9 +43,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btEsquerda = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dgGruposExistentes = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btDireita = new System.Windows.Forms.Button();
+            this.btEsquerdo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgGruposExistentes)).BeginInit();
             this.SuspendLayout();
             // 
             // NovoUsuario
@@ -131,27 +134,49 @@
             resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
-            // btEsquerda
+            // dgGruposExistentes
             // 
-            resources.ApplyResources(this.btEsquerda, "btEsquerda");
-            this.btEsquerda.Name = "btEsquerda";
-            this.btEsquerda.UseVisualStyleBackColor = true;
+            this.dgGruposExistentes.AllowUserToAddRows = false;
+            this.dgGruposExistentes.AllowUserToDeleteRows = false;
+            this.dgGruposExistentes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgGruposExistentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgGruposExistentes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn2});
+            resources.ApplyResources(this.dgGruposExistentes, "dgGruposExistentes");
+            this.dgGruposExistentes.Name = "dgGruposExistentes";
+            this.dgGruposExistentes.ReadOnly = true;
             // 
-            // comboBox1
+            // dataGridViewTextBoxColumn2
             // 
-            this.comboBox1.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBox1, "comboBox1");
-            this.comboBox1.Name = "comboBox1";
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // btDireita
+            // 
+            resources.ApplyResources(this.btDireita, "btDireita");
+            this.btDireita.Name = "btDireita";
+            this.btDireita.UseVisualStyleBackColor = true;
+            this.btDireita.Click += new System.EventHandler(this.BtAutoEncremento_Click);
+            // 
+            // btEsquerdo
+            // 
+            resources.ApplyResources(this.btEsquerdo, "btEsquerdo");
+            this.btEsquerdo.Name = "btEsquerdo";
+            this.btEsquerdo.UseVisualStyleBackColor = true;
+            this.btEsquerdo.Click += new System.EventHandler(this.BtAutoEncremento_Click);
             // 
             // GnUsuarioNovo
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.btEsquerda);
+            this.Controls.Add(this.dgGruposExistentes);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.SalvarNovoUsuario);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.btEsquerdo);
+            this.Controls.Add(this.btDireita);
             this.Controls.Add(this.BtAutoEncremento);
             this.Controls.Add(this.CancelarNovoUsuario);
             this.Controls.Add(this.TxMatricula);
@@ -167,6 +192,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.GnUsuarioNovo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgGruposExistentes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,7 +214,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.Button btEsquerda;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridView dgGruposExistentes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.Button btDireita;
+        private System.Windows.Forms.Button btEsquerdo;
     }
 }

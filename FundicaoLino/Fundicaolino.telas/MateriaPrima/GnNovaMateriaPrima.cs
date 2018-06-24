@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Fundicaolino.telas
+namespace Fundicaolino.telas.MateriaPrima
 {
-    public partial class GridUsuario : Form
+    public partial class GnNovaMateriaPrima : Form
     {
-        public GridUsuario()
+        public GnNovaMateriaPrima()
         {
             InitializeComponent();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

@@ -28,34 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txId = new System.Windows.Forms.TextBox();
+            this.TxIdentificador = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btSalvarProcesso = new System.Windows.Forms.Button();
             this.btCancelar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TxNmProduto = new System.Windows.Forms.TextBox();
+            this.TxVlPeso = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // txId
+            // TxIdentificador
             // 
-            this.txId.Location = new System.Drawing.Point(252, 128);
-            this.txId.Name = "txId";
-            this.txId.Size = new System.Drawing.Size(138, 20);
-            this.txId.TabIndex = 10;
+            this.TxIdentificador.Location = new System.Drawing.Point(252, 128);
+            this.TxIdentificador.Name = "TxIdentificador";
+            this.TxIdentificador.Size = new System.Drawing.Size(138, 20);
+            this.TxIdentificador.TabIndex = 10;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(92, 128);
+            this.label2.Location = new System.Drawing.Point(40, 128);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 20);
+            this.label2.Size = new System.Drawing.Size(171, 20);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Codigo Produto";
+            this.label2.Text = "Codigo tipo de Produto";
             // 
             // btSalvarProcesso
             // 
@@ -65,6 +65,7 @@
             this.btSalvarProcesso.TabIndex = 8;
             this.btSalvarProcesso.Text = "Salvar";
             this.btSalvarProcesso.UseVisualStyleBackColor = true;
+            this.btSalvarProcesso.Click += new System.EventHandler(this.btSalvarProcesso_Click);
             // 
             // btCancelar
             // 
@@ -99,25 +100,25 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(92, 251);
+            this.label4.Location = new System.Drawing.Point(146, 252);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(119, 20);
+            this.label4.Size = new System.Drawing.Size(65, 20);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Codigo Material";
+            this.label4.Text = "Material";
             // 
-            // textBox1
+            // TxNmProduto
             // 
-            this.textBox1.Location = new System.Drawing.Point(252, 166);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(138, 20);
-            this.textBox1.TabIndex = 10;
+            this.TxNmProduto.Location = new System.Drawing.Point(252, 166);
+            this.TxNmProduto.Name = "TxNmProduto";
+            this.TxNmProduto.Size = new System.Drawing.Size(138, 20);
+            this.TxNmProduto.TabIndex = 10;
             // 
-            // textBox2
+            // TxVlPeso
             // 
-            this.textBox2.Location = new System.Drawing.Point(252, 207);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(138, 20);
-            this.textBox2.TabIndex = 10;
+            this.TxVlPeso.Location = new System.Drawing.Point(252, 207);
+            this.TxVlPeso.Name = "TxVlPeso";
+            this.TxVlPeso.Size = new System.Drawing.Size(138, 20);
+            this.TxVlPeso.TabIndex = 10;
             // 
             // comboBox1
             // 
@@ -133,9 +134,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.txId);
+            this.Controls.Add(this.TxVlPeso);
+            this.Controls.Add(this.TxNmProduto);
+            this.Controls.Add(this.TxIdentificador);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
@@ -153,15 +154,15 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txId;
+        private System.Windows.Forms.TextBox TxIdentificador;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btSalvarProcesso;
         private System.Windows.Forms.Button btCancelar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TxNmProduto;
+        private System.Windows.Forms.TextBox TxVlPeso;
         private System.Windows.Forms.ComboBox comboBox1;
     }
 }

@@ -35,10 +35,12 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.GenericaProducao = new System.Windows.Forms.Label();
             this.Genericacontroleemtemporeal = new System.Windows.Forms.Button();
+            this.btGerenciarProdutos = new System.Windows.Forms.Button();
             this.Genericacadastrarproduto = new System.Windows.Forms.Button();
             this.Genericacontrole = new System.Windows.Forms.Label();
             this.GenericaControleQualidade = new System.Windows.Forms.Button();
             this.Genericaexibirfiladeproducao = new System.Windows.Forms.Button();
+            this.btCadastraMateriaPrima = new System.Windows.Forms.Button();
             this.btCadastraProducao = new System.Windows.Forms.Button();
             this.Genericacadastrarprocesso = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -64,7 +66,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(777, 491);
+            this.panel1.Size = new System.Drawing.Size(777, 559);
             this.panel1.TabIndex = 4;
             // 
             // panel4
@@ -75,7 +77,7 @@
             this.panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel4.Location = new System.Drawing.Point(220, 82);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(557, 409);
+            this.panel4.Size = new System.Drawing.Size(557, 477);
             this.panel4.TabIndex = 0;
             // 
             // panel3
@@ -85,10 +87,12 @@
             this.panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel3.Controls.Add(this.GenericaProducao);
             this.panel3.Controls.Add(this.Genericacontroleemtemporeal);
+            this.panel3.Controls.Add(this.btGerenciarProdutos);
             this.panel3.Controls.Add(this.Genericacadastrarproduto);
             this.panel3.Controls.Add(this.Genericacontrole);
             this.panel3.Controls.Add(this.GenericaControleQualidade);
             this.panel3.Controls.Add(this.Genericaexibirfiladeproducao);
+            this.panel3.Controls.Add(this.btCadastraMateriaPrima);
             this.panel3.Controls.Add(this.btCadastraProducao);
             this.panel3.Controls.Add(this.Genericacadastrarprocesso);
             this.panel3.Controls.Add(this.label2);
@@ -97,7 +101,7 @@
             this.panel3.Controls.Add(this.Genericagerenciargrupo);
             this.panel3.Location = new System.Drawing.Point(0, 82);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(214, 409);
+            this.panel3.Size = new System.Drawing.Size(214, 477);
             this.panel3.TabIndex = 0;
             // 
             // GenericaProducao
@@ -113,7 +117,7 @@
             // 
             // Genericacontroleemtemporeal
             // 
-            this.Genericacontroleemtemporeal.Location = new System.Drawing.Point(38, 375);
+            this.Genericacontroleemtemporeal.Location = new System.Drawing.Point(38, 433);
             this.Genericacontroleemtemporeal.Name = "Genericacontroleemtemporeal";
             this.Genericacontroleemtemporeal.Size = new System.Drawing.Size(163, 23);
             this.Genericacontroleemtemporeal.TabIndex = 8;
@@ -121,13 +125,23 @@
             this.Genericacontroleemtemporeal.UseVisualStyleBackColor = true;
             this.Genericacontroleemtemporeal.Click += new System.EventHandler(this.Genericacontroleemtemporeal_Click);
             // 
+            // btGerenciarProdutos
+            // 
+            this.btGerenciarProdutos.Location = new System.Drawing.Point(38, 375);
+            this.btGerenciarProdutos.Name = "btGerenciarProdutos";
+            this.btGerenciarProdutos.Size = new System.Drawing.Size(163, 23);
+            this.btGerenciarProdutos.TabIndex = 8;
+            this.btGerenciarProdutos.Text = "Gerenciar Produto";
+            this.btGerenciarProdutos.UseVisualStyleBackColor = true;
+            this.btGerenciarProdutos.Click += new System.EventHandler(this.btGerenciarProdutos_Click);
+            // 
             // Genericacadastrarproduto
             // 
-            this.Genericacadastrarproduto.Location = new System.Drawing.Point(38, 317);
+            this.Genericacadastrarproduto.Location = new System.Drawing.Point(38, 346);
             this.Genericacadastrarproduto.Name = "Genericacadastrarproduto";
             this.Genericacadastrarproduto.Size = new System.Drawing.Size(163, 23);
             this.Genericacadastrarproduto.TabIndex = 8;
-            this.Genericacadastrarproduto.Text = "Cadastrar produtos";
+            this.Genericacadastrarproduto.Text = "Gerenciar Tipo Produto";
             this.Genericacadastrarproduto.UseVisualStyleBackColor = true;
             this.Genericacadastrarproduto.Click += new System.EventHandler(this.Genericacadastrarproduto_Click);
             // 
@@ -154,7 +168,7 @@
             // 
             // Genericaexibirfiladeproducao
             // 
-            this.Genericaexibirfiladeproducao.Location = new System.Drawing.Point(38, 346);
+            this.Genericaexibirfiladeproducao.Location = new System.Drawing.Point(38, 404);
             this.Genericaexibirfiladeproducao.Name = "Genericaexibirfiladeproducao";
             this.Genericaexibirfiladeproducao.Size = new System.Drawing.Size(163, 23);
             this.Genericaexibirfiladeproducao.TabIndex = 8;
@@ -162,23 +176,33 @@
             this.Genericaexibirfiladeproducao.UseVisualStyleBackColor = true;
             this.Genericaexibirfiladeproducao.Click += new System.EventHandler(this.Genericaexibirfiladeproducao_Click);
             // 
+            // btCadastraMateriaPrima
+            // 
+            this.btCadastraMateriaPrima.Location = new System.Drawing.Point(38, 288);
+            this.btCadastraMateriaPrima.Name = "btCadastraMateriaPrima";
+            this.btCadastraMateriaPrima.Size = new System.Drawing.Size(163, 23);
+            this.btCadastraMateriaPrima.TabIndex = 8;
+            this.btCadastraMateriaPrima.Text = "Gerenciar Materia Prima";
+            this.btCadastraMateriaPrima.UseVisualStyleBackColor = true;
+            this.btCadastraMateriaPrima.Click += new System.EventHandler(this.btCadastraMateriaPrima_Click);
+            // 
             // btCadastraProducao
             // 
             this.btCadastraProducao.Location = new System.Drawing.Point(38, 259);
             this.btCadastraProducao.Name = "btCadastraProducao";
             this.btCadastraProducao.Size = new System.Drawing.Size(163, 23);
             this.btCadastraProducao.TabIndex = 8;
-            this.btCadastraProducao.Text = "Cadastrar Produção";
+            this.btCadastraProducao.Text = "Gerenciar Produção";
             this.btCadastraProducao.UseVisualStyleBackColor = true;
             this.btCadastraProducao.Click += new System.EventHandler(this.btCadastraProducao_Click);
             // 
             // Genericacadastrarprocesso
             // 
-            this.Genericacadastrarprocesso.Location = new System.Drawing.Point(38, 288);
+            this.Genericacadastrarprocesso.Location = new System.Drawing.Point(38, 317);
             this.Genericacadastrarprocesso.Name = "Genericacadastrarprocesso";
             this.Genericacadastrarprocesso.Size = new System.Drawing.Size(163, 23);
             this.Genericacadastrarprocesso.TabIndex = 8;
-            this.Genericacadastrarprocesso.Text = "Cadastrar processo";
+            this.Genericacadastrarprocesso.Text = "Gerenciar Processo";
             this.Genericacadastrarprocesso.UseVisualStyleBackColor = true;
             this.Genericacadastrarprocesso.Click += new System.EventHandler(this.Genericacadastrarprocesso_Click);
             // 
@@ -279,7 +303,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(777, 491);
+            this.ClientSize = new System.Drawing.Size(777, 559);
             this.Controls.Add(this.panel1);
             this.IsMdiContainer = true;
             this.Name = "TelaPrincipal";
@@ -314,6 +338,8 @@
         private System.Windows.Forms.Button Genericacadastrarprocesso;
         private System.Windows.Forms.Button GenericaControleProducao;
         private System.Windows.Forms.Button btCadastraProducao;
+        private System.Windows.Forms.Button btGerenciarProdutos;
+        private System.Windows.Forms.Button btCadastraMateriaPrima;
     }
 }
 

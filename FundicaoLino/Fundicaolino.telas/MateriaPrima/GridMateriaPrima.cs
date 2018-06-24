@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Fundicaolino.telas
+namespace Fundicaolino.telas.MateriaPrima
 {
-    public partial class GridProducao : Form
+    public partial class GridMateriaPrima : Form
     {
-        public GridProducao()
+        public GridMateriaPrima()
         {
             InitializeComponent();
         }

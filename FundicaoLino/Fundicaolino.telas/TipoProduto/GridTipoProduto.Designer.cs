@@ -1,6 +1,6 @@
 ﻿namespace Fundicaolino.telas
 {
-    partial class GridProduto
+    partial class GridTipoProduto
     {
         /// <summary>
         /// Required designer variable.

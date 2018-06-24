@@ -1,4 +1,6 @@
 ﻿using Fundicaolino.negocio;
+using Fundicaolino.telas.MateriaPrima;
+using Fundicaolino.telas.Produto;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -150,16 +152,31 @@ namespace Fundicaolino.telas
                     break;
                 case 7:
                     //gridProduto.Close();
-                    CadastraTipoProduto cadastraNovoProduto = new CadastraTipoProduto();
-                    cadastraNovoProduto.MdiParent = this;
-                    panel4.Controls.Add(cadastraNovoProduto);
-                    cadastraNovoProduto.Show();
+                    CadastraTipoProduto cadastraNovoTipoProduto = new CadastraTipoProduto();
+                    cadastraNovoTipoProduto.MdiParent = this;
+                    panel4.Controls.Add(cadastraNovoTipoProduto);
+                    cadastraNovoTipoProduto.Show();
 
 
                     break;
                 case 8:
                     break;
                 case 9:
+                    break;
+                case 10:
+                    GnNovaMateriaPrima gnNovaMateriaPrima = new GnNovaMateriaPrima();
+                    gnNovaMateriaPrima.MdiParent = this;
+                    panel4.Controls.Add(gnNovaMateriaPrima);
+                    gnNovaMateriaPrima.Show();
+                    break;
+                case 11:
+                    GnProdutoNovo gnProdutoNovo = new GnProdutoNovo();
+                    gnProdutoNovo.MdiParent = this;
+                    panel4.Controls.Add(gnProdutoNovo);
+                    gnProdutoNovo.Show();
+                    break;
+                default:
+                    Console.WriteLine("ZONA DE CONFORTO");
                     break;
             }
         }
@@ -214,10 +231,10 @@ namespace Fundicaolino.telas
 
         private void Genericacadastrarproduto_Click(object sender, EventArgs e)
         {
-            GridProduto gridProduto = new GridProduto();
-            gridProduto.MdiParent = this;
-            panel4.Controls.Add(gridProduto);
-            gridProduto.Show();
+            GridTipoProduto gridTipoProduto = new GridTipoProduto();
+            gridTipoProduto.MdiParent = this;
+            panel4.Controls.Add(gridTipoProduto);
+            gridTipoProduto.Show();
             tela = 7;
         }
 
@@ -234,6 +251,24 @@ namespace Fundicaolino.telas
         {
             ///////////////////////////////////////////////////////////////////////FAZER///////////////////////////////////////////////////
             tela = 9;
+        }
+
+        private void btCadastraMateriaPrima_Click(object sender, EventArgs e)
+        {
+            GridMateriaPrima gridMateriaPrima = new GridMateriaPrima();
+            gridMateriaPrima.MdiParent = this;
+            panel4.Controls.Add(gridMateriaPrima);
+            gridMateriaPrima.Show();
+            tela = 10;
+        }
+
+        private void btGerenciarProdutos_Click(object sender, EventArgs e)
+        {
+            GridProduto gridProduto = new GridProduto();
+            gridProduto.MdiParent = this;
+            panel4.Controls.Add(gridProduto);
+            gridProduto.Show();
+            tela = 11;
         }
     }
 }

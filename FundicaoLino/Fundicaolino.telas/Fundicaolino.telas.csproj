@@ -52,71 +52,95 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CadastraTipoProduto.cs">
+    <Compile Include="MateriaPrima\GnNovaMateriaPrima.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CadastraTipoProduto.Designer.cs">
+    <Compile Include="MateriaPrima\GnNovaMateriaPrima.Designer.cs">
+      <DependentUpon>GnNovaMateriaPrima.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MateriaPrima\GridMateriaPrima.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MateriaPrima\GridMateriaPrima.Designer.cs">
+      <DependentUpon>GridMateriaPrima.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produto\GnProdutoNovo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produto\GnProdutoNovo.Designer.cs">
+      <DependentUpon>GnProdutoNovo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produto\GridProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produto\GridProduto.Designer.cs">
+      <DependentUpon>GridProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TipoProduto\CadastraTipoProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TipoProduto\CadastraTipoProduto.Designer.cs">
       <DependentUpon>CadastraTipoProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="GnCadProducao.cs">
+    <Compile Include="Producao\GnCadProducao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GnCadProducao.Designer.cs">
+    <Compile Include="Producao\GnCadProducao.Designer.cs">
       <DependentUpon>GnCadProducao.cs</DependentUpon>
     </Compile>
-    <Compile Include="GridFiladeProducao.cs">
+    <Compile Include="Producao\GridFiladeProducao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GridFiladeProducao.Designer.cs">
+    <Compile Include="Producao\GridFiladeProducao.Designer.cs">
       <DependentUpon>GridFiladeProducao.cs</DependentUpon>
     </Compile>
-    <Compile Include="GnGerProcesso.cs">
+    <Compile Include="Processo\GnGerProcesso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GnGerProcesso.Designer.cs">
+    <Compile Include="Processo\GnGerProcesso.Designer.cs">
       <DependentUpon>GnGerProcesso.cs</DependentUpon>
     </Compile>
-    <Compile Include="GridGrupo.cs">
+    <Compile Include="Grupo\GridGrupo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GridGrupo.Designer.cs">
+    <Compile Include="Grupo\GridGrupo.Designer.cs">
       <DependentUpon>GridGrupo.cs</DependentUpon>
     </Compile>
-    <Compile Include="GridUsuario.cs">
+    <Compile Include="Usuario\GridUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GridUsuario.Designer.cs">
+    <Compile Include="Usuario\GridUsuario.Designer.cs">
       <DependentUpon>GridUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="GnGrupoNovo.cs">
+    <Compile Include="Grupo\GnGrupoNovo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GnGrupoNovo.Designer.cs">
+    <Compile Include="Grupo\GnGrupoNovo.Designer.cs">
       <DependentUpon>GnGrupoNovo.cs</DependentUpon>
     </Compile>
-    <Compile Include="GnUsuarioNovo.cs">
+    <Compile Include="Usuario\GnUsuarioNovo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GnUsuarioNovo.Designer.cs">
+    <Compile Include="Usuario\GnUsuarioNovo.Designer.cs">
       <DependentUpon>GnUsuarioNovo.cs</DependentUpon>
     </Compile>
-    <Compile Include="GridProcesso.cs">
+    <Compile Include="Processo\GridProcesso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GridProcesso.Designer.cs">
+    <Compile Include="Processo\GridProcesso.Designer.cs">
       <DependentUpon>GridProcesso.cs</DependentUpon>
     </Compile>
-    <Compile Include="GridProducao.cs">
+    <Compile Include="Producao\GridProducao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GridProducao.Designer.cs">
+    <Compile Include="Producao\GridProducao.Designer.cs">
       <DependentUpon>GridProducao.cs</DependentUpon>
     </Compile>
-    <Compile Include="GridProduto.cs">
+    <Compile Include="TipoProduto\GridTipoProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GridProduto.Designer.cs">
-      <DependentUpon>GridProduto.cs</DependentUpon>
+    <Compile Include="TipoProduto\GridTipoProduto.Designer.cs">
+      <DependentUpon>GridTipoProduto.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -132,38 +156,50 @@
     <Compile Include="TelaPrincipal.Designer.cs">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CadastraTipoProduto.resx">
+    <EmbeddedResource Include="MateriaPrima\GnNovaMateriaPrima.resx">
+      <DependentUpon>GnNovaMateriaPrima.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MateriaPrima\GridMateriaPrima.resx">
+      <DependentUpon>GridMateriaPrima.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produto\GnProdutoNovo.resx">
+      <DependentUpon>GnProdutoNovo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produto\GridProduto.resx">
+      <DependentUpon>GridProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TipoProduto\CadastraTipoProduto.resx">
       <DependentUpon>CadastraTipoProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GnCadProducao.resx">
+    <EmbeddedResource Include="Producao\GnCadProducao.resx">
       <DependentUpon>GnCadProducao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GridFiladeProducao.resx">
+    <EmbeddedResource Include="Producao\GridFiladeProducao.resx">
       <DependentUpon>GridFiladeProducao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GnGerProcesso.resx">
+    <EmbeddedResource Include="Processo\GnGerProcesso.resx">
       <DependentUpon>GnGerProcesso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GridGrupo.resx">
+    <EmbeddedResource Include="Grupo\GridGrupo.resx">
       <DependentUpon>GridGrupo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GridUsuario.resx">
+    <EmbeddedResource Include="Usuario\GridUsuario.resx">
       <DependentUpon>GridUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GnGrupoNovo.resx">
+    <EmbeddedResource Include="Grupo\GnGrupoNovo.resx">
       <DependentUpon>GnGrupoNovo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GnUsuarioNovo.resx">
+    <EmbeddedResource Include="Usuario\GnUsuarioNovo.resx">
       <DependentUpon>GnUsuarioNovo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GridProcesso.resx">
+    <EmbeddedResource Include="Processo\GridProcesso.resx">
       <DependentUpon>GridProcesso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GridProducao.resx">
+    <EmbeddedResource Include="Producao\GridProducao.resx">
       <DependentUpon>GridProducao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GridProduto.resx">
-      <DependentUpon>GridProduto.cs</DependentUpon>
+    <EmbeddedResource Include="TipoProduto\GridTipoProduto.resx">
+      <DependentUpon>GridTipoProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -200,5 +236,6 @@
       <Name>Fundicaolino.negocio</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
