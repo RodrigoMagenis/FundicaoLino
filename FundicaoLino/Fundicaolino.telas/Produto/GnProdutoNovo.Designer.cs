@@ -100,6 +100,7 @@
             this.BtSalvar.TabIndex = 12;
             this.BtSalvar.Text = "Salvar";
             this.BtSalvar.UseVisualStyleBackColor = true;
+            this.BtSalvar.Click += new System.EventHandler(this.BtSalvar_Click);
             // 
             // BtCancelar
             // 
@@ -128,6 +129,7 @@
             this.Name = "GnProdutoNovo";
             this.Text = "GnProdutoNovo";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.GnProdutoNovo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

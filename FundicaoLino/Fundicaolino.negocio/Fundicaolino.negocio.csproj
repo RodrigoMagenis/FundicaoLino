@@ -69,7 +69,7 @@
     <Compile Include="Models\Material.cs" />
     <Compile Include="Models\Processo.cs" />
     <Compile Include="Models\Producao.cs" />
-    <Compile Include="Models\Produto.cs" />
+    <Compile Include="Models\dbProduto.cs" />
     <Compile Include="Models\TipoProduto.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Models\Grupo.cs" />

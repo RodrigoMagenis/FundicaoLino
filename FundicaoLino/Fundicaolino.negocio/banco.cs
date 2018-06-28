@@ -15,7 +15,7 @@ namespace Fundicaolino.negocio
         public virtual DbSet<Material> Materiais { get; set; }
         public virtual DbSet<Processo> Processos { get; set; }
         public virtual DbSet<Producao> Producoes { get; set; }
-        public virtual DbSet<Produto> Produtos { get; set; }
+        public virtual DbSet<dbProduto> Produtos { get; set; }
         public virtual DbSet<TipoProduto> TipoProdutos { get; set; }
         public virtual DbSet<Usuario> Usuarios { get; set; }
     }
