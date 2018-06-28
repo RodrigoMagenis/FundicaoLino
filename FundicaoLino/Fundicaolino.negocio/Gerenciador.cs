@@ -289,40 +289,41 @@ namespace Fundicaolino.negocio
             return validacao;
         }
 
-        //public Validacao AlterarMateriaPrima(Material materiaPrima)
-        //{
-        //    Validacao validacao = new Validacao();
-        //    Material tipoMateriaPrimaBanco= BuscaMateriaPrimaPorId(materiaPrima.Id);
-        //    if (String.IsNullOrEmpty(tipoProduto.NmTipoProduto.ToString()))
-        //    {
-        //        validacao.Mensagens.Add("nome", "O nome do tipo do produto deve ser informado");
-        //    }
+        public Validacao AlterarMateriaPrima(Material materiaPrima)
+        {
+            Validacao validacao = new Validacao();
+            Material materialBanco = BuscaMaterialPorId(materiaPrima.Id);
 
-        //    if (banco.TipoProdutos.Where(x => x.NmTipoProduto == tipoProduto.NmTipoProduto).Any() && validacao.Mensagens.Count == 0)
-        //    {
-        //        validacao.Mensagens.Add("nome", "A quantidade não pode ser negativa");
-        //    }
+            if (String.IsNullOrEmpty(materiaPrima.NmMaterial.ToString()))
+            {
+                validacao.Mensagens.Add("nome", "O nome da Matéria prima deve ser informado");
+            }
 
-        //    if (tipoProduto.VlPeso != Convert.ToDecimal(null))
-        //    {
-        //        if (tipoProduto.VlPeso < 0)
-        //        {
-        //            validacao.Mensagens.Add("peso", "O peso deve ser constituido de apenas valores positivos");
-        //        }
-        //    }
-        //    else
-        //    {
-        //        tipoProduto.VlPeso = 0;
-        //    }
+            if (banco.Materiais.Where(x => x.NmMaterial == materiaPrima.NmMaterial).Any() && validacao.Mensagens.Count == 0)
+            {
+                validacao.Mensagens.Add("nome", "Esse Material já foi cadastrado no sistema");
+            }
 
-        //    if (validacao.Valido)
-        //    {
-        //        tipoProdutoBanco.NmTipoProduto = tipoProduto.NmTipoProduto;
-        //        tipoProdutoBanco.VlPeso = tipoProduto.VlPeso;
-        //        this.banco.SaveChanges();
-        //    }
-        //    return validacao;
-        //}
+            if (materiaPrima.VlPesoMaterial != Convert.ToDecimal(null))
+            {
+                if (materiaPrima.VlPesoMaterial < 0)
+                {
+                    validacao.Mensagens.Add("peso", "O peso deve ser constituido de apenas valores positivos");
+                }
+            }
+            else
+            {
+                materiaPrima.VlPesoMaterial = 0;
+            }
+
+            if (validacao.Valido)
+            {
+                materialBanco.NmMaterial = materiaPrima.NmMaterial;
+                materialBanco.VlPesoMaterial = materiaPrima.VlPesoMaterial;
+                this.banco.SaveChanges();
+            }
+            return validacao;
+        }
 
 
 
@@ -347,6 +348,11 @@ namespace Fundicaolino.negocio
         public List<TipoProduto> TodosOsTiposProdutos()
         {
             return this.banco.TipoProdutos.ToList();
+        }
+
+        public List<Material> TodasAsMateriasPrimas()
+        {
+            return this.banco.Materiais.ToList();
         }
 
 
@@ -384,6 +390,11 @@ namespace Fundicaolino.negocio
         public TipoProduto BuscaTipoProdutoPorId(long Id)
         {
             return this.banco.TipoProdutos.Where(g => g.Id == Id).FirstOrDefault();
+        }
+
+        public Material BuscaMaterialPorId(long Id)
+        {
+            return this.banco.Materiais.Where(g => g.Id == Id).FirstOrDefault();
         }
     }
 }

@@ -46,8 +46,7 @@ namespace Fundicaolino.telas.MateriaPrima
             }
             else
             {
-                //validacao = Program.Gerenciador.AlterarMateriaPrima(usuario);
-                //#Feature
+                validacao = Program.Gerenciador.AlterarMateriaPrima(materiaPrima);
             }
 
             try
