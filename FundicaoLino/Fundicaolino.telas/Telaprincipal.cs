@@ -204,7 +204,10 @@ namespace Fundicaolino.telas
 
         private void GenericaControleProducao_Click(object sender, EventArgs e)
         {
-            ///////////////////////////////////////////////////////////////////////FAZER///////////////////////////////////////////////////
+            GraficoProducao graficoProducao = new GraficoProducao();
+            graficoProducao.MdiParent = this;
+            panel4.Controls.Add(graficoProducao);
+            graficoProducao.Show();
             tela = 3;
         }
 

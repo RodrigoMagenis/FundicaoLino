@@ -100,6 +100,7 @@
             // 
             // TxIdentificador
             // 
+            this.TxIdentificador.Enabled = false;
             this.TxIdentificador.Location = new System.Drawing.Point(237, 153);
             this.TxIdentificador.Name = "TxIdentificador";
             this.TxIdentificador.Size = new System.Drawing.Size(138, 20);

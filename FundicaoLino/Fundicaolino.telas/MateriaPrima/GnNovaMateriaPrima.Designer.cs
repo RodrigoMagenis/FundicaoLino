@@ -61,6 +61,7 @@
             // 
             // tbIdMaterial
             // 
+            this.tbIdMaterial.Enabled = false;
             this.tbIdMaterial.Location = new System.Drawing.Point(266, 110);
             this.tbIdMaterial.Name = "tbIdMaterial";
             this.tbIdMaterial.Size = new System.Drawing.Size(121, 20);

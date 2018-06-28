@@ -32,7 +32,6 @@
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NmTipoProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VlPeso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdMateriais = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,8 +43,7 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.NmTipoProduto,
-            this.VlPeso,
-            this.IdMateriais});
+            this.VlPeso});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
@@ -77,22 +75,14 @@
             this.VlPeso.Name = "VlPeso";
             this.VlPeso.ReadOnly = true;
             // 
-            // IdMateriais
-            // 
-            this.IdMateriais.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.IdMateriais.DataPropertyName = "IdMateriais";
-            this.IdMateriais.HeaderText = "Codigo Material";
-            this.IdMateriais.Name = "IdMateriais";
-            this.IdMateriais.ReadOnly = true;
-            // 
-            // GridProduto
+            // GridTipoProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "GridProduto";
+            this.Name = "GridTipoProduto";
             this.Text = "GridProduto";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -106,6 +96,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn NmTipoProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn VlPeso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdMateriais;
     }
 }
