@@ -28,28 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgMateriaPrima = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NmProcesso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EtapaProcesso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgMateriaPrima)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgMateriaPrima
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgMateriaPrima.AllowUserToAddRows = false;
+            this.dgMateriaPrima.AllowUserToDeleteRows = false;
+            this.dgMateriaPrima.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgMateriaPrima.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.NmProcesso,
             this.EtapaProcesso});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(801, 403);
-            this.dataGridView1.TabIndex = 1;
+            this.dgMateriaPrima.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgMateriaPrima.Location = new System.Drawing.Point(0, 0);
+            this.dgMateriaPrima.Name = "dgMateriaPrima";
+            this.dgMateriaPrima.ReadOnly = true;
+            this.dgMateriaPrima.Size = new System.Drawing.Size(801, 403);
+            this.dgMateriaPrima.TabIndex = 1;
             // 
             // Id
             // 
@@ -80,19 +80,20 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(801, 403);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgMateriaPrima);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GridMateriaPrima";
             this.Text = "GridMateriaPrima";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.GridMateriaPrima_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgMateriaPrima)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgMateriaPrima;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn NmProcesso;
         private System.Windows.Forms.DataGridViewTextBoxColumn EtapaProcesso;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fundicaolino.negocio.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,31 @@ namespace Fundicaolino.telas.MateriaPrima
         public GridMateriaPrima()
         {
             InitializeComponent();
+        }
+
+        private void CarregarMateriasPrimas()
+        {
+            dgMateriaPrima.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgMateriaPrima.MultiSelect = false;
+            dgMateriaPrima.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgMateriaPrima.AutoGenerateColumns = false;
+            List<Material> materiasPrimas = Program.Gerenciador.TodasAsMateriasPrimas();
+            dgMateriaPrima.DataSource = materiasPrimas;
+        }
+
+        private void GridMateriaPrima_Load(object sender, EventArgs e)
+        {
+            this.CarregarMateriasPrimas();
+        }
+
+        private bool VerificaSelecao()
+        {
+            if (dgMateriaPrima.SelectedRows.Count <= 0)
+            {
+                MessageBox.Show("Selecione uma linha");
+                return false;
+            }
+            return true;
         }
     }
 }

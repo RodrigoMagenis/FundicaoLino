@@ -20,17 +20,17 @@ namespace Fundicaolino.telas
         private void btLogin_Click(object sender, EventArgs e)
         { 
             TelaPrincipal telaprincipal = new TelaPrincipal();
-            if (TxLogin.Text == "admin" && TxSenha.Text == "admin")
-            {
+            //if (TxLogin.Text == "admin" && TxSenha.Text == "admin")
+            //{
                 telaprincipal.Show();
-                this.Hide();
-            }
-            else
-            {
-                TxLogin.Text = "";
-                TxSenha.Text = "";
-                MessageBox.Show("Login Inválido");
-            }  
+            //    this.Hide();
+            //}
+            //else
+            //{
+            //    TxLogin.Text = "";
+            //    TxSenha.Text = "";
+            //    MessageBox.Show("Login Inválido");
+            //}  
         }
 
         private void EsqueciMinhaSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
