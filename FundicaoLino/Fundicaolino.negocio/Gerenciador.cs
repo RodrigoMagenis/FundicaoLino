@@ -170,7 +170,7 @@ namespace Fundicaolino.negocio
 
             if (banco.TipoProdutos.Where(x => x.NmTipoProduto == tipoProduto.NmTipoProduto).Any() && validacao.Mensagens.Count == 0)
             {
-                validacao.Mensagens.Add("qtd", "A quantidade não pode ser negativa");
+                validacao.Mensagens.Add("nome", "Esse produto já foi cadastrado");
             }
 
             if (tipoProduto.VlPeso != Convert.ToDecimal(null))

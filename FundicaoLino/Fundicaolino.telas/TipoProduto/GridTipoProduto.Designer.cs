@@ -1,6 +1,6 @@
 ﻿namespace Fundicaolino.telas
 {
-    partial class GridTipoProduto
+    partial class dgTipoProduto
     {
         /// <summary>
         /// Required designer variable.
@@ -28,30 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.gridTipoProduto = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NmTipoProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VlPeso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdMateriais = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridTipoProduto)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // gridTipoProduto
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.gridTipoProduto.AllowUserToAddRows = false;
+            this.gridTipoProduto.AllowUserToDeleteRows = false;
+            this.gridTipoProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridTipoProduto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.NmTipoProduto,
             this.VlPeso,
             this.IdMateriais});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(800, 450);
-            this.dataGridView1.TabIndex = 0;
+            this.gridTipoProduto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridTipoProduto.Location = new System.Drawing.Point(0, 0);
+            this.gridTipoProduto.Name = "gridTipoProduto";
+            this.gridTipoProduto.ReadOnly = true;
+            this.gridTipoProduto.Size = new System.Drawing.Size(800, 450);
+            this.gridTipoProduto.TabIndex = 0;
             // 
             // Id
             // 
@@ -85,24 +85,25 @@
             this.IdMateriais.Name = "IdMateriais";
             this.IdMateriais.ReadOnly = true;
             // 
-            // GridProduto
+            // dgTipoProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.gridTipoProduto);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "GridProduto";
+            this.Name = "dgTipoProduto";
             this.Text = "GridProduto";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.dgTipoProduto_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gridTipoProduto)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView gridTipoProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn NmTipoProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn VlPeso;
