@@ -28,32 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgProducao = new System.Windows.Forms.DataGridView();
+            this.dgProduto = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdTipoProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NmTipoProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Responsavel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgProducao)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgProduto)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgProducao
+            // dgProduto
             // 
-            this.dgProducao.AllowUserToAddRows = false;
-            this.dgProducao.AllowUserToDeleteRows = false;
-            this.dgProducao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgProducao.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgProduto.AllowUserToAddRows = false;
+            this.dgProduto.AllowUserToDeleteRows = false;
+            this.dgProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgProduto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.IdTipoProduto,
             this.NmTipoProduto,
             this.Responsavel,
             this.date});
-            this.dgProducao.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgProducao.Location = new System.Drawing.Point(0, 0);
-            this.dgProducao.Name = "dgProducao";
-            this.dgProducao.ReadOnly = true;
-            this.dgProducao.Size = new System.Drawing.Size(763, 482);
-            this.dgProducao.TabIndex = 1;
+            this.dgProduto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgProduto.Location = new System.Drawing.Point(0, 0);
+            this.dgProduto.Name = "dgProduto";
+            this.dgProduto.ReadOnly = true;
+            this.dgProduto.Size = new System.Drawing.Size(763, 482);
+            this.dgProduto.TabIndex = 1;
             // 
             // Id
             // 
@@ -97,19 +97,20 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(763, 482);
-            this.Controls.Add(this.dgProducao);
+            this.Controls.Add(this.dgProduto);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GridProduto";
             this.Text = "GridProduto";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.dgProducao)).EndInit();
+            this.Load += new System.EventHandler(this.GridProduto_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgProduto)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgProducao;
+        private System.Windows.Forms.DataGridView dgProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdTipoProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn NmTipoProduto;

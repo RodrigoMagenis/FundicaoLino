@@ -354,8 +354,11 @@ namespace Fundicaolino.negocio
         {
             return this.banco.Materiais.ToList();
         }
-
-
+        
+        public List<dbProduto> TodosOsProdutos()
+        {
+            return this.banco.Produtos.ToList();
+        }
 
         /*--------------------------------------------------------------------------------------------------------------*/
 
