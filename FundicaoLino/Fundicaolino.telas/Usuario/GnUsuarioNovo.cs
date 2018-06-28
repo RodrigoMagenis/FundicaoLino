@@ -41,8 +41,7 @@ namespace Fundicaolino.telas
            
             Usuario usuario = new Usuario();
             Boolean resultado;
-            Int64 longConvertido;
-            Int32 intConvertido;
+            Float
 
             resultado = Int64.TryParse(TxIdentificador.Text, out longConvertido);
             if (resultado)
