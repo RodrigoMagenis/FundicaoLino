@@ -1,4 +1,5 @@
 ﻿using Fundicaolino.negocio;
+using Fundicaolino.telas.Controle;
 using Fundicaolino.telas.MateriaPrima;
 using Fundicaolino.telas.Produto;
 using System;
@@ -268,6 +269,15 @@ namespace Fundicaolino.telas
             gridProduto.MdiParent = this;
             panel4.Controls.Add(gridProduto);
             gridProduto.Show();
+            tela = 11;
+        }
+
+        private void GenericaVisualizarProduto_Click(object sender, EventArgs e)
+        {
+            ConsultarResponsavel consultarResponsavel = new ConsultarResponsavel();
+            consultarResponsavel.MdiParent = this;
+            panel4.Controls.Add(consultarResponsavel);
+            consultarResponsavel.Show();
             tela = 11;
         }
     }

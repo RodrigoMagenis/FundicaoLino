@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controle\ConsultarResponsavel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controle\ConsultarResponsavel.Designer.cs">
+      <DependentUpon>ConsultarResponsavel.cs</DependentUpon>
+    </Compile>
     <Compile Include="MateriaPrima\GnNovaMateriaPrima.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     <Compile Include="TelaPrincipal.Designer.cs">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Controle\ConsultarResponsavel.resx">
+      <DependentUpon>ConsultarResponsavel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MateriaPrima\GnNovaMateriaPrima.resx">
       <DependentUpon>GnNovaMateriaPrima.cs</DependentUpon>
     </EmbeddedResource>
