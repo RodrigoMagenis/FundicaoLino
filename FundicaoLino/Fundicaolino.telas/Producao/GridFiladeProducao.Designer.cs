@@ -102,11 +102,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView gnGridFrameUser;
         private System.Windows.Forms.DataGridViewTextBoxColumn DtProducao;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdProducao;
         private System.Windows.Forms.DataGridViewTextBoxColumn NmProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn QtProduto;
+        public System.Windows.Forms.DataGridView gnGridFrameUser;
     }
 }

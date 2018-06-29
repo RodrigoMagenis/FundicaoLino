@@ -10,6 +10,7 @@ namespace Fundicaolino.telas
     public static class Program
     {
         public static Gerenciador Gerenciador = new Gerenciador();
+       
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.
         /// </summary>

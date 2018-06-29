@@ -79,6 +79,7 @@
             this.CancelarCad.TabIndex = 9;
             this.CancelarCad.Text = "Cancelar";
             this.CancelarCad.UseVisualStyleBackColor = true;
+            this.CancelarCad.Click += new System.EventHandler(this.CancelarCad_Click);
             // 
             // SalvarNovoUsuario
             // 
@@ -100,6 +101,7 @@
             // 
             // TxIdentificador
             // 
+            this.TxIdentificador.Enabled = false;
             this.TxIdentificador.Location = new System.Drawing.Point(237, 153);
             this.TxIdentificador.Name = "TxIdentificador";
             this.TxIdentificador.Size = new System.Drawing.Size(138, 20);

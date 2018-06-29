@@ -38,17 +38,18 @@
             this.TxNmProduto = new System.Windows.Forms.TextBox();
             this.TxVlPeso = new System.Windows.Forms.TextBox();
             this.dgGruposExistentes = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btEsquerdo = new System.Windows.Forms.Button();
             this.btDireita = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgGruposExistentes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // TxIdentificador
             // 
+            this.TxIdentificador.Enabled = false;
             this.TxIdentificador.Location = new System.Drawing.Point(230, 82);
             this.TxIdentificador.Name = "TxIdentificador";
             this.TxIdentificador.Size = new System.Drawing.Size(138, 20);
@@ -82,6 +83,7 @@
             this.btCancelar.TabIndex = 7;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
             // label1
             // 
@@ -141,6 +143,13 @@
             this.dgGruposExistentes.Size = new System.Drawing.Size(181, 204);
             this.dgGruposExistentes.TabIndex = 13;
             // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Materiais Existentes";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
             // dataGridView2
             // 
             this.dataGridView2.AllowUserToOrderColumns = true;
@@ -152,6 +161,11 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(187, 204);
             this.dataGridView2.TabIndex = 14;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Materiais Selecionados";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
             // btEsquerdo
             // 
@@ -175,18 +189,6 @@
             this.btDireita.TabIndex = 12;
             this.btDireita.Text = ">";
             this.btDireita.UseVisualStyleBackColor = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Materiais Existentes";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Materiais Selecionados";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
             // CadastraTipoProduto
             // 

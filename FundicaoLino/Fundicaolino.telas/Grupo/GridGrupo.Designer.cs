@@ -94,10 +94,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgGrupo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn NomeGrupo;
         private System.Windows.Forms.DataGridViewTextBoxColumn FgGrupo;
+        public System.Windows.Forms.DataGridView dgGrupo;
     }
 }
