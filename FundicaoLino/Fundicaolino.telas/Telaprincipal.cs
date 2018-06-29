@@ -1,4 +1,5 @@
 ﻿using Fundicaolino.negocio;
+using Fundicaolino.negocio.Models;
 using Fundicaolino.telas.Controle;
 using Fundicaolino.telas.MateriaPrima;
 using Fundicaolino.telas.Produto;
@@ -23,7 +24,7 @@ namespace Fundicaolino.telas
         {
             InitializeComponent();
         }
-
+        public static GridUsuario GridUsuario = new GridUsuario();
         private void ShowNewForm(object sender, EventArgs e)
         {
             Form childForm = new Form();
@@ -108,9 +109,60 @@ namespace Fundicaolino.telas
 
         }
 
-        private void GenericaExluir_Click(object sender, EventArgs e)
+        
+            private void GenericaExluir_Click(object sender, EventArgs e)
         {
 
+            switch (tela)
+            {
+                case 1://grupo
+                    var gridGrupo = (GridGrupo)panel4.Controls[0];
+
+                    break;
+                case 2://usuario
+                    var gridUsuario = (GridUsuario)panel4.Controls[0];
+                    if (gridUsuario.VerificaSelecao())
+                    {
+                        DialogResult resultado = MessageBox.Show("Tem certeza?", "Quer remover?", MessageBoxButtons.OKCancel);
+                        if (resultado == DialogResult.OK)
+                        {
+                                Usuario usuarioSelecionado = (Usuario)gridUsuario.dgUsuario.SelectedRows[0].DataBoundItem;
+                                var validacao = Program.Gerenciador.RemoverUsuario(usuarioSelecionado);
+                                if (validacao.Valido)
+                                {
+                                    MessageBox.Show("Cliente removido com sucesso");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Ocorreu um problema ao remover o cliente");
+                                }
+                            gridUsuario.CarregarUsuarios();
+                            }
+                    }
+                break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5://producao
+                    break;
+                case 6://processo
+                    break;
+                case 7://tipo de produto
+                    break;
+                case 8:
+                    break;
+                case 9:
+                    break;
+                case 10://materia prima
+                    break;
+                case 11://produto
+                    break;
+                default:
+                    
+                    break;
+
+            }
         }
 
         private void GenericoNovo_Click(object sender, EventArgs e)
@@ -282,6 +334,11 @@ namespace Fundicaolino.telas
             panel4.Controls.Add(consultarResponsavel);
             consultarResponsavel.Show();
             tela = 11;
+        }
+
+        private void TelaPrincipal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

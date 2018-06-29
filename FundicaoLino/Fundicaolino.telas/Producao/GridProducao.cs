@@ -32,7 +32,7 @@ namespace Fundicaolino.telas
             dgProducao.DataSource = producoes;
         }
 
-        private bool VerificaSelecao()
+        public bool VerificaSelecao()
         {
             if (dgProducao.SelectedRows.Count <= 0)
             {

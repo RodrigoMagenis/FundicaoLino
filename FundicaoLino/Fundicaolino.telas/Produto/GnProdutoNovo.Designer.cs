@@ -112,6 +112,7 @@
             this.BtCancelar.TabIndex = 11;
             this.BtCancelar.Text = "Cancelar";
             this.BtCancelar.UseVisualStyleBackColor = true;
+            this.BtCancelar.Click += new System.EventHandler(this.BtCancelar_Click);
             // 
             // GnProdutoNovo
             // 

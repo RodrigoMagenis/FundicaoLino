@@ -79,6 +79,7 @@
             this.CancelarCad.TabIndex = 9;
             this.CancelarCad.Text = "Cancelar";
             this.CancelarCad.UseVisualStyleBackColor = true;
+            this.CancelarCad.Click += new System.EventHandler(this.CancelarCad_Click);
             // 
             // SalvarNovoUsuario
             // 
