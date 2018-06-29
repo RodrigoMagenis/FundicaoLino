@@ -38,10 +38,10 @@
             this.TxNmProduto = new System.Windows.Forms.TextBox();
             this.TxVlPeso = new System.Windows.Forms.TextBox();
             this.dgMateriaisExistentes = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgMateriasSelecionados = new System.Windows.Forms.DataGridView();
             this.btEsquerdo = new System.Windows.Forms.Button();
             this.btDireita = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgMateriaisExistentes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgMateriasSelecionados)).BeginInit();
@@ -141,6 +141,14 @@
             this.dgMateriaisExistentes.Size = new System.Drawing.Size(181, 204);
             this.dgMateriaisExistentes.TabIndex = 13;
             // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "NmMaterial";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Materiais Existentes";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
             // dgMateriasSelecionados
             // 
             this.dgMateriasSelecionados.AllowUserToOrderColumns = true;
@@ -178,17 +186,9 @@
             this.btDireita.UseVisualStyleBackColor = true;
             this.btDireita.Click += new System.EventHandler(this.btDireita_Click);
             // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "NmMaterial";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Materiais Existentes";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
             // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Material.NmMaterial";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "NmMaterial";
             this.dataGridViewTextBoxColumn1.HeaderText = "Materiais Selecionados";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 

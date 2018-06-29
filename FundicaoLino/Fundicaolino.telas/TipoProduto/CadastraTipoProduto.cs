@@ -96,7 +96,7 @@ namespace Fundicaolino.telas
         private void CadastraTipoProduto_Load(object sender, EventArgs e)
         {
             this.CarregarMateriasPrimasExistentes();
-            //this.carregaMateriaisSelecionados();
+            this.CarregarMateriasPrimasSelecionadas();
         }
 
         private void CarregarDataGrids()
@@ -112,11 +112,37 @@ namespace Fundicaolino.telas
             dgMateriaisExistentes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgMateriaisExistentes.AutoGenerateColumns = false;
             IEnumerable<Material> materiasPrimas = Program.Gerenciador.TodasAsMateriasPrimas();
-            if (this.tipoProduto.Materiais != null)
+            if (this.tipoProduto.Materiais.Count > 0)
             {
-                var materiasExistentes = materiasPrimas.Except(this.tipoProduto.Materiais);
+                //var materiasExistentes = materiasPrimas.Except(this.tipoProduto.Materiais);
+
+                List<Material> mats = new List<Material>();
+
+                foreach (Material material in materiasPrimas)
+                {
+                    bool tem = false;
+                    foreach (Material mat in this.tipoProduto.Materiais)
+                    {
+                        if(mat.Id.Equals(material.Id))
+                        {
+                            tem = true;
+                            break;
+                        }
+                    }
+
+                    if(!tem)
+                    {
+                        mats.Add(material);
+                    }
+                }
+
+                dgMateriaisExistentes.DataSource = mats;
             }
-            dgMateriaisExistentes.DataSource = materiasPrimas;
+            else
+            {
+                dgMateriaisExistentes.DataSource = materiasPrimas;
+            }
+            
         }
 
         private void CarregarMateriasPrimasSelecionadas()
@@ -164,7 +190,7 @@ namespace Fundicaolino.telas
             if (this.VerificaSelecaoMateriasPrimasSelecionadas())
             {
                 Material materialSelecionado = (Material)dgMateriasSelecionados.SelectedRows[0].DataBoundItem;
-                tipoProduto.Materiais.Add(materialSelecionado);
+                tipoProduto.Materiais.Remove(materialSelecionado);
                 CarregarDataGrids();
             }
         }

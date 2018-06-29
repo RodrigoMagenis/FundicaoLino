@@ -15,6 +15,10 @@ namespace Fundicaolino.negocio.Models
         public decimal               VlPeso { get; set; }
         public ICollection<Material> Materiais { get; set; }
         public Boolean               FgTipoProduto { get; set; }
-    }
 
+        public TipoProduto()
+        {
+            this.Materiais = new List<Material>();
+        }
+    }
 }
