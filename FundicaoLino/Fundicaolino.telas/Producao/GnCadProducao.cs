@@ -95,5 +95,10 @@ namespace Fundicaolino.telas
                 this.Close();
             }
         }
+
+        private void CancelarCad_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

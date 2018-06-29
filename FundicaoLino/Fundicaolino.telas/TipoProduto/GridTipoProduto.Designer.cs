@@ -107,6 +107,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn NmTipoProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn VlPeso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdMateriais;
+        public System.Windows.Forms.DataGridView dgTipodeProduto;
     }
 }

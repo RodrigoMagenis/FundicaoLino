@@ -41,6 +41,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,6 +53,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controle\ConsultarResponsavel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controle\ConsultarResponsavel.Designer.cs">
+      <DependentUpon>ConsultarResponsavel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controle\GraficoProducao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controle\GraficoProducao.Designer.cs">
+      <DependentUpon>GraficoProducao.cs</DependentUpon>
+    </Compile>
     <Compile Include="MateriaPrima\GnNovaMateriaPrima.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +169,12 @@
     <Compile Include="TelaPrincipal.Designer.cs">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Controle\ConsultarResponsavel.resx">
+      <DependentUpon>ConsultarResponsavel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controle\GraficoProducao.resx">
+      <DependentUpon>GraficoProducao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MateriaPrima\GnNovaMateriaPrima.resx">
       <DependentUpon>GnNovaMateriaPrima.cs</DependentUpon>
     </EmbeddedResource>

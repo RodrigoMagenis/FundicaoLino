@@ -17,7 +17,6 @@ namespace Fundicaolino.telas
         {
             InitializeComponent();
         }
-
         private void CarregarTiposProdutos()
         {
             gridTipoProduto.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;

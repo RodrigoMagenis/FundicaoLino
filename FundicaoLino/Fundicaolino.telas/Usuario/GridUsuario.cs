@@ -18,7 +18,7 @@ namespace Fundicaolino.telas
             InitializeComponent();
         }
 
-        private void CarregarUsuarios()
+        public void CarregarUsuarios()
         {
             dgUsuario.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgUsuario.MultiSelect = false;
@@ -33,7 +33,7 @@ namespace Fundicaolino.telas
             CarregarUsuarios();
         }
 
-        private bool VerificaSelecao()
+        public bool VerificaSelecao()
         {
             if (dgUsuario.SelectedRows.Count <= 0)
             {
