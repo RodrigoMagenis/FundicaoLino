@@ -330,12 +330,20 @@ namespace Fundicaolino.negocio
             return validacao;
         }
 
-
-
         /*--------------------------------------------------------------------------------------------------------------*/
 
-        /* Retorna todos os resultados - Usado nas grids */
-        public List<Grupo> TodosOsGrupos()
+        /* pesquisa responsavel*/
+
+        public Validacao PesquisaResponsavel(dbProduto produto)
+        {
+            Validacao validacao = new Validacao();
+            dbProduto produtoBanco = BuscaProdutoPorId(produto.Id);
+            return validacao;
+        }
+            /*--------------------------------------------------------------------------------------------------------------*/
+
+            /* Retorna todos os resultados - Usado nas grids */
+            public List<Grupo> TodosOsGrupos()
         {
                 return this.banco.Grupos.ToList();
         }
@@ -403,6 +411,11 @@ namespace Fundicaolino.negocio
         public Material BuscaMaterialPorId(long Id)
         {
             return this.banco.Materiais.Where(g => g.Id == Id).FirstOrDefault();
+        }
+
+        public dbProduto BuscaProdutoPorId(long Id)
+        {
+            return this.banco.Produtos.Where(g => g.Id == Id).FirstOrDefault();
         }
     }
 }

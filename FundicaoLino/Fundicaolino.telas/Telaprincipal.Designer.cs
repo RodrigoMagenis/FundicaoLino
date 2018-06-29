@@ -38,7 +38,7 @@
             this.btGerenciarProdutos = new System.Windows.Forms.Button();
             this.Genericacadastrarproduto = new System.Windows.Forms.Button();
             this.Genericacontrole = new System.Windows.Forms.Label();
-            this.GenericaControleQualidade = new System.Windows.Forms.Button();
+            this.pesquisar = new System.Windows.Forms.Button();
             this.Genericaexibirfiladeproducao = new System.Windows.Forms.Button();
             this.btCadastraMateriaPrima = new System.Windows.Forms.Button();
             this.btCadastraProducao = new System.Windows.Forms.Button();
@@ -90,7 +90,7 @@
             this.panel3.Controls.Add(this.btGerenciarProdutos);
             this.panel3.Controls.Add(this.Genericacadastrarproduto);
             this.panel3.Controls.Add(this.Genericacontrole);
-            this.panel3.Controls.Add(this.GenericaControleQualidade);
+            this.panel3.Controls.Add(this.pesquisar);
             this.panel3.Controls.Add(this.Genericaexibirfiladeproducao);
             this.panel3.Controls.Add(this.btCadastraMateriaPrima);
             this.panel3.Controls.Add(this.btCadastraProducao);
@@ -156,15 +156,15 @@
             this.Genericacontrole.Text = "Controle";
             this.Genericacontrole.Click += new System.EventHandler(this.label2_Click);
             // 
-            // GenericaControleQualidade
+            // pesquisar
             // 
-            this.GenericaControleQualidade.Location = new System.Drawing.Point(38, 177);
-            this.GenericaControleQualidade.Name = "GenericaControleQualidade";
-            this.GenericaControleQualidade.Size = new System.Drawing.Size(163, 23);
-            this.GenericaControleQualidade.TabIndex = 8;
-            this.GenericaControleQualidade.Text = "Qualidade";
-            this.GenericaControleQualidade.UseVisualStyleBackColor = true;
-            this.GenericaControleQualidade.Click += new System.EventHandler(this.GenericaControleQualidade_Click);
+            this.pesquisar.Location = new System.Drawing.Point(38, 177);
+            this.pesquisar.Name = "pesquisar";
+            this.pesquisar.Size = new System.Drawing.Size(163, 23);
+            this.pesquisar.TabIndex = 8;
+            this.pesquisar.Text = "Pesquisar Responsavel";
+            this.pesquisar.UseVisualStyleBackColor = true;
+            this.pesquisar.Click += new System.EventHandler(this.pesquisar_Click);
             // 
             // Genericaexibirfiladeproducao
             // 
@@ -333,7 +333,7 @@
         private System.Windows.Forms.Button Genericacontroleemtemporeal;
         private System.Windows.Forms.Button Genericacadastrarproduto;
         private System.Windows.Forms.Label Genericacontrole;
-        private System.Windows.Forms.Button GenericaControleQualidade;
+        private System.Windows.Forms.Button pesquisar;
         private System.Windows.Forms.Button Genericaexibirfiladeproducao;
         private System.Windows.Forms.Button Genericacadastrarprocesso;
         private System.Windows.Forms.Button GenericaControleProducao;

@@ -270,5 +270,15 @@ namespace Fundicaolino.telas
             gridProduto.Show();
             tela = 11;
         }
+
+        private void pesquisar_Click(object sender, EventArgs e)
+        {
+
+            ConsultaResponsavel consultaResponsavel = new ConsultaResponsavel();
+            consultaResponsavel.MdiParent = this;
+            panel4.Controls.Add(consultaResponsavel);
+            consultaResponsavel.Show();
+            tela = 12;
+        }
     }
 }
