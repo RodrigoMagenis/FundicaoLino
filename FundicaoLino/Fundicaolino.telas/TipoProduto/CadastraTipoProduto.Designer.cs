@@ -37,14 +37,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.TxNmProduto = new System.Windows.Forms.TextBox();
             this.TxVlPeso = new System.Windows.Forms.TextBox();
-            this.dgGruposExistentes = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgMateriaisExistentes = new System.Windows.Forms.DataGridView();
+            this.dgMateriasSelecionados = new System.Windows.Forms.DataGridView();
             this.btEsquerdo = new System.Windows.Forms.Button();
             this.btDireita = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgGruposExistentes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgMateriaisExistentes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgMateriasSelecionados)).BeginInit();
             this.SuspendLayout();
             // 
             // TxIdentificador
@@ -127,31 +127,31 @@
             this.TxVlPeso.Size = new System.Drawing.Size(138, 20);
             this.TxVlPeso.TabIndex = 10;
             // 
-            // dgGruposExistentes
+            // dgMateriaisExistentes
             // 
-            this.dgGruposExistentes.AllowUserToAddRows = false;
-            this.dgGruposExistentes.AllowUserToDeleteRows = false;
-            this.dgGruposExistentes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgGruposExistentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgGruposExistentes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgMateriaisExistentes.AllowUserToAddRows = false;
+            this.dgMateriaisExistentes.AllowUserToDeleteRows = false;
+            this.dgMateriaisExistentes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgMateriaisExistentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgMateriaisExistentes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn2});
-            this.dgGruposExistentes.Location = new System.Drawing.Point(222, 206);
-            this.dgGruposExistentes.Name = "dgGruposExistentes";
-            this.dgGruposExistentes.ReadOnly = true;
-            this.dgGruposExistentes.Size = new System.Drawing.Size(181, 204);
-            this.dgGruposExistentes.TabIndex = 13;
+            this.dgMateriaisExistentes.Location = new System.Drawing.Point(222, 206);
+            this.dgMateriaisExistentes.Name = "dgMateriaisExistentes";
+            this.dgMateriaisExistentes.ReadOnly = true;
+            this.dgMateriaisExistentes.Size = new System.Drawing.Size(181, 204);
+            this.dgMateriaisExistentes.TabIndex = 13;
             // 
-            // dataGridView2
+            // dgMateriasSelecionados
             // 
-            this.dataGridView2.AllowUserToOrderColumns = true;
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgMateriasSelecionados.AllowUserToOrderColumns = true;
+            this.dgMateriasSelecionados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgMateriasSelecionados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgMateriasSelecionados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1});
-            this.dataGridView2.Location = new System.Drawing.Point(504, 206);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(187, 204);
-            this.dataGridView2.TabIndex = 14;
+            this.dgMateriasSelecionados.Location = new System.Drawing.Point(504, 206);
+            this.dgMateriasSelecionados.Name = "dgMateriasSelecionados";
+            this.dgMateriasSelecionados.Size = new System.Drawing.Size(187, 204);
+            this.dgMateriasSelecionados.TabIndex = 14;
             // 
             // btEsquerdo
             // 
@@ -163,6 +163,7 @@
             this.btEsquerdo.TabIndex = 11;
             this.btEsquerdo.Text = "<";
             this.btEsquerdo.UseVisualStyleBackColor = true;
+            this.btEsquerdo.Click += new System.EventHandler(this.btEsquerdo_Click);
             // 
             // btDireita
             // 
@@ -175,16 +176,19 @@
             this.btDireita.TabIndex = 12;
             this.btDireita.Text = ">";
             this.btDireita.UseVisualStyleBackColor = true;
+            this.btDireita.Click += new System.EventHandler(this.btDireita_Click);
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "NmMaterial";
             this.dataGridViewTextBoxColumn2.HeaderText = "Materiais Existentes";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Material.NmMaterial";
             this.dataGridViewTextBoxColumn1.HeaderText = "Materiais Selecionados";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
@@ -193,8 +197,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dgGruposExistentes);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dgMateriaisExistentes);
+            this.Controls.Add(this.dgMateriasSelecionados);
             this.Controls.Add(this.btEsquerdo);
             this.Controls.Add(this.btDireita);
             this.Controls.Add(this.TxVlPeso);
@@ -210,8 +214,9 @@
             this.Name = "CadastraTipoProduto";
             this.Text = "CadastraProducao";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.dgGruposExistentes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.Load += new System.EventHandler(this.CadastraTipoProduto_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgMateriaisExistentes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgMateriasSelecionados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,8 +233,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox TxNmProduto;
         private System.Windows.Forms.TextBox TxVlPeso;
-        private System.Windows.Forms.DataGridView dgGruposExistentes;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgMateriaisExistentes;
+        private System.Windows.Forms.DataGridView dgMateriasSelecionados;
         private System.Windows.Forms.Button btEsquerdo;
         private System.Windows.Forms.Button btDireita;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;

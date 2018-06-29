@@ -15,6 +15,7 @@ namespace Fundicaolino.telas
     public partial class CadastraTipoProduto : Form
     {
         public TipoProduto TipoSelecionado { get; set; }
+        TipoProduto tipoProduto = new TipoProduto();
 
         public CadastraTipoProduto()
         {
@@ -23,7 +24,6 @@ namespace Fundicaolino.telas
 
         private void btSalvarProcesso_Click(object sender, EventArgs e)
         {
-            TipoProduto tipoProduto = new TipoProduto();
             Boolean resultado;
             Int64 longConvertido;
             Decimal decimalConvertido;
@@ -91,6 +91,66 @@ namespace Fundicaolino.telas
                 MessageBox.Show("Ocorreu uma falha grave, contate um administrador");
                 this.Close();
             }
+        }
+
+        private void CadastraTipoProduto_Load(object sender, EventArgs e)
+        {
+            this.CarregarMateriasPrimasExistentes();
+            //this.carregaMateriaisSelecionados();
+        }
+
+        private void CarregarMateriasPrimasExistentes()
+        {
+            dgMateriaisExistentes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgMateriaisExistentes.MultiSelect = false;
+            dgMateriaisExistentes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgMateriaisExistentes.AutoGenerateColumns = false;
+            IEnumerable<Material> materiasPrimas = Program.Gerenciador.TodasAsMateriasPrimas();
+            var materiasExistentes = materiasPrimas.Except(this.tipoProduto.Materiais);
+            dgMateriaisExistentes.DataSource = materiasPrimas;
+        }
+
+        private void CarregarMateriasPrimasSelecionadas()
+        {
+            dgMateriaisExistentes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgMateriaisExistentes.MultiSelect = false;
+            dgMateriaisExistentes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgMateriaisExistentes.AutoGenerateColumns = false;
+            List<Material> materiasPrimasSelecionadas = this.tipoProduto.Materiais.ToList();
+            dgMateriaisExistentes.DataSource = materiasPrimasSelecionadas;
+        }
+
+        private bool VerificaSelecaoMateriasPrimasExistentes()
+        {
+            if (dgMateriaisExistentes.SelectedRows.Count <= 0)
+            {
+                MessageBox.Show("Selecione uma linha");
+                return false;
+            }
+            return true;
+        }
+
+        private bool VerificaSelecaoMateriasPrimasSelecionadas()
+        {
+            if (dgMateriasSelecionados.SelectedRows.Count <= 0)
+            {
+                MessageBox.Show("Selecione uma linha");
+                return false;
+            }
+            return true;
+        }
+
+        private void btDireita_Click(object sender, EventArgs e)
+        {
+            if (this.VerificaSelecaoMateriasPrimasExistentes())
+            {
+                this.tipoProduto.Materiais.Add(Program.Gerenciador.TodasAsMateriasPrimas().Where(m => m.ToString() == dgMateriaisExistentes.SelectedRows.ToString()).First()); //falta testar
+            }
+        }
+
+        private void btEsquerdo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
