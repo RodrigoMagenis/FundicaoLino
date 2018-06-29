@@ -99,6 +99,12 @@ namespace Fundicaolino.telas
             //this.carregaMateriaisSelecionados();
         }
 
+        private void CarregarDataGrids()
+        {
+            CarregarMateriasPrimasExistentes();
+            CarregarMateriasPrimasSelecionadas();
+        }
+
         private void CarregarMateriasPrimasExistentes()
         {
             dgMateriaisExistentes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -106,18 +112,21 @@ namespace Fundicaolino.telas
             dgMateriaisExistentes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgMateriaisExistentes.AutoGenerateColumns = false;
             IEnumerable<Material> materiasPrimas = Program.Gerenciador.TodasAsMateriasPrimas();
-            var materiasExistentes = materiasPrimas.Except(this.tipoProduto.Materiais);
+            if (this.tipoProduto.Materiais != null)
+            {
+                var materiasExistentes = materiasPrimas.Except(this.tipoProduto.Materiais);
+            }
             dgMateriaisExistentes.DataSource = materiasPrimas;
         }
 
         private void CarregarMateriasPrimasSelecionadas()
         {
-            dgMateriaisExistentes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgMateriaisExistentes.MultiSelect = false;
-            dgMateriaisExistentes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgMateriaisExistentes.AutoGenerateColumns = false;
+            dgMateriasSelecionados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgMateriasSelecionados.MultiSelect = false;
+            dgMateriasSelecionados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgMateriasSelecionados.AutoGenerateColumns = false;
             List<Material> materiasPrimasSelecionadas = this.tipoProduto.Materiais.ToList();
-            dgMateriaisExistentes.DataSource = materiasPrimasSelecionadas;
+            dgMateriasSelecionados.DataSource = materiasPrimasSelecionadas;
         }
 
         private bool VerificaSelecaoMateriasPrimasExistentes()
@@ -144,13 +153,20 @@ namespace Fundicaolino.telas
         {
             if (this.VerificaSelecaoMateriasPrimasExistentes())
             {
-                this.tipoProduto.Materiais.Add(Program.Gerenciador.TodasAsMateriasPrimas().Where(m => m.ToString() == dgMateriaisExistentes.SelectedRows.ToString()).First()); //falta testar
+                Material materialSelecionado = (Material)dgMateriaisExistentes.SelectedRows[0].DataBoundItem;
+                tipoProduto.Materiais.Add(materialSelecionado);
+                CarregarDataGrids();
             }
         }
 
         private void btEsquerdo_Click(object sender, EventArgs e)
         {
-
+            if (this.VerificaSelecaoMateriasPrimasSelecionadas())
+            {
+                Material materialSelecionado = (Material)dgMateriasSelecionados.SelectedRows[0].DataBoundItem;
+                tipoProduto.Materiais.Add(materialSelecionado);
+                CarregarDataGrids();
+            }
         }
     }
 
