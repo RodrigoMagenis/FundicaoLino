@@ -78,5 +78,10 @@ namespace Fundicaolino.telas.MateriaPrima
                 this.Close();
             }
         }
+
+        private void BtCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

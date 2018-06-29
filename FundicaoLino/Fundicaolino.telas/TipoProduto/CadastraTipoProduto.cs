@@ -168,6 +168,9 @@ namespace Fundicaolino.telas
                 CarregarDataGrids();
             }
         }
+        private void btCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
-
 }

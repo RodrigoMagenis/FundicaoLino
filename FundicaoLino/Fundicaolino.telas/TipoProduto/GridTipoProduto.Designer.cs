@@ -52,6 +52,7 @@
             this.gridTipoProduto.ReadOnly = true;
             this.gridTipoProduto.Size = new System.Drawing.Size(800, 450);
             this.gridTipoProduto.TabIndex = 0;
+
             // 
             // Id
             // 
@@ -86,6 +87,7 @@
             this.IdMateriais.ReadOnly = true;
             // 
             // dgTipoProduto
+
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -97,16 +99,15 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.dgTipoProduto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridTipoProduto)).EndInit();
+
             this.ResumeLayout(false);
 
         }
-
-        #endregion
 
         private System.Windows.Forms.DataGridView gridTipoProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn NmTipoProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn VlPeso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdMateriais;
+        public System.Windows.Forms.DataGridView dgTipodeProduto;
     }
 }

@@ -71,5 +71,10 @@ namespace Fundicaolino.telas
                 MessageBox.Show("Ocorreu uma falha grave, contate um administrador");
             }
         }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
