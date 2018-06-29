@@ -102,11 +102,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgProducao;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn QtProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdProcesso;
         private System.Windows.Forms.DataGridViewTextBoxColumn DtProducao;
+        public System.Windows.Forms.DataGridView dgProducao;
     }
 }

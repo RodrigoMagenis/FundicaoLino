@@ -392,7 +392,14 @@ namespace Fundicaolino.negocio
         {
             return this.banco.TipoProdutos.ToList();
         }
-
+        public List<Processo> TodosOsProcessos()
+        {
+            return this.banco.Processos.ToList();
+        }
+        public List<dbProduto> TodosOsProdutos()
+        {
+            return this.banco.Produtos.ToList();
+        }
         public List<Material> TodasAsMateriasPrimas()
         {
             return this.banco.Materiais.ToList();

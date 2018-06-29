@@ -22,7 +22,7 @@ namespace Fundicaolino.telas
         {
             CarregarProducoes();
         }
-        private void CarregarProducoes()
+        public void CarregarProducoes()
         {
             dgProducao.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgProducao.MultiSelect = false;
