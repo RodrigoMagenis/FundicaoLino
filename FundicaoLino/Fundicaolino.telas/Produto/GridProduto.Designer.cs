@@ -109,6 +109,10 @@
         }
 
         #endregion
+
+
+        private System.Windows.Forms.DataGridView dgProduto;
+
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdTipoProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn NmTipoProduto;

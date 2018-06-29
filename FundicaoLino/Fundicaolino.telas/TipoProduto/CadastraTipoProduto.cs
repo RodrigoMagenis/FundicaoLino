@@ -15,6 +15,7 @@ namespace Fundicaolino.telas
     public partial class CadastraTipoProduto : Form
     {
         public TipoProduto TipoSelecionado { get; set; }
+        TipoProduto tipoProduto = new TipoProduto();
 
         public CadastraTipoProduto()
         {
@@ -23,7 +24,6 @@ namespace Fundicaolino.telas
 
         private void btSalvarProcesso_Click(object sender, EventArgs e)
         {
-            TipoProduto tipoProduto = new TipoProduto();
             Boolean resultado;
             Int64 longConvertido;
             Decimal decimalConvertido;
@@ -93,6 +93,106 @@ namespace Fundicaolino.telas
             }
         }
 
+        private void CadastraTipoProduto_Load(object sender, EventArgs e)
+        {
+            this.CarregarMateriasPrimasExistentes();
+            this.CarregarMateriasPrimasSelecionadas();
+        }
+
+        private void CarregarDataGrids()
+        {
+            CarregarMateriasPrimasExistentes();
+            CarregarMateriasPrimasSelecionadas();
+        }
+
+        private void CarregarMateriasPrimasExistentes()
+        {
+            dgMateriaisExistentes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgMateriaisExistentes.MultiSelect = false;
+            dgMateriaisExistentes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgMateriaisExistentes.AutoGenerateColumns = false;
+            IEnumerable<Material> materiasPrimas = Program.Gerenciador.TodasAsMateriasPrimas();
+            if (this.tipoProduto.Materiais.Count > 0)
+            {
+                //var materiasExistentes = materiasPrimas.Except(this.tipoProduto.Materiais);
+
+                List<Material> mats = new List<Material>();
+
+                foreach (Material material in materiasPrimas)
+                {
+                    bool tem = false;
+                    foreach (Material mat in this.tipoProduto.Materiais)
+                    {
+                        if(mat.Id.Equals(material.Id))
+                        {
+                            tem = true;
+                            break;
+                        }
+                    }
+
+                    if(!tem)
+                    {
+                        mats.Add(material);
+                    }
+                }
+
+                dgMateriaisExistentes.DataSource = mats;
+            }
+            else
+            {
+                dgMateriaisExistentes.DataSource = materiasPrimas;
+            }
+            
+        }
+
+        private void CarregarMateriasPrimasSelecionadas()
+        {
+            dgMateriasSelecionados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgMateriasSelecionados.MultiSelect = false;
+            dgMateriasSelecionados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgMateriasSelecionados.AutoGenerateColumns = false;
+            List<Material> materiasPrimasSelecionadas = this.tipoProduto.Materiais.ToList();
+            dgMateriasSelecionados.DataSource = materiasPrimasSelecionadas;
+        }
+
+        private bool VerificaSelecaoMateriasPrimasExistentes()
+        {
+            if (dgMateriaisExistentes.SelectedRows.Count <= 0)
+            {
+                MessageBox.Show("Selecione uma linha");
+                return false;
+            }
+            return true;
+        }
+
+        private bool VerificaSelecaoMateriasPrimasSelecionadas()
+        {
+            if (dgMateriasSelecionados.SelectedRows.Count <= 0)
+            {
+                MessageBox.Show("Selecione uma linha");
+                return false;
+            }
+            return true;
+        }
+
+        private void btDireita_Click(object sender, EventArgs e)
+        {
+            if (this.VerificaSelecaoMateriasPrimasExistentes())
+            {
+                Material materialSelecionado = (Material)dgMateriaisExistentes.SelectedRows[0].DataBoundItem;
+                tipoProduto.Materiais.Add(materialSelecionado);
+                CarregarDataGrids();
+            }
+        }
+
+        private void btEsquerdo_Click(object sender, EventArgs e)
+        {
+            if (this.VerificaSelecaoMateriasPrimasSelecionadas())
+            {
+                Material materialSelecionado = (Material)dgMateriasSelecionados.SelectedRows[0].DataBoundItem;
+                tipoProduto.Materiais.Remove(materialSelecionado);
+                CarregarDataGrids();
+            }
         private void btCancelar_Click(object sender, EventArgs e)
         {
             this.Close();

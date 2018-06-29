@@ -382,7 +382,7 @@ namespace Fundicaolino.telas
 
         private void Genericacadastrarproduto_Click(object sender, EventArgs e)
         {
-            GridTipoProduto gridTipoProduto = new GridTipoProduto();
+            dgTipoProduto gridTipoProduto = new dgTipoProduto();
             gridTipoProduto.MdiParent = this;
             panel4.Controls.Add(gridTipoProduto);
             gridTipoProduto.Show();

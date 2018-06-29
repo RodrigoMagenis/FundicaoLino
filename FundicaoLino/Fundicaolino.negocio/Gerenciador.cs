@@ -213,19 +213,24 @@ namespace Fundicaolino.negocio
 
             if (banco.TipoProdutos.Where(x => x.NmTipoProduto == tipoProduto.NmTipoProduto).Any() && validacao.Mensagens.Count == 0)
             {
-                validacao.Mensagens.Add("qtd", "A quantidade não pode ser negativa");
+                validacao.Mensagens.Add("nome", "Esse produto já foi cadastrado");
             }
 
-            if (tipoProduto.VlPeso != Convert.ToDecimal(null))
+            if(tipoProduto.VlPeso < 0)
             {
-                if(tipoProduto.VlPeso < 0)
+                validacao.Mensagens.Add("peso", "O peso deve ser constituido de apenas valores positivos");
+            }
+
+            try
+            {
+                if (!(tipoProduto.Materiais.Count() > 0))
                 {
-                    validacao.Mensagens.Add("peso", "O peso deve ser constituido de apenas valores positivos");
+                    validacao.Mensagens.Add("Materiais", "Ao menos uma matéria prima deve ser selecionada");
                 }
             }
-            else
+            catch(Exception e)
             {
-                tipoProduto.VlPeso = 0;
+                validacao.Mensagens.Add("Materiais", "Ao menos uma matéria prima deve ser selecionada");
             }
 
             if (validacao.Valido)
@@ -404,8 +409,11 @@ namespace Fundicaolino.negocio
         {
             return this.banco.Materiais.ToList();
         }
-
-
+        
+        public List<dbProduto> TodosOsProdutos()
+        {
+            return this.banco.Produtos.ToList();
+        }
 
         /*--------------------------------------------------------------------------------------------------------------*/
 
