@@ -42,7 +42,7 @@
             this.btPesquisar.Location = new System.Drawing.Point(337, 117);
             this.btPesquisar.Name = "btPesquisar";
             this.btPesquisar.Size = new System.Drawing.Size(61, 23);
-            this.btPesquisar.TabIndex = 0;
+            this.btPesquisar.TabIndex = 2;
             this.btPesquisar.Text = "Pesquisar";
             this.btPesquisar.UseVisualStyleBackColor = true;
             // 

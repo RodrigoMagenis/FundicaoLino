@@ -53,7 +53,7 @@
             this.TxIdentificador.Location = new System.Drawing.Point(230, 82);
             this.TxIdentificador.Name = "TxIdentificador";
             this.TxIdentificador.Size = new System.Drawing.Size(138, 20);
-            this.TxIdentificador.TabIndex = 10;
+            this.TxIdentificador.TabIndex = 0;
             // 
             // label2
             // 
@@ -70,7 +70,7 @@
             this.btSalvarProcesso.Location = new System.Drawing.Point(651, 49);
             this.btSalvarProcesso.Name = "btSalvarProcesso";
             this.btSalvarProcesso.Size = new System.Drawing.Size(84, 42);
-            this.btSalvarProcesso.TabIndex = 8;
+            this.btSalvarProcesso.TabIndex = 7;
             this.btSalvarProcesso.Text = "Salvar";
             this.btSalvarProcesso.UseVisualStyleBackColor = true;
             this.btSalvarProcesso.Click += new System.EventHandler(this.btSalvarProcesso_Click);
@@ -80,7 +80,7 @@
             this.btCancelar.Location = new System.Drawing.Point(539, 49);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(83, 42);
-            this.btCancelar.TabIndex = 7;
+            this.btCancelar.TabIndex = 8;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
             this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
@@ -92,7 +92,7 @@
             this.label1.Location = new System.Drawing.Point(78, 120);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(111, 20);
-            this.label1.TabIndex = 9;
+            this.label1.TabIndex = 10;
             this.label1.Text = "Nome Produto";
             // 
             // label3
@@ -102,7 +102,7 @@
             this.label3.Location = new System.Drawing.Point(144, 161);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 20);
-            this.label3.TabIndex = 9;
+            this.label3.TabIndex = 11;
             this.label3.Text = "Peso";
             // 
             // label4
@@ -112,7 +112,7 @@
             this.label4.Location = new System.Drawing.Point(124, 206);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 20);
-            this.label4.TabIndex = 9;
+            this.label4.TabIndex = 12;
             this.label4.Text = "Materiais";
             // 
             // TxNmProduto
@@ -120,14 +120,14 @@
             this.TxNmProduto.Location = new System.Drawing.Point(230, 120);
             this.TxNmProduto.Name = "TxNmProduto";
             this.TxNmProduto.Size = new System.Drawing.Size(138, 20);
-            this.TxNmProduto.TabIndex = 10;
+            this.TxNmProduto.TabIndex = 1;
             // 
             // TxVlPeso
             // 
             this.TxVlPeso.Location = new System.Drawing.Point(230, 161);
             this.TxVlPeso.Name = "TxVlPeso";
             this.TxVlPeso.Size = new System.Drawing.Size(138, 20);
-            this.TxVlPeso.TabIndex = 10;
+            this.TxVlPeso.TabIndex = 2;
             // 
             // dgGruposExistentes
             // 
@@ -141,7 +141,7 @@
             this.dgGruposExistentes.Name = "dgGruposExistentes";
             this.dgGruposExistentes.ReadOnly = true;
             this.dgGruposExistentes.Size = new System.Drawing.Size(181, 204);
-            this.dgGruposExistentes.TabIndex = 13;
+            this.dgGruposExistentes.TabIndex = 3;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -160,7 +160,7 @@
             this.dataGridView2.Location = new System.Drawing.Point(504, 206);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(187, 204);
-            this.dataGridView2.TabIndex = 14;
+            this.dataGridView2.TabIndex = 5;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -174,7 +174,7 @@
             this.btEsquerdo.Location = new System.Drawing.Point(441, 308);
             this.btEsquerdo.Name = "btEsquerdo";
             this.btEsquerdo.Size = new System.Drawing.Size(29, 28);
-            this.btEsquerdo.TabIndex = 11;
+            this.btEsquerdo.TabIndex = 6;
             this.btEsquerdo.Text = "<";
             this.btEsquerdo.UseVisualStyleBackColor = true;
             // 
@@ -186,7 +186,7 @@
             this.btDireita.Location = new System.Drawing.Point(441, 263);
             this.btDireita.Name = "btDireita";
             this.btDireita.Size = new System.Drawing.Size(29, 28);
-            this.btDireita.TabIndex = 12;
+            this.btDireita.TabIndex = 4;
             this.btDireita.Text = ">";
             this.btDireita.UseVisualStyleBackColor = true;
             // 

@@ -39,7 +39,6 @@
             this.TxMatricula = new System.Windows.Forms.TextBox();
             this.CancelarNovoUsuario = new System.Windows.Forms.Button();
             this.SalvarNovoUsuario = new System.Windows.Forms.Button();
-            this.BtAutoEncremento = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -104,13 +103,6 @@
             this.SalvarNovoUsuario.Name = "SalvarNovoUsuario";
             this.SalvarNovoUsuario.UseVisualStyleBackColor = true;
             this.SalvarNovoUsuario.Click += new System.EventHandler(this.SalvarNovoUsuario_Click);
-            // 
-            // BtAutoEncremento
-            // 
-            resources.ApplyResources(this.BtAutoEncremento, "BtAutoEncremento");
-            this.BtAutoEncremento.Name = "BtAutoEncremento";
-            this.BtAutoEncremento.UseVisualStyleBackColor = true;
-            this.BtAutoEncremento.Click += new System.EventHandler(this.BtAutoEncremento_Click);
             // 
             // button1
             // 
@@ -177,7 +169,6 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btEsquerdo);
             this.Controls.Add(this.btDireita);
-            this.Controls.Add(this.BtAutoEncremento);
             this.Controls.Add(this.CancelarNovoUsuario);
             this.Controls.Add(this.TxMatricula);
             this.Controls.Add(this.TxNomeUsuario);
@@ -210,7 +201,6 @@
         private System.Windows.Forms.TextBox TxMatricula;
         private System.Windows.Forms.Button CancelarNovoUsuario;
         private System.Windows.Forms.Button SalvarNovoUsuario;
-        private System.Windows.Forms.Button BtAutoEncremento;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
