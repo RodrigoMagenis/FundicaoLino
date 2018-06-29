@@ -38,7 +38,7 @@ namespace Fundicaolino.telas
 
         private void SalvarNovoUsuario_Click(object sender, EventArgs e)
         {
-           
+
             Usuario usuario = new Usuario();
             Boolean resultado;
             Int64 longConvertido;
@@ -68,7 +68,7 @@ namespace Fundicaolino.telas
 
             usuario.NmLogin = TxNomeUsuario.Text;
             usuario.FgUsuario = true;
-            usuario.NmSenha = "cop12345"; 
+            usuario.NmSenha = "cop12345";
             //#Feature Haverá uma tela de configuração do sistema que permitirá selecionar uma senha padrão
             //#Feature Haverá relação com o grupo de acesso no cadastro de usuário;
 
@@ -111,5 +111,17 @@ namespace Fundicaolino.telas
                 this.Close();
             }
         }
+
+        private void GnUsuarioNovo_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //var gridUsuario = new GridUsuario();
+            var panel = new Panel();
+
+
+            var gridUsuario = (GridUsuario)TelaPrincipal.GridUsuario.Controls[0];
+
+
+        }
     }
 }
+
