@@ -31,11 +31,15 @@ private void btPesquisar_Click(object sender, EventArgs e)
                 produto.Id = longConvertido;
                 this.CarregaDataGrid();
             }
+            else
+            {
+                MessageBox.Show("Insira um valor válido");
+            }
         }
 
         private void ConsultaResponsavel_Load(object sender, EventArgs e)
         {
-            CarregaDataGrid();
+           CarregaDataGrid();
         }
 
         public void CarregaDataGrid()
@@ -46,7 +50,7 @@ private void btPesquisar_Click(object sender, EventArgs e)
             dgProduto.AutoGenerateColumns = false;
             List<dbProduto> todosOsProdutos = Program.Gerenciador.TodosOsProdutos();
             var produtoSelecionado = todosOsProdutos.Where(p => p.Id == produto.Id);
-            dgProduto.DataSource = todosOsProdutos;
+            dgProduto.DataSource = produtoSelecionado;
         }
     }
 }

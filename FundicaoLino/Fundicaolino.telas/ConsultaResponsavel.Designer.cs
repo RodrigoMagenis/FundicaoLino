@@ -32,8 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btPesquisar = new System.Windows.Forms.Button();
             this.dgProduto = new System.Windows.Forms.DataGridView();
-            this.NmResponsavel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DtProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NmUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgProduto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,29 +69,29 @@
             this.dgProduto.AllowUserToDeleteRows = false;
             this.dgProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgProduto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.NmResponsavel,
-            this.DtProduto});
+            this.NmUsuario,
+            this.Date});
             this.dgProduto.Location = new System.Drawing.Point(238, 171);
             this.dgProduto.Name = "dgProduto";
             this.dgProduto.ReadOnly = true;
             this.dgProduto.Size = new System.Drawing.Size(323, 220);
             this.dgProduto.TabIndex = 3;
             // 
-            // NmResponsavel
+            // NmUsuario
             // 
-            this.NmResponsavel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NmResponsavel.DataPropertyName = "NmResponsavel";
-            this.NmResponsavel.HeaderText = "Responsavel";
-            this.NmResponsavel.Name = "NmResponsavel";
-            this.NmResponsavel.ReadOnly = true;
+            this.NmUsuario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NmUsuario.DataPropertyName = "NmResponsavel";
+            this.NmUsuario.HeaderText = "Responsavel";
+            this.NmUsuario.Name = "NmUsuario";
+            this.NmUsuario.ReadOnly = true;
             // 
-            // DtProduto
+            // Date
             // 
-            this.DtProduto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DtProduto.DataPropertyName = "DtProduto";
-            this.DtProduto.HeaderText = "Data";
-            this.DtProduto.Name = "DtProduto";
-            this.DtProduto.ReadOnly = true;
+            this.Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Date.DataPropertyName = "DtProduto";
+            this.Date.HeaderText = "Data";
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
             // 
             // ConsultaResponsavel
             // 
@@ -117,7 +117,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btPesquisar;
         private System.Windows.Forms.DataGridView dgProduto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NmResponsavel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DtProduto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NmUsuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
     }
 }
