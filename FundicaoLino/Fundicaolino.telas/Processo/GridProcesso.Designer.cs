@@ -31,7 +31,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NmProcesso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EtapaProcesso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            //this.EtapaProcesso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
