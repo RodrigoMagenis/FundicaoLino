@@ -29,7 +29,7 @@ private void btPesquisar_Click(object sender, EventArgs e)
             if (resultado)
             {
                 produto.Id = longConvertido;
-                this.CarregaDataGrid();
+                this.CarregaDadosNosCampos();
             }
             else
             {
@@ -39,18 +39,20 @@ private void btPesquisar_Click(object sender, EventArgs e)
 
         private void ConsultaResponsavel_Load(object sender, EventArgs e)
         {
-           CarregaDataGrid();
         }
 
-        public void CarregaDataGrid()
+        public void CarregaDadosNosCampos()
         {
-            dgProduto.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgProduto.MultiSelect = false;
-            dgProduto.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgProduto.AutoGenerateColumns = false;
             List<dbProduto> todosOsProdutos = Program.Gerenciador.TodosOsProdutos();
-            var produtoSelecionado = todosOsProdutos.Where(p => p.Id == produto.Id);
-            dgProduto.DataSource = produtoSelecionado;
+            var produtoSelecionado = todosOsProdutos.Where(p => p.Id == produto.Id).First();
+
+            this.TbResponsavel.Text = produtoSelecionado.Responsavel.NmUsuario;
+            this.TbMatricula.Text = produtoSelecionado.Responsavel.Idmatricula.ToString();
+
+            this.TbNmTipoProduto.Text = produtoSelecionado.NmTipoProduto;
+            this.TbIdTipoProduto.Text = produtoSelecionado.IdTipoProduto.ToString();
+
+            this.TbData.Text = produtoSelecionado.DtProduto.ToString();
         }
     }
 }
