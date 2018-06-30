@@ -320,9 +320,6 @@ namespace Fundicaolino.telas
                     panel4.Controls.Add(gnProdutoNovo);
                     gnProdutoNovo.Show();
                     break;
-                default:
-                    Console.WriteLine("ZONA DE CONFORTO");
-                    break;
             }
         }
 
