@@ -44,15 +44,21 @@ private void btPesquisar_Click(object sender, EventArgs e)
         public void CarregaDadosNosCampos()
         {
             List<dbProduto> todosOsProdutos = Program.Gerenciador.TodosOsProdutos();
-            var produtoSelecionado = todosOsProdutos.Where(p => p.Id == produto.Id).First();
+            try
+            {
+                var produtoSelecionado = todosOsProdutos.Where(p => p.Id == produto.Id).First();
+                this.TbResponsavel.Text = produtoSelecionado.Responsavel.NmUsuario;
+                this.TbMatricula.Text = produtoSelecionado.Responsavel.Idmatricula.ToString();
 
-            this.TbResponsavel.Text = produtoSelecionado.Responsavel.NmUsuario;
-            this.TbMatricula.Text = produtoSelecionado.Responsavel.Idmatricula.ToString();
+                this.TbNmTipoProduto.Text = produtoSelecionado.NmTipoProduto;
+                this.TbIdTipoProduto.Text = produtoSelecionado.IdTipoProduto.ToString();
 
-            this.TbNmTipoProduto.Text = produtoSelecionado.NmTipoProduto;
-            this.TbIdTipoProduto.Text = produtoSelecionado.IdTipoProduto.ToString();
-
-            this.TbData.Text = produtoSelecionado.DtProduto.ToString();
+                this.TbData.Text = produtoSelecionado.DtProduto.ToString();
+            }
+            catch
+            {
+                MessageBox.Show("Produto não encontrado, verifique o valor informado");
+            }
         }
     }
 }
