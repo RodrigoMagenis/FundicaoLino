@@ -17,6 +17,12 @@ namespace Fundicaolino.negocio.Models
         public Producao                     ProducaoProduto { get; set; }
         // #Feature vincula o processo (ou etapa) a data de término
 
+        public dbProduto()
+        {
+            this.Responsavel = new Usuario();
+            this.TPProduto = new TipoProduto();
+        }
+
         [NotMapped]
         public String NmResponsavel
         {
@@ -28,11 +34,11 @@ namespace Fundicaolino.negocio.Models
         }
 
         [NotMapped]
-        public String IdTipoProduto
+        public Int64 IdTipoProduto
         {
             get
             {
-                String IdTipoProduto = Convert.ToString(TPProduto.Id);
+                Int64 IdTipoProduto = TPProduto.Id;
                 return IdTipoProduto;
             }
         }
