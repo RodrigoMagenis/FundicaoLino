@@ -1,4 +1,5 @@
 ﻿using Fundicaolino.negocio;
+using Fundicaolino.negocio.Models;
 using Fundicaolino.telas.MateriaPrima;
 using Fundicaolino.telas.Produto;
 using System;
@@ -109,7 +110,151 @@ namespace Fundicaolino.telas
 
         private void GenericaExluir_Click(object sender, EventArgs e)
         {
+            switch (tela)
+            {
+                case 1://grupo
+                    var gridGrupo = (GridGrupo)panel4.Controls[0];
 
+                    break;
+                case 2://usuario
+                    var gridUsuario = (GridUsuario)panel4.Controls[0];
+                    if (gridUsuario.VerificaSelecao())
+                    {
+                        DialogResult resultado = MessageBox.Show("Tem certeza?", "Quer remover?", MessageBoxButtons.OKCancel);
+                        if (resultado == DialogResult.OK)
+                        {
+                            Usuario usuarioSelecionado = (Usuario)gridUsuario.dgUsuario.SelectedRows[0].DataBoundItem;
+                            var validacao = Program.Gerenciador.RemoverUsuario(usuarioSelecionado);
+                            if (validacao.Valido)
+                            {
+                                MessageBox.Show("Usuario removido com sucesso");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Ocorreu um problema ao remover o Usuario");
+                            }
+                            gridUsuario.CarregarUsuarios();
+                        }
+                    }
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5://producao
+                    var gridProducao = (GridProducao)panel4.Controls[0];
+                    if (gridProducao.VerificaSelecao())
+                    {
+                        DialogResult resultado = MessageBox.Show("Tem certeza?", "Quer remover?", MessageBoxButtons.OKCancel);
+                        if (resultado == DialogResult.OK)
+                        {
+                            Producao producaoSelecionada = (Producao)gridProducao.dgProducao.SelectedRows[0].DataBoundItem;
+                            var validacao = Program.Gerenciador.RemoverProducao(producaoSelecionada);
+                            if (validacao.Valido)
+                            {
+                                MessageBox.Show("Produção removida com sucesso");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Ocorreu um problema ao remover a Produção");
+                            }
+                            gridProducao.CarregarProducoes();
+                        }
+                    }
+                    break;
+                case 6://processo
+                       /* var gridProcesso = (GridProcesso)panel4.Controls[0];
+                        if (gridProcesso.VerificaSelecao())
+                        {
+                            DialogResult resultado = MessageBox.Show("Tem certeza?", "Quer remover?", MessageBoxButtons.OKCancel);
+                            if (resultado == DialogResult.OK)
+                            {
+                                Processo processoSelecionado = (Processo)gridProcesso.dgProcesso.SelectedRows[0].DataBoundItem;
+                                var validacao = Program.Gerenciador.RemoverProcesso(processoSelecionado);
+                                if (validacao.Valido)
+                                {
+                                    MessageBox.Show("Processo removido com sucesso");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Ocorreu um problema ao remover o Processo");
+                                }
+                                gridProcesso.CarregarProcessos();
+                            }
+                        }*/
+                    break;
+                case 7://tipo de produto
+                    var gridTipodeProduto = (dgTipodeProdutoFundo)panel4.Controls[0];
+                    if (gridTipodeProduto.VerificaSelecao())
+                    {
+                        DialogResult resultado = MessageBox.Show("Tem certeza?", "Quer remover?", MessageBoxButtons.OKCancel);
+                        if (resultado == DialogResult.OK)
+                        {
+                            TipoProduto tipoProdutoSelecionado = (TipoProduto)gridTipodeProduto.gridTipoProduto.SelectedRows[0].DataBoundItem;
+                            var validacao = Program.Gerenciador.RemoverTipodeProduto(tipoProdutoSelecionado);
+                            if (validacao.Valido)
+                            {
+                                MessageBox.Show("Tipo de produto removido com sucesso");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Ocorreu um problema ao remover o tipo de produto");
+                            }
+                            gridTipodeProduto.CarregarTiposProdutos();
+                        }
+                    }
+                    break;
+                case 8:
+                    break;
+                case 9:
+                    break;
+                case 10://materia prima
+                    var gridMateriaPrima = (GridMateriaPrima)panel4.Controls[0];
+                    if (gridMateriaPrima.VerificaSelecao())
+                    {
+                        DialogResult resultado = MessageBox.Show("Tem certeza?", "Quer remover?", MessageBoxButtons.OKCancel);
+                        if (resultado == DialogResult.OK)
+                        {
+                            Material materialSelecionado = (Material)gridMateriaPrima.dgMateriaPrima.SelectedRows[0].DataBoundItem;
+                            var validacao = Program.Gerenciador.RemoverMateriaPrima(materialSelecionado);
+                            if (validacao.Valido)
+                            {
+                                MessageBox.Show("Tipo de produto removido com sucesso");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Ocorreu um problema ao remover o tipo de produto");
+                            }
+                            gridMateriaPrima.CarregarMateriasPrimas();
+                        }
+                    }
+                    break;
+                case 11://produto
+                    var gridProduto = (GridProduto)panel4.Controls[0];
+                    if (gridProduto.VerificaSelecao())
+                    {
+                        DialogResult resultado = MessageBox.Show("Tem certeza?", "Quer remover?", MessageBoxButtons.OKCancel);
+                        if (resultado == DialogResult.OK)
+                        {
+                            dbProduto produtoSelecionado = (dbProduto)gridProduto.dgProduto.SelectedRows[0].DataBoundItem;
+                            var validacao = Program.Gerenciador.RemoverProduto(produtoSelecionado);
+                            if (validacao.Valido)
+                            {
+                                MessageBox.Show("Tipo de produto removido com sucesso");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Ocorreu um problema ao remover o tipo de produto");
+                            }
+                            gridProduto.CarregarProdutos();
+                        }
+                    }
+                    break;
+                default:
+
+                    break;
+
+            }
         }
 
         private void GenericoNovo_Click(object sender, EventArgs e)
@@ -231,7 +376,7 @@ namespace Fundicaolino.telas
 
         private void Genericacadastrarproduto_Click(object sender, EventArgs e)
         {
-            dgTipoProduto gridTipoProduto = new dgTipoProduto();
+            dgTipodeProdutoFundo gridTipoProduto = new dgTipodeProdutoFundo();
             gridTipoProduto.MdiParent = this;
             panel4.Controls.Add(gridTipoProduto);
             gridTipoProduto.Show();
