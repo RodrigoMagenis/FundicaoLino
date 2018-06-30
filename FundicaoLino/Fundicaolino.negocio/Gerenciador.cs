@@ -9,6 +9,7 @@ namespace Fundicaolino.negocio
 {
     public class Gerenciador
     {
+        
         private Banco banco = new Banco();
         public Validacao RemoverUsuario(Usuario usuarioSelecionado)
         {
@@ -22,6 +23,7 @@ namespace Fundicaolino.negocio
             Validacao validacao = new Validacao();
             banco.TipoProdutos.Remove(tipodeProdutoSelecionado);
             banco.SaveChanges();
+            
             return validacao;
         }
         public Validacao RemoverProduto(dbProduto produtoSelecionado)

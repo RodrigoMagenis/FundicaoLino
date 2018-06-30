@@ -102,8 +102,10 @@
             this.Controls.Add(this.btPesquisar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbIdProduto);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ConsultaResponsavel";
             this.Text = "ConsultaResponsavel";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ConsultaResponsavel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgProduto)).EndInit();
             this.ResumeLayout(false);

@@ -129,13 +129,13 @@
     <value>107, 43</value>
   </data>
   <data name="NovoUsuario.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 25</value>
+    <value>186, 25</value>
   </data>
   <data name="NovoUsuario.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>11</value>
   </data>
   <data name="NovoUsuario.Text" xml:space="preserve">
-    <value>Novo Usuario</value>
+    <value>Cadastrar Usuario</value>
   </data>
   <data name="&gt;&gt;NovoUsuario.Name" xml:space="preserve">
     <value>NovoUsuario</value>
@@ -147,7 +147,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;NovoUsuario.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>14</value>
   </data>
   <data name="NovoIdentificador.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -162,7 +162,7 @@
     <value>101, 20</value>
   </data>
   <data name="NovoIdentificador.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>11</value>
   </data>
   <data name="NovoIdentificador.Text" xml:space="preserve">
     <value>Identificador:</value>
@@ -177,7 +177,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;NovoIdentificador.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>13</value>
   </data>
   <data name="NovoNomeUsuario.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -192,7 +192,7 @@
     <value>111, 20</value>
   </data>
   <data name="NovoNomeUsuario.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>11</value>
   </data>
   <data name="NovoNomeUsuario.Text" xml:space="preserve">
     <value>Nome usuário:</value>
@@ -207,7 +207,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;NovoNomeUsuario.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>12</value>
   </data>
   <data name="NovoMatricula.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -222,7 +222,7 @@
     <value>77, 20</value>
   </data>
   <data name="NovoMatricula.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>11</value>
   </data>
   <data name="NovoMatricula.Text" xml:space="preserve">
     <value>Matrícula:</value>
@@ -237,7 +237,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;NovoMatricula.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>11</value>
   </data>
   <data name="NovoGrupodeAcesso.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -252,7 +252,7 @@
     <value>135, 20</value>
   </data>
   <data name="NovoGrupodeAcesso.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>11</value>
   </data>
   <data name="NovoGrupodeAcesso.Text" xml:space="preserve">
     <value>Grupo de acesso:</value>
@@ -267,7 +267,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;NovoGrupodeAcesso.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>10</value>
+  </data>
+  <data name="TxIdentificador.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="TxIdentificador.Location" type="System.Drawing.Point, System.Drawing">
     <value>188, 100</value>
@@ -276,7 +279,7 @@
     <value>89, 20</value>
   </data>
   <data name="TxIdentificador.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;TxIdentificador.Name" xml:space="preserve">
     <value>TxIdentificador</value>
@@ -288,7 +291,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TxIdentificador.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>9</value>
   </data>
   <data name="TxNomeUsuario.Location" type="System.Drawing.Point, System.Drawing">
     <value>187, 134</value>
@@ -309,7 +312,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TxNomeUsuario.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>8</value>
   </data>
   <data name="TxMatricula.Location" type="System.Drawing.Point, System.Drawing">
     <value>187, 170</value>
@@ -318,7 +321,7 @@
     <value>90, 20</value>
   </data>
   <data name="TxMatricula.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;TxMatricula.Name" xml:space="preserve">
     <value>TxMatricula</value>
@@ -330,7 +333,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TxMatricula.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="CancelarNovoUsuario.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -342,7 +345,7 @@
     <value>73, 42</value>
   </data>
   <data name="CancelarNovoUsuario.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>7</value>
   </data>
   <data name="CancelarNovoUsuario.Text" xml:space="preserve">
     <value>Cancelar</value>
@@ -357,7 +360,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;CancelarNovoUsuario.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="SalvarNovoUsuario.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -369,7 +372,7 @@
     <value>74, 42</value>
   </data>
   <data name="SalvarNovoUsuario.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>6</value>
   </data>
   <data name="SalvarNovoUsuario.Text" xml:space="preserve">
     <value>Salvar</value>
@@ -386,33 +389,6 @@
   <data name="&gt;&gt;SalvarNovoUsuario.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="BtAutoEncremento.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="BtAutoEncremento.Location" type="System.Drawing.Point, System.Drawing">
-    <value>283, 95</value>
-  </data>
-  <data name="BtAutoEncremento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 28</value>
-  </data>
-  <data name="BtAutoEncremento.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="BtAutoEncremento.Text" xml:space="preserve">
-    <value>AUTO</value>
-  </data>
-  <data name="&gt;&gt;BtAutoEncremento.Name" xml:space="preserve">
-    <value>BtAutoEncremento</value>
-  </data>
-  <data name="&gt;&gt;BtAutoEncremento.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BtAutoEncremento.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;BtAutoEncremento.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
   <data name="button1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
@@ -423,7 +399,7 @@
     <value>73, 28</value>
   </data>
   <data name="button1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="button1.Text" xml:space="preserve">
     <value>AUTO</value>
@@ -508,7 +484,7 @@
     <value>27, 28</value>
   </data>
   <data name="btDireita.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="btDireita.Text" xml:space="preserve">
     <value>&gt;</value>
@@ -538,7 +514,7 @@
     <value>27, 28</value>
   </data>
   <data name="btEsquerdo.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="btEsquerdo.Text" xml:space="preserve">
     <value>&lt;</value>

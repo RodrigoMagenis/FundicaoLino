@@ -39,7 +39,6 @@
             this.TxMatricula = new System.Windows.Forms.TextBox();
             this.CancelarNovoUsuario = new System.Windows.Forms.Button();
             this.SalvarNovoUsuario = new System.Windows.Forms.Button();
-            this.BtAutoEncremento = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -105,13 +104,6 @@
             this.SalvarNovoUsuario.UseVisualStyleBackColor = true;
             this.SalvarNovoUsuario.Click += new System.EventHandler(this.SalvarNovoUsuario_Click);
             // 
-            // BtAutoEncremento
-            // 
-            resources.ApplyResources(this.BtAutoEncremento, "BtAutoEncremento");
-            this.BtAutoEncremento.Name = "BtAutoEncremento";
-            this.BtAutoEncremento.UseVisualStyleBackColor = true;
-            this.BtAutoEncremento.Click += new System.EventHandler(this.BtAutoEncremento_Click);
-            // 
             // button1
             // 
             resources.ApplyResources(this.button1, "button1");
@@ -121,18 +113,21 @@
             // 
             // dataGridView2
             // 
-            this.dataGridView2.AllowUserToOrderColumns = true;
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1});
             resources.ApplyResources(this.dataGridView2, "dataGridView2");
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
             resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dgGruposExistentes
             // 
@@ -177,7 +172,6 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btEsquerdo);
             this.Controls.Add(this.btDireita);
-            this.Controls.Add(this.BtAutoEncremento);
             this.Controls.Add(this.CancelarNovoUsuario);
             this.Controls.Add(this.TxMatricula);
             this.Controls.Add(this.TxNomeUsuario);
@@ -210,7 +204,6 @@
         private System.Windows.Forms.TextBox TxMatricula;
         private System.Windows.Forms.Button CancelarNovoUsuario;
         private System.Windows.Forms.Button SalvarNovoUsuario;
-        private System.Windows.Forms.Button BtAutoEncremento;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;

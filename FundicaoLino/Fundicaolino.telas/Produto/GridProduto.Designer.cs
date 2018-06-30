@@ -66,6 +66,7 @@
             // IdTipoProduto
             // 
             this.IdTipoProduto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.IdTipoProduto.DataPropertyName = "Responsavel.Id";
             this.IdTipoProduto.HeaderText = "ID Tipo do Produto";
             this.IdTipoProduto.Name = "IdTipoProduto";
             this.IdTipoProduto.ReadOnly = true;
@@ -73,7 +74,7 @@
             // NmTipoProduto
             // 
             this.NmTipoProduto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NmTipoProduto.DataPropertyName = "NmTipoProduto";
+            this.NmTipoProduto.DataPropertyName = "ProducaoProduto";
             this.NmTipoProduto.HeaderText = "Nome Produto";
             this.NmTipoProduto.Name = "NmTipoProduto";
             this.NmTipoProduto.ReadOnly = true;
@@ -81,6 +82,7 @@
             // Responsavel
             // 
             this.Responsavel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Responsavel.DataPropertyName = "Responsavel.Id";
             this.Responsavel.HeaderText = "Responsavel";
             this.Responsavel.Name = "Responsavel";
             this.Responsavel.ReadOnly = true;
@@ -88,6 +90,7 @@
             // date
             // 
             this.date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.date.DataPropertyName = "DtProduto";
             this.date.HeaderText = "Data";
             this.date.Name = "date";
             this.date.ReadOnly = true;
@@ -109,11 +112,11 @@
         }
 
         #endregion
+        public System.Windows.Forms.DataGridView dgProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdTipoProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn NmTipoProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Responsavel;
         private System.Windows.Forms.DataGridViewTextBoxColumn date;
-        public System.Windows.Forms.DataGridView dgProduto;
     }
 }

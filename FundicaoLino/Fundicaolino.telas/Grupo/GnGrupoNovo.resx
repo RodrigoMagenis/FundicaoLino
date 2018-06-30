@@ -126,7 +126,7 @@
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="BtnCancel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>8</value>
   </data>
   <data name="BtnCancel.Text" xml:space="preserve">
     <value>Cancelar</value>
@@ -153,13 +153,13 @@
     <value>108, 64</value>
   </data>
   <data name="NvGrupo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 24</value>
+    <value>147, 24</value>
   </data>
   <data name="NvGrupo.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="NvGrupo.Text" xml:space="preserve">
-    <value>Novo Grupo</value>
+    <value>Cadastrar Grupo</value>
   </data>
   <data name="&gt;&gt;NvGrupo.Name" xml:space="preserve">
     <value>NvGrupo</value>
@@ -184,7 +184,7 @@
     <value>81, 31</value>
   </data>
   <data name="BtnSave.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>7</value>
   </data>
   <data name="BtnSave.Text" xml:space="preserve">
     <value>Salvar</value>
@@ -244,7 +244,7 @@
     <value>93, 18</value>
   </data>
   <data name="TxNameGroup.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;TxNameGroup.Name" xml:space="preserve">
     <value>TxNameGroup</value>
@@ -268,7 +268,7 @@
     <value>104, 17</value>
   </data>
   <data name="XboxUsuario.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>1</value>
   </data>
   <data name="XboxUsuario.Text" xml:space="preserve">
     <value>Tela de usuários</value>
@@ -298,7 +298,7 @@
     <value>166, 17</value>
   </data>
   <data name="XboxControleProducao.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="XboxControleProducao.Text" xml:space="preserve">
     <value>Tela de controle da produção</value>
@@ -358,7 +358,7 @@
     <value>205, 17</value>
   </data>
   <data name="XboxProducao.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="XboxProducao.Text" xml:space="preserve">
     <value>Tela de Gerenciamento de produções</value>
@@ -388,7 +388,7 @@
     <value>203, 17</value>
   </data>
   <data name="XboxProcesso.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="XboxProcesso.Text" xml:space="preserve">
     <value>Tela de Gerenciamento de processos</value>
@@ -418,7 +418,7 @@
     <value>196, 17</value>
   </data>
   <data name="XboxProduto.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="XboxProduto.Text" xml:space="preserve">
     <value>Tela de Gerenciamento de produtos</value>

@@ -69,5 +69,32 @@ namespace Fundicaolino.telas.Produto
             }
 
         }
+
+        private void BtCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void lbResponsavel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbResponsavel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbCodigoTipodeProduto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbCodigoTIpodeProduto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }

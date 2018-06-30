@@ -16,5 +16,6 @@ namespace Fundicaolino.negocio.Models
         public DateTime                     DtProduto { get; set; }
         public Producao                     ProducaoProduto { get; set; }
         // #Feature vincula o processo (ou etapa) a data de término
+        
     }
 }

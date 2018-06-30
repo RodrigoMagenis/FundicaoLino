@@ -52,10 +52,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsultaResponsavel.cs">
+    <Compile Include="Controle\ConsultaResponsavel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConsultaResponsavel.Designer.cs">
+    <Compile Include="Controle\ConsultaResponsavel.Designer.cs">
       <DependentUpon>ConsultaResponsavel.cs</DependentUpon>
     </Compile>
     <Compile Include="MateriaPrima\GnNovaMateriaPrima.cs">
@@ -162,7 +162,7 @@
     <Compile Include="TelaPrincipal.Designer.cs">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ConsultaResponsavel.resx">
+    <EmbeddedResource Include="Controle\ConsultaResponsavel.resx">
       <DependentUpon>ConsultaResponsavel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MateriaPrima\GnNovaMateriaPrima.resx">

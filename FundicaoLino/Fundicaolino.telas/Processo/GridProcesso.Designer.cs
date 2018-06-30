@@ -42,8 +42,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
-            this.NmProcesso,
-            this.EtapaProcesso});
+            this.NmProcesso});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
@@ -67,14 +66,6 @@
             this.NmProcesso.Name = "NmProcesso";
             this.NmProcesso.ReadOnly = true;
             // 
-            // EtapaProcesso
-            // 
-            this.EtapaProcesso.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.EtapaProcesso.DataPropertyName = "EtapaProcesso";
-            this.EtapaProcesso.HeaderText = "Etapa";
-            this.EtapaProcesso.Name = "EtapaProcesso";
-            this.EtapaProcesso.ReadOnly = true;
-            // 
             // GridProcesso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -91,9 +82,8 @@
         }
 
         #endregion
+        public System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn NmProcesso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EtapaProcesso;
-        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }
