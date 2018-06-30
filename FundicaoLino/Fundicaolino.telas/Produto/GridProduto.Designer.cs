@@ -32,7 +32,7 @@
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdTipoProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NmTipoProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Responsavel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NmUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgProduto)).BeginInit();
             this.SuspendLayout();
@@ -46,7 +46,7 @@
             this.Id,
             this.IdTipoProduto,
             this.NmTipoProduto,
-            this.Responsavel,
+            this.NmUsuario,
             this.date});
             this.dgProduto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgProduto.Location = new System.Drawing.Point(0, 0);
@@ -66,6 +66,7 @@
             // IdTipoProduto
             // 
             this.IdTipoProduto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.IdTipoProduto.DataPropertyName = "IdTipoProduto";
             this.IdTipoProduto.HeaderText = "ID Tipo do Produto";
             this.IdTipoProduto.Name = "IdTipoProduto";
             this.IdTipoProduto.ReadOnly = true;
@@ -78,16 +79,18 @@
             this.NmTipoProduto.Name = "NmTipoProduto";
             this.NmTipoProduto.ReadOnly = true;
             // 
-            // Responsavel
+            // NmUsuario
             // 
-            this.Responsavel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Responsavel.HeaderText = "Responsavel";
-            this.Responsavel.Name = "Responsavel";
-            this.Responsavel.ReadOnly = true;
+            this.NmUsuario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NmUsuario.DataPropertyName = "NmResponsavel";
+            this.NmUsuario.HeaderText = "Responsavel";
+            this.NmUsuario.Name = "NmUsuario";
+            this.NmUsuario.ReadOnly = true;
             // 
             // date
             // 
             this.date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.date.DataPropertyName = "DtProduto";
             this.date.HeaderText = "Data";
             this.date.Name = "date";
             this.date.ReadOnly = true;
@@ -114,7 +117,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdTipoProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn NmTipoProduto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Responsavel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NmUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn date;
     }
 }

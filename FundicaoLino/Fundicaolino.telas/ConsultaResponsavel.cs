@@ -46,7 +46,7 @@ private void btPesquisar_Click(object sender, EventArgs e)
             dgProduto.AutoGenerateColumns = false;
             List<dbProduto> todosOsProdutos = Program.Gerenciador.TodosOsProdutos();
             var produtoSelecionado = todosOsProdutos.Where(p => p.Id == produto.Id);
-            dgProduto.DataSource = produtoSelecionado;
+            dgProduto.DataSource = todosOsProdutos;
         }
     }
 }
