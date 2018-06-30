@@ -36,6 +36,7 @@
             this.lbIdMaterial = new System.Windows.Forms.Label();
             this.tbNmMaterial = new System.Windows.Forms.TextBox();
             this.tbPesoMaterial = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BtSalvar
@@ -44,7 +45,7 @@
             this.BtSalvar.Location = new System.Drawing.Point(725, 22);
             this.BtSalvar.Name = "BtSalvar";
             this.BtSalvar.Size = new System.Drawing.Size(74, 42);
-            this.BtSalvar.TabIndex = 20;
+            this.BtSalvar.TabIndex = 3;
             this.BtSalvar.Text = "Salvar";
             this.BtSalvar.UseVisualStyleBackColor = true;
             this.BtSalvar.Click += new System.EventHandler(this.BtSalvar_Click);
@@ -55,16 +56,18 @@
             this.BtCancelar.Location = new System.Drawing.Point(632, 22);
             this.BtCancelar.Name = "BtCancelar";
             this.BtCancelar.Size = new System.Drawing.Size(73, 42);
-            this.BtCancelar.TabIndex = 19;
+            this.BtCancelar.TabIndex = 4;
             this.BtCancelar.Text = "Cancelar";
             this.BtCancelar.UseVisualStyleBackColor = true;
+            this.BtCancelar.Click += new System.EventHandler(this.BtCancelar_Click);
             // 
             // tbIdMaterial
             // 
+            this.tbIdMaterial.Enabled = false;
             this.tbIdMaterial.Location = new System.Drawing.Point(266, 110);
             this.tbIdMaterial.Name = "tbIdMaterial";
             this.tbIdMaterial.Size = new System.Drawing.Size(121, 20);
-            this.tbIdMaterial.TabIndex = 16;
+            this.tbIdMaterial.TabIndex = 0;
             // 
             // lbPesoMaterial
             // 
@@ -101,20 +104,32 @@
             this.tbNmMaterial.Location = new System.Drawing.Point(266, 157);
             this.tbNmMaterial.Name = "tbNmMaterial";
             this.tbNmMaterial.Size = new System.Drawing.Size(121, 20);
-            this.tbNmMaterial.TabIndex = 16;
+            this.tbNmMaterial.TabIndex = 1;
             // 
             // tbPesoMaterial
             // 
             this.tbPesoMaterial.Location = new System.Drawing.Point(266, 200);
             this.tbPesoMaterial.Name = "tbPesoMaterial";
             this.tbPesoMaterial.Size = new System.Drawing.Size(121, 20);
-            this.tbPesoMaterial.TabIndex = 16;
+            this.tbPesoMaterial.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(135, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(242, 25);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Cadastrar máteria prima";
+            this.label1.UseMnemonic = false;
             // 
             // GnNovaMateriaPrima
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(838, 394);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.BtSalvar);
             this.Controls.Add(this.BtCancelar);
             this.Controls.Add(this.tbPesoMaterial);
@@ -142,5 +157,6 @@
         private System.Windows.Forms.Label lbIdMaterial;
         private System.Windows.Forms.TextBox tbNmMaterial;
         private System.Windows.Forms.TextBox tbPesoMaterial;
+        private System.Windows.Forms.Label label1;
     }
 }

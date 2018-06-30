@@ -36,13 +36,14 @@
             this.cbResponsavel = new System.Windows.Forms.ComboBox();
             this.BtSalvar = new System.Windows.Forms.Button();
             this.BtCancelar = new System.Windows.Forms.Button();
+            this.NovoUsuario = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(68, 73);
+            this.label1.Location = new System.Drawing.Point(69, 102);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(127, 18);
             this.label1.TabIndex = 0;
@@ -50,46 +51,53 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(212, 73);
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(213, 102);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(121, 20);
-            this.textBox1.TabIndex = 1;
+            this.textBox1.TabIndex = 0;
             // 
             // cbCodigoTipodeProduto
             // 
             this.cbCodigoTipodeProduto.FormattingEnabled = true;
-            this.cbCodigoTipodeProduto.Location = new System.Drawing.Point(212, 119);
+            this.cbCodigoTipodeProduto.ItemHeight = 13;
+            this.cbCodigoTipodeProduto.Location = new System.Drawing.Point(213, 148);
             this.cbCodigoTipodeProduto.Name = "cbCodigoTipodeProduto";
             this.cbCodigoTipodeProduto.Size = new System.Drawing.Size(121, 21);
             this.cbCodigoTipodeProduto.TabIndex = 2;
+            this.cbCodigoTipodeProduto.SelectedIndexChanged += new System.EventHandler(this.cbCodigoTipodeProduto_SelectedIndexChanged);
             // 
             // lbCodigoTIpodeProduto
             // 
             this.lbCodigoTIpodeProduto.AutoSize = true;
             this.lbCodigoTIpodeProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCodigoTIpodeProduto.Location = new System.Drawing.Point(12, 119);
+            this.lbCodigoTIpodeProduto.Location = new System.Drawing.Point(13, 148);
             this.lbCodigoTIpodeProduto.Name = "lbCodigoTIpodeProduto";
             this.lbCodigoTIpodeProduto.Size = new System.Drawing.Size(183, 18);
             this.lbCodigoTIpodeProduto.TabIndex = 0;
             this.lbCodigoTIpodeProduto.Text = "Codigo tipo de Produto";
+            this.lbCodigoTIpodeProduto.Click += new System.EventHandler(this.lbCodigoTIpodeProduto_Click);
             // 
             // lbResponsavel
             // 
             this.lbResponsavel.AutoSize = true;
             this.lbResponsavel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbResponsavel.Location = new System.Drawing.Point(90, 164);
+            this.lbResponsavel.Location = new System.Drawing.Point(91, 193);
             this.lbResponsavel.Name = "lbResponsavel";
             this.lbResponsavel.Size = new System.Drawing.Size(105, 18);
             this.lbResponsavel.TabIndex = 0;
             this.lbResponsavel.Text = "Responsavel";
+            this.lbResponsavel.Click += new System.EventHandler(this.lbResponsavel_Click);
             // 
             // cbResponsavel
             // 
             this.cbResponsavel.FormattingEnabled = true;
-            this.cbResponsavel.Location = new System.Drawing.Point(212, 165);
+            this.cbResponsavel.ItemHeight = 13;
+            this.cbResponsavel.Location = new System.Drawing.Point(213, 194);
             this.cbResponsavel.Name = "cbResponsavel";
             this.cbResponsavel.Size = new System.Drawing.Size(121, 21);
             this.cbResponsavel.TabIndex = 2;
+            this.cbResponsavel.SelectedIndexChanged += new System.EventHandler(this.cbResponsavel_SelectedIndexChanged);
             // 
             // BtSalvar
             // 
@@ -97,7 +105,7 @@
             this.BtSalvar.Location = new System.Drawing.Point(688, 38);
             this.BtSalvar.Name = "BtSalvar";
             this.BtSalvar.Size = new System.Drawing.Size(74, 42);
-            this.BtSalvar.TabIndex = 12;
+            this.BtSalvar.TabIndex = 3;
             this.BtSalvar.Text = "Salvar";
             this.BtSalvar.UseVisualStyleBackColor = true;
             this.BtSalvar.Click += new System.EventHandler(this.BtSalvar_Click);
@@ -108,15 +116,28 @@
             this.BtCancelar.Location = new System.Drawing.Point(585, 38);
             this.BtCancelar.Name = "BtCancelar";
             this.BtCancelar.Size = new System.Drawing.Size(73, 42);
-            this.BtCancelar.TabIndex = 11;
+            this.BtCancelar.TabIndex = 4;
             this.BtCancelar.Text = "Cancelar";
             this.BtCancelar.UseVisualStyleBackColor = true;
+            this.BtCancelar.Click += new System.EventHandler(this.BtCancelar_Click);
+            // 
+            // NovoUsuario
+            // 
+            this.NovoUsuario.AutoSize = true;
+            this.NovoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.NovoUsuario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.NovoUsuario.Location = new System.Drawing.Point(88, 26);
+            this.NovoUsuario.Name = "NovoUsuario";
+            this.NovoUsuario.Size = new System.Drawing.Size(187, 25);
+            this.NovoUsuario.TabIndex = 13;
+            this.NovoUsuario.Text = "Cadastrar Produto";
             // 
             // GnProdutoNovo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(836, 445);
+            this.Controls.Add(this.NovoUsuario);
             this.Controls.Add(this.BtSalvar);
             this.Controls.Add(this.BtCancelar);
             this.Controls.Add(this.cbResponsavel);
@@ -145,5 +166,6 @@
         private System.Windows.Forms.ComboBox cbResponsavel;
         private System.Windows.Forms.Button BtSalvar;
         private System.Windows.Forms.Button BtCancelar;
+        private System.Windows.Forms.Label NovoUsuario;
     }
 }

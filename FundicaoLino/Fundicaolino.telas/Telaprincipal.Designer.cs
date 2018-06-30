@@ -120,7 +120,7 @@
             this.Genericacontroleemtemporeal.Location = new System.Drawing.Point(38, 433);
             this.Genericacontroleemtemporeal.Name = "Genericacontroleemtemporeal";
             this.Genericacontroleemtemporeal.Size = new System.Drawing.Size(163, 23);
-            this.Genericacontroleemtemporeal.TabIndex = 8;
+            this.Genericacontroleemtemporeal.TabIndex = 10;
             this.Genericacontroleemtemporeal.Text = "Monitoramento em tempo real";
             this.Genericacontroleemtemporeal.UseVisualStyleBackColor = true;
             this.Genericacontroleemtemporeal.Click += new System.EventHandler(this.Genericacontroleemtemporeal_Click);
@@ -140,7 +140,7 @@
             this.Genericacadastrarproduto.Location = new System.Drawing.Point(38, 346);
             this.Genericacadastrarproduto.Name = "Genericacadastrarproduto";
             this.Genericacadastrarproduto.Size = new System.Drawing.Size(163, 23);
-            this.Genericacadastrarproduto.TabIndex = 8;
+            this.Genericacadastrarproduto.TabIndex = 7;
             this.Genericacadastrarproduto.Text = "Gerenciar Tipo Produto";
             this.Genericacadastrarproduto.UseVisualStyleBackColor = true;
             this.Genericacadastrarproduto.Click += new System.EventHandler(this.Genericacadastrarproduto_Click);
@@ -161,7 +161,7 @@
             this.pesquisar.Location = new System.Drawing.Point(38, 177);
             this.pesquisar.Name = "pesquisar";
             this.pesquisar.Size = new System.Drawing.Size(163, 23);
-            this.pesquisar.TabIndex = 8;
+            this.pesquisar.TabIndex = 3;
             this.pesquisar.Text = "Pesquisar Responsavel";
             this.pesquisar.UseVisualStyleBackColor = true;
             this.pesquisar.Click += new System.EventHandler(this.pesquisar_Click);
@@ -171,7 +171,7 @@
             this.Genericaexibirfiladeproducao.Location = new System.Drawing.Point(38, 404);
             this.Genericaexibirfiladeproducao.Name = "Genericaexibirfiladeproducao";
             this.Genericaexibirfiladeproducao.Size = new System.Drawing.Size(163, 23);
-            this.Genericaexibirfiladeproducao.TabIndex = 8;
+            this.Genericaexibirfiladeproducao.TabIndex = 9;
             this.Genericaexibirfiladeproducao.Text = "Exibir fila de produção";
             this.Genericaexibirfiladeproducao.UseVisualStyleBackColor = true;
             this.Genericaexibirfiladeproducao.Click += new System.EventHandler(this.Genericaexibirfiladeproducao_Click);
@@ -181,7 +181,7 @@
             this.btCadastraMateriaPrima.Location = new System.Drawing.Point(38, 288);
             this.btCadastraMateriaPrima.Name = "btCadastraMateriaPrima";
             this.btCadastraMateriaPrima.Size = new System.Drawing.Size(163, 23);
-            this.btCadastraMateriaPrima.TabIndex = 8;
+            this.btCadastraMateriaPrima.TabIndex = 5;
             this.btCadastraMateriaPrima.Text = "Gerenciar Materia Prima";
             this.btCadastraMateriaPrima.UseVisualStyleBackColor = true;
             this.btCadastraMateriaPrima.Click += new System.EventHandler(this.btCadastraMateriaPrima_Click);
@@ -191,7 +191,7 @@
             this.btCadastraProducao.Location = new System.Drawing.Point(38, 259);
             this.btCadastraProducao.Name = "btCadastraProducao";
             this.btCadastraProducao.Size = new System.Drawing.Size(163, 23);
-            this.btCadastraProducao.TabIndex = 8;
+            this.btCadastraProducao.TabIndex = 4;
             this.btCadastraProducao.Text = "Gerenciar Produção";
             this.btCadastraProducao.UseVisualStyleBackColor = true;
             this.btCadastraProducao.Click += new System.EventHandler(this.btCadastraProducao_Click);
@@ -201,7 +201,7 @@
             this.Genericacadastrarprocesso.Location = new System.Drawing.Point(38, 317);
             this.Genericacadastrarprocesso.Name = "Genericacadastrarprocesso";
             this.Genericacadastrarprocesso.Size = new System.Drawing.Size(163, 23);
-            this.Genericacadastrarprocesso.TabIndex = 8;
+            this.Genericacadastrarprocesso.TabIndex = 6;
             this.Genericacadastrarprocesso.Text = "Gerenciar Processo";
             this.Genericacadastrarprocesso.UseVisualStyleBackColor = true;
             this.Genericacadastrarprocesso.Click += new System.EventHandler(this.Genericacadastrarprocesso_Click);
@@ -222,7 +222,7 @@
             this.GenericaControleProducao.Location = new System.Drawing.Point(38, 148);
             this.GenericaControleProducao.Name = "GenericaControleProducao";
             this.GenericaControleProducao.Size = new System.Drawing.Size(163, 23);
-            this.GenericaControleProducao.TabIndex = 8;
+            this.GenericaControleProducao.TabIndex = 2;
             this.GenericaControleProducao.Text = "Produção";
             this.GenericaControleProducao.UseVisualStyleBackColor = true;
             this.GenericaControleProducao.Click += new System.EventHandler(this.GenericaControleProducao_Click);
@@ -232,7 +232,7 @@
             this.Genericagerenciarusuario.Location = new System.Drawing.Point(38, 72);
             this.Genericagerenciarusuario.Name = "Genericagerenciarusuario";
             this.Genericagerenciarusuario.Size = new System.Drawing.Size(163, 23);
-            this.Genericagerenciarusuario.TabIndex = 8;
+            this.Genericagerenciarusuario.TabIndex = 1;
             this.Genericagerenciarusuario.Text = "Gerenciar Usuario";
             this.Genericagerenciarusuario.UseVisualStyleBackColor = true;
             this.Genericagerenciarusuario.Click += new System.EventHandler(this.Genericagerenciarusuario_Click);
@@ -242,7 +242,7 @@
             this.Genericagerenciargrupo.Location = new System.Drawing.Point(38, 43);
             this.Genericagerenciargrupo.Name = "Genericagerenciargrupo";
             this.Genericagerenciargrupo.Size = new System.Drawing.Size(163, 23);
-            this.Genericagerenciargrupo.TabIndex = 8;
+            this.Genericagerenciargrupo.TabIndex = 0;
             this.Genericagerenciargrupo.Text = "Gerenciar grupo";
             this.Genericagerenciargrupo.UseVisualStyleBackColor = true;
             this.Genericagerenciargrupo.Click += new System.EventHandler(this.Genericagerenciargrupo_Click);

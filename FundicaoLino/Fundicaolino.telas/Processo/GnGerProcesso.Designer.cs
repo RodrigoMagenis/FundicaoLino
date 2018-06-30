@@ -45,16 +45,16 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(78, 72);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(225, 25);
+            this.label1.Size = new System.Drawing.Size(202, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Gerência de Processo";
+            this.label1.Text = "Cadastrar Processo";
             // 
             // btCancelar
             // 
             this.btCancelar.Location = new System.Drawing.Point(528, 55);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(83, 42);
-            this.btCancelar.TabIndex = 1;
+            this.btCancelar.TabIndex = 4;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
             this.btCancelar.Click += new System.EventHandler(this.button1_Click);
@@ -64,7 +64,7 @@
             this.btSalvarProcesso.Location = new System.Drawing.Point(640, 55);
             this.btSalvarProcesso.Name = "btSalvarProcesso";
             this.btSalvarProcesso.Size = new System.Drawing.Size(84, 42);
-            this.btSalvarProcesso.TabIndex = 2;
+            this.btSalvarProcesso.TabIndex = 3;
             this.btSalvarProcesso.Text = "Salvar";
             this.btSalvarProcesso.UseVisualStyleBackColor = true;
             // 
@@ -101,24 +101,25 @@
             // 
             // textBox1
             // 
+            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(239, 153);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(138, 20);
-            this.textBox1.TabIndex = 6;
+            this.textBox1.TabIndex = 0;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(239, 188);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(133, 20);
-            this.textBox2.TabIndex = 7;
+            this.textBox2.TabIndex = 1;
             // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(239, 221);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(133, 20);
-            this.textBox3.TabIndex = 8;
+            this.textBox3.TabIndex = 2;
             // 
             // GnGerProcesso
             // 

@@ -45,9 +45,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(78, 72);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(227, 25);
+            this.label1.Size = new System.Drawing.Size(204, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Gerência de Produção";
+            this.label1.Text = "Cadastrar Produção";
             this.label1.UseMnemonic = false;
             // 
             // label2
@@ -76,9 +76,10 @@
             this.CancelarCad.Location = new System.Drawing.Point(556, 55);
             this.CancelarCad.Name = "CancelarCad";
             this.CancelarCad.Size = new System.Drawing.Size(73, 42);
-            this.CancelarCad.TabIndex = 9;
+            this.CancelarCad.TabIndex = 4;
             this.CancelarCad.Text = "Cancelar";
             this.CancelarCad.UseVisualStyleBackColor = true;
+            this.CancelarCad.Click += new System.EventHandler(this.CancelarCad_Click);
             // 
             // SalvarNovoUsuario
             // 
@@ -86,7 +87,7 @@
             this.SalvarNovoUsuario.Location = new System.Drawing.Point(659, 55);
             this.SalvarNovoUsuario.Name = "SalvarNovoUsuario";
             this.SalvarNovoUsuario.Size = new System.Drawing.Size(74, 42);
-            this.SalvarNovoUsuario.TabIndex = 10;
+            this.SalvarNovoUsuario.TabIndex = 3;
             this.SalvarNovoUsuario.Text = "Salvar";
             this.SalvarNovoUsuario.UseVisualStyleBackColor = true;
             this.SalvarNovoUsuario.Click += new System.EventHandler(this.SalvarNovoUsuario_Click);
@@ -96,21 +97,22 @@
             this.TxQuantidade.Location = new System.Drawing.Point(237, 183);
             this.TxQuantidade.Name = "TxQuantidade";
             this.TxQuantidade.Size = new System.Drawing.Size(138, 20);
-            this.TxQuantidade.TabIndex = 4;
+            this.TxQuantidade.TabIndex = 1;
             // 
             // TxIdentificador
             // 
+            this.TxIdentificador.Enabled = false;
             this.TxIdentificador.Location = new System.Drawing.Point(237, 153);
             this.TxIdentificador.Name = "TxIdentificador";
             this.TxIdentificador.Size = new System.Drawing.Size(138, 20);
-            this.TxIdentificador.TabIndex = 2;
+            this.TxIdentificador.TabIndex = 0;
             // 
             // TxProcesso
             // 
             this.TxProcesso.Location = new System.Drawing.Point(237, 218);
             this.TxProcesso.Name = "TxProcesso";
             this.TxProcesso.Size = new System.Drawing.Size(138, 20);
-            this.TxProcesso.TabIndex = 6;
+            this.TxProcesso.TabIndex = 2;
             // 
             // label4
             // 

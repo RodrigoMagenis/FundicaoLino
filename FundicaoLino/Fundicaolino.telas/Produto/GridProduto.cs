@@ -27,7 +27,7 @@ namespace Fundicaolino.telas.Produto
             List<dbProduto> produtos = Program.Gerenciador.TodosOsProdutos();
             dgProduto.DataSource = produtos;
         }
-
+        
         public void GridProduto_Load(object sender, EventArgs e)
         {
             this.CarregarProdutos();

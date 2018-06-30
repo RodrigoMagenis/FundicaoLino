@@ -112,11 +112,11 @@
         }
 
         #endregion
+        public System.Windows.Forms.DataGridView dgProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdTipoProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn NmTipoProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn NmUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn date;
-        public System.Windows.Forms.DataGridView dgProduto;
     }
 }

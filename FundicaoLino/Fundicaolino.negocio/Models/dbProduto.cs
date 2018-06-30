@@ -52,6 +52,5 @@ namespace Fundicaolino.negocio.Models
                 return NmTipoProduto;
             }
         }
-
     }
 }

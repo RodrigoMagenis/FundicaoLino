@@ -17,5 +17,6 @@ namespace Fundicaolino.negocio.Models
         public string                     NmLogin { get; set; }
         public string                     NmSenha { get; set; }
         public Boolean                    FgUsuario { get; set; }
+
     }
 }
