@@ -1,6 +1,6 @@
 ﻿namespace Fundicaolino.telas
 {
-    partial class dgTipoProduto
+    partial class dgTipodeProdutoFundo
     {
         /// <summary>
         /// Required designer variable.
@@ -85,14 +85,14 @@
             this.IdMateriais.Name = "IdMateriais";
             this.IdMateriais.ReadOnly = true;
             // 
-            // dgTipoProduto
+            // dgTipodeProdutoFundo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.gridTipoProduto);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "dgTipoProduto";
+            this.Name = "dgTipodeProdutoFundo";
             this.Text = "GridProduto";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.dgTipoProduto_Load);
@@ -102,11 +102,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView gridTipoProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn NmTipoProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn VlPeso;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdMateriais;
+        public System.Windows.Forms.DataGridView gridTipoProduto;
     }
 }

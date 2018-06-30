@@ -17,8 +17,8 @@ namespace Fundicaolino.telas
         {
             InitializeComponent();
         }
-        
-        private void CarregarGrupos()
+
+        public void CarregarGrupos()
         {
             dgGrupo.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgGrupo.MultiSelect = false;
@@ -28,12 +28,12 @@ namespace Fundicaolino.telas
             dgGrupo.DataSource = grupos;
         }
 
-        private void GridGrupo_Load(object sender, EventArgs e)
+        public void GridGrupo_Load(object sender, EventArgs e)
         {
             CarregarGrupos();
         }
 
-        private bool VerificaSelecao()
+        public bool VerificaSelecao()
         {
             if(dgGrupo.SelectedRows.Count <= 0)
             {

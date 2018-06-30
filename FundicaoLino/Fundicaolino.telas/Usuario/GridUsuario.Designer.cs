@@ -151,12 +151,12 @@
 
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.Panel gnGridPanelUser;
-        private System.Windows.Forms.DataGridView dgUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn NmUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdMatricula;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdGrupo;
         private System.Windows.Forms.DataGridViewTextBoxColumn NmLogin;
         private System.Windows.Forms.DataGridViewTextBoxColumn FgUsuario;
+        public System.Windows.Forms.DataGridView dgUsuario;
     }
 }

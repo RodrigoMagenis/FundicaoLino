@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace Fundicaolino.telas
 {
-    public partial class dgTipoProduto : Form
+    public partial class dgTipodeProdutoFundo : Form
     {
-        public dgTipoProduto()
+        public dgTipodeProdutoFundo()
         {
             InitializeComponent();
         }
 
-        private void CarregarTiposProdutos()
+        public void CarregarTiposProdutos()
         {
             gridTipoProduto.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             gridTipoProduto.MultiSelect = false;
@@ -28,12 +28,12 @@ namespace Fundicaolino.telas
             gridTipoProduto.DataSource = usuarios;
         }
 
-        private void dgTipoProduto_Load(object sender, EventArgs e)
+        public void dgTipoProduto_Load(object sender, EventArgs e)
         {
             this.CarregarTiposProdutos();
         }
 
-        private bool VerificaSelecao()
+        public bool VerificaSelecao()
         {
             if (gridTipoProduto.SelectedRows.Count <= 0)
             {

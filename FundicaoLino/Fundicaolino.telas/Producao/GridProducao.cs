@@ -18,11 +18,11 @@ namespace Fundicaolino.telas
             InitializeComponent();
         }
 
-        private void GridProducao_Load(object sender, EventArgs e)
+        public void GridProducao_Load(object sender, EventArgs e)
         {
             CarregarProducoes();
         }
-        private void CarregarProducoes()
+        public void CarregarProducoes()
         {
             dgProducao.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgProducao.MultiSelect = false;
@@ -32,7 +32,7 @@ namespace Fundicaolino.telas
             dgProducao.DataSource = producoes;
         }
 
-        private bool VerificaSelecao()
+        public bool VerificaSelecao()
         {
             if (dgProducao.SelectedRows.Count <= 0)
             {

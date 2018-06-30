@@ -18,7 +18,7 @@ namespace Fundicaolino.telas.MateriaPrima
             InitializeComponent();
         }
 
-        private void CarregarMateriasPrimas()
+        public void CarregarMateriasPrimas()
         {
             dgMateriaPrima.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgMateriaPrima.MultiSelect = false;
@@ -28,12 +28,12 @@ namespace Fundicaolino.telas.MateriaPrima
             dgMateriaPrima.DataSource = materiasPrimas;
         }
 
-        private void GridMateriaPrima_Load(object sender, EventArgs e)
+        public void GridMateriaPrima_Load(object sender, EventArgs e)
         {
             this.CarregarMateriasPrimas();
         }
 
-        private bool VerificaSelecao()
+        public bool VerificaSelecao()
         {
             if (dgMateriaPrima.SelectedRows.Count <= 0)
             {

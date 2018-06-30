@@ -10,14 +10,57 @@ namespace Fundicaolino.negocio
     public class Gerenciador
     {
         private Banco banco = new Banco();
-        public Validacao RemoverUsuario(Usuario usuario)
+        public Validacao RemoverUsuario(Usuario usuarioSelecionado)
         {
             Validacao validacao = new Validacao();
-            banco.Usuarios.Remove(usuario);
+            banco.Usuarios.Remove(usuarioSelecionado);
+            banco.SaveChanges();
+            return validacao;
+        }
+        public Validacao RemoverTipodeProduto(TipoProduto tipodeProdutoSelecionado)
+        {
+            Validacao validacao = new Validacao();
+            banco.TipoProdutos.Remove(tipodeProdutoSelecionado);
+            banco.SaveChanges();
+            return validacao;
+        }
+        public Validacao RemoverProduto(dbProduto produtoSelecionado)
+        {
+            Validacao validacao = new Validacao();
+            banco.Produtos.Remove(produtoSelecionado);
+            banco.SaveChanges();
+            return validacao;
+        }
+        public Validacao RemoverProducao(Producao producaoSelecionada)
+        {
+            Validacao validacao = new Validacao();
+            banco.Producoes.Remove(producaoSelecionada);
+            banco.SaveChanges();
+            return validacao;
+        }
+        public Validacao RemoverProcesso(Processo processoSelecionado)
+        {
+            Validacao validacao = new Validacao();
+            banco.Processos.Remove(processoSelecionado);
+            banco.SaveChanges();
+            return validacao;
+        }
+        public Validacao RemoverMateriaPrima(Material materialSelecionado)
+        {
+            Validacao validacao = new Validacao();
+            banco.Materiais.Remove(materialSelecionado);
+            banco.SaveChanges();
+            return validacao;
+        }
+        public Validacao RemoverGrupos(Grupo grupoSelecionado)
+        {
+            Validacao validacao = new Validacao();
+            banco.Grupos.Remove(grupoSelecionado);
+            banco.SaveChanges();
             return validacao;
         }
 
- /*--------------------------------------------------------------------------------------------------------------*/
+        /*--------------------------------------------------------------------------------------------------------------*/
 
         /* Adiciona / Altera Usuario */
         public Validacao AdicionarUsuario(Usuario usuario)

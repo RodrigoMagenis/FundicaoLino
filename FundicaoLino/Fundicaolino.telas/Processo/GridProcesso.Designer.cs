@@ -91,10 +91,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn NmProcesso;
         private System.Windows.Forms.DataGridViewTextBoxColumn EtapaProcesso;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }
