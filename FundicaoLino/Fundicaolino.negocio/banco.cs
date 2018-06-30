@@ -18,5 +18,10 @@ namespace Fundicaolino.negocio
         public virtual DbSet<dbProduto> Produtos { get; set; }
         public virtual DbSet<TipoProduto> TipoProdutos { get; set; }
         public virtual DbSet<Usuario> Usuarios { get; set; }
+        public Banco()
+        {
+            this.TipoProdutos.ToList();
+            this.Usuarios.ToList();
+        }
     }
 }
