@@ -1,5 +1,6 @@
 ﻿using Fundicaolino.negocio;
 using Fundicaolino.negocio.Models;
+using Fundicaolino.telas.Controle;
 using Fundicaolino.telas.MateriaPrima;
 using Fundicaolino.telas.Produto;
 using System;
@@ -323,12 +324,6 @@ namespace Fundicaolino.telas
                     panel4.Controls.Add(telaNovoUsuario);
                     telaNovoUsuario.Show();
                     break;
-                case 3:
-                    ///////////////////////////////////////////////////////////////////////FAZER///////////////////////////////////////////////////
-                    break;
-                case 4:
-                    ///////////////////////////////////////////////////////////////////////FAZER///////////////////////////////////////////////////
-                    break;
                 case 5:
                     //gridProducao.Close();
                     GnCadProducao CadastraNovaProducao = new GnCadProducao();
@@ -349,12 +344,6 @@ namespace Fundicaolino.telas
                     cadastraNovoTipoProduto.MdiParent = this;
                     panel4.Controls.Add(cadastraNovoTipoProduto);
                     cadastraNovoTipoProduto.Show();
-
-
-                    break;
-                case 8:
-                    break;
-                case 9:
                     break;
                 case 10:
                     GnNovaMateriaPrima gnNovaMateriaPrima = new GnNovaMateriaPrima();
@@ -393,15 +382,13 @@ namespace Fundicaolino.telas
 
         private void GenericaControleProducao_Click(object sender, EventArgs e)
         {
-            ///////////////////////////////////////////////////////////////////////FAZER///////////////////////////////////////////////////
+            GraficoProdutosProduzidos ProducaoChart = new GraficoProdutosProduzidos();
+            ProducaoChart.MdiParent = this;
+            panel4.Controls.Add(ProducaoChart);
+            ProducaoChart.Show();
             tela = 3;
         }
 
-        private void GenericaControleQualidade_Click(object sender, EventArgs e)
-        {
-            ///////////////////////////////////////////////////////////////////////FAZER///////////////////////////////////////////////////
-            tela = 4;
-        }
         private void btCadastraProducao_Click(object sender, EventArgs e)
         {
             GridProducao gridProducao = new GridProducao();
