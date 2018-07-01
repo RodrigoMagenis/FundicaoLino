@@ -84,7 +84,7 @@ namespace Fundicaolino.negocio
                     }
                 }
             }
-            if (relacionamentos)
+            if (!relacionamentos)
             {
                 banco.Materiais.Remove(materialSelecionado);
                 banco.SaveChanges();
