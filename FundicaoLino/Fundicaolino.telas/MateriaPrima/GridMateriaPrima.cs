@@ -17,7 +17,7 @@ namespace Fundicaolino.telas.MateriaPrima
         {
             InitializeComponent();
         }
-
+       
         public void CarregarMateriasPrimas()
         {
             dgMateriaPrima.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;

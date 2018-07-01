@@ -14,7 +14,7 @@ namespace Fundicaolino.telas.Produto
 {
     public partial class GnProdutoNovo : Form
     {
-        dbProduto produto = new dbProduto();
+        public dbProduto produtoSelecionado = new dbProduto();
         public GnProdutoNovo()
         {
             InitializeComponent();
@@ -40,12 +40,12 @@ namespace Fundicaolino.telas.Produto
         {
             try
             {
-                produto.Responsavel = cbResponsavel.SelectedItem as Usuario;
-                produto.TPProduto = cbCodigoTipodeProduto.SelectedItem as TipoProduto;
-                produto.DtProduto = DateTime.Now;
+                produtoSelecionado.Responsavel = cbResponsavel.SelectedItem as Usuario;
+                produtoSelecionado.TPProduto = cbCodigoTipodeProduto.SelectedItem as TipoProduto;
+                produtoSelecionado.DtProduto = DateTime.Now;
 
                 Validacao validacao;
-                validacao = Program.Gerenciador.AdicionarProduto(produto);
+                validacao = Program.Gerenciador.AdicionarProduto(produtoSelecionado);
 
                 if (validacao.Valido)
                 {
@@ -95,6 +95,15 @@ namespace Fundicaolino.telas.Produto
 
         }
 
-       
+        private void GnProdutoNovo_Shown(object sender, EventArgs e)
+        {
+            if (produtoSelecionado != null)
+            {
+                this.textBox1.Text = produtoSelecionado.Id.ToString();
+                this.cbCodigoTipodeProduto.Text = produtoSelecionado.NmTipoProduto.ToString();
+                this.cbResponsavel.Text = produtoSelecionado.Responsavel.ToString();
+               
+            }
+        }
     }
 }

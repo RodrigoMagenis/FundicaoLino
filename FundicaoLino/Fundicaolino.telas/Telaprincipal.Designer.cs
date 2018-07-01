@@ -279,6 +279,7 @@
             this.GenericaEditar.TabIndex = 6;
             this.GenericaEditar.Text = "Editar";
             this.GenericaEditar.UseVisualStyleBackColor = true;
+            this.GenericaEditar.Click += new System.EventHandler(this.GenericaEditar_Click);
             // 
             // GeniricaAlterarsituacao
             // 

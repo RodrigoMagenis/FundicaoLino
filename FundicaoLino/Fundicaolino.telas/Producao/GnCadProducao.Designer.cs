@@ -142,6 +142,7 @@
             this.Name = "GnCadProducao";
             this.Text = "GnCadProducao";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Shown += new System.EventHandler(this.GnCadProducao_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

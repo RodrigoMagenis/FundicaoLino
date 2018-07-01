@@ -15,7 +15,7 @@ namespace Fundicaolino.telas
     public partial class GnUsuarioNovo : Form
     {
         public Usuario UsuarioSelecionado { get; set; }
-
+    
         public GnUsuarioNovo()
         {
             InitializeComponent();
@@ -79,6 +79,7 @@ namespace Fundicaolino.telas
             }
             else
             {
+                usuario.Id = UsuarioSelecionado.Id;
                 validacao = Program.Gerenciador.AlterarUsuario(usuario);
             }
 
@@ -109,6 +110,17 @@ namespace Fundicaolino.telas
             {
                 MessageBox.Show("Ocorreu uma falha grave, contate um administrador");
                 this.Close();
+            }
+        }
+
+        private void GnUsuarioNovo_Shown(object sender, EventArgs e)
+        {
+            if (UsuarioSelecionado != null)
+            {
+                this.TxIdentificador.Text = UsuarioSelecionado.Id.ToString();
+                this.TxNomeUsuario.Text = UsuarioSelecionado.NmUsuario.ToString();
+                this.TxMatricula.Text = UsuarioSelecionado.Idmatricula.ToString();
+                this.dgGruposSelecionados.Text = UsuarioSelecionado.GrupoUsuario.ToString();
             }
         }
     }

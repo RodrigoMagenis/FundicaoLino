@@ -20,12 +20,12 @@ namespace Fundicaolino.telas
 
         public void CarregarTiposProdutos()
         {
-            gridTipoProduto.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            gridTipoProduto.MultiSelect = false;
-            gridTipoProduto.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            gridTipoProduto.AutoGenerateColumns = false;
+            GridTipoProduto.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            GridTipoProduto.MultiSelect = false;
+            GridTipoProduto.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            GridTipoProduto.AutoGenerateColumns = false;
             List<TipoProduto> usuarios = Program.Gerenciador.TodosOsTiposProdutos();
-            gridTipoProduto.DataSource = usuarios;
+            GridTipoProduto.DataSource = usuarios;
         }
 
         public void dgTipoProduto_Load(object sender, EventArgs e)
@@ -35,7 +35,7 @@ namespace Fundicaolino.telas
 
         public bool VerificaSelecao()
         {
-            if (gridTipoProduto.SelectedRows.Count <= 0)
+            if (GridTipoProduto.SelectedRows.Count <= 0)
             {
                 MessageBox.Show("Selecione uma linha");
                 return false;

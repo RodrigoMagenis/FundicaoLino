@@ -28,30 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gridTipoProduto = new System.Windows.Forms.DataGridView();
+            this.GridTipoProduto = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NmTipoProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VlPeso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdMateriais = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.gridTipoProduto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridTipoProduto)).BeginInit();
             this.SuspendLayout();
             // 
-            // gridTipoProduto
+            // GridTipoProduto
             // 
-            this.gridTipoProduto.AllowUserToAddRows = false;
-            this.gridTipoProduto.AllowUserToDeleteRows = false;
-            this.gridTipoProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridTipoProduto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.GridTipoProduto.AllowUserToAddRows = false;
+            this.GridTipoProduto.AllowUserToDeleteRows = false;
+            this.GridTipoProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridTipoProduto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.NmTipoProduto,
             this.VlPeso,
             this.IdMateriais});
-            this.gridTipoProduto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridTipoProduto.Location = new System.Drawing.Point(0, 0);
-            this.gridTipoProduto.Name = "gridTipoProduto";
-            this.gridTipoProduto.ReadOnly = true;
-            this.gridTipoProduto.Size = new System.Drawing.Size(800, 450);
-            this.gridTipoProduto.TabIndex = 0;
+            this.GridTipoProduto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GridTipoProduto.Location = new System.Drawing.Point(0, 0);
+            this.GridTipoProduto.Name = "GridTipoProduto";
+            this.GridTipoProduto.ReadOnly = true;
+            this.GridTipoProduto.Size = new System.Drawing.Size(800, 450);
+            this.GridTipoProduto.TabIndex = 0;
             // 
             // Id
             // 
@@ -90,13 +90,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.gridTipoProduto);
+            this.Controls.Add(this.GridTipoProduto);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "dgTipodeProdutoFundo";
             this.Text = "GridProduto";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.dgTipoProduto_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gridTipoProduto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridTipoProduto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -106,6 +106,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NmTipoProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn VlPeso;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdMateriais;
-        public System.Windows.Forms.DataGridView gridTipoProduto;
+        public System.Windows.Forms.DataGridView GridTipoProduto;
     }
 }

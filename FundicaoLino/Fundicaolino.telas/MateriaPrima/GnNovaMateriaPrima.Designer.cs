@@ -142,6 +142,7 @@
             this.Name = "GnNovaMateriaPrima";
             this.Text = "GnNovaMateriaPrima";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Shown += new System.EventHandler(this.GnNovaMateriaPrima_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -232,6 +232,7 @@
             this.Text = "CadastraProducao";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.CadastraTipoProduto_Load);
+            this.Shown += new System.EventHandler(this.CadastraTipoProduto_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.dgMateriaisExistentes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgMateriasSelecionados)).EndInit();
             this.ResumeLayout(false);

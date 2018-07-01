@@ -14,7 +14,7 @@ namespace Fundicaolino.telas
 {
     public partial class GnCadProducao : Form
     {
-        public Usuario ProducaoSelecionada { get; set; }
+        public Producao ProducaoSelecionada { get; set; }
 
         public GnCadProducao()
         {
@@ -63,6 +63,7 @@ namespace Fundicaolino.telas
             }
             else
             {
+                producao.Id = ProducaoSelecionada.Id;
                 validacao = Program.Gerenciador.AlterarProducao(producao);
             }
 
@@ -94,11 +95,23 @@ namespace Fundicaolino.telas
                 MessageBox.Show("Ocorreu uma falha grave, contate um administrador");
                 this.Close();
             }
+           
         }
 
         private void CancelarCad_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void GnCadProducao_Shown(object sender, EventArgs e)
+        {
+            if (ProducaoSelecionada != null)
+            {
+                this.TxIdentificador.Text = ProducaoSelecionada.Id.ToString();
+                this.TxQuantidade.Text = ProducaoSelecionada.QtProduto.ToString();
+               // this.TxProcesso.Text = ProducaoSelecionada.Processo.ToString();
+
+            }
         }
     }
 }
