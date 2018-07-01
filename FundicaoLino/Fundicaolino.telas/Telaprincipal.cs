@@ -125,13 +125,21 @@ namespace Fundicaolino.telas
                         {
                             Usuario usuarioSelecionado = (Usuario)gridUsuario.dgUsuario.SelectedRows[0].DataBoundItem;
                             var validacao = Program.Gerenciador.RemoverUsuario(usuarioSelecionado);
-                            if (validacao.Valido)
+                            if (!validacao.Valido)
                             {
-                                MessageBox.Show("Usuario removido com sucesso");
+                                String mensagemValidacao = "";
+                                foreach (var chave in validacao.Mensagens.Keys)
+                                {
+                                    String msg = validacao.Mensagens[chave];
+                                    mensagemValidacao += msg;
+                                    mensagemValidacao += Environment.NewLine;
+                                }
+                                MessageBox.Show(mensagemValidacao);
                             }
                             else
                             {
-                                MessageBox.Show("Ocorreu um problema ao remover o Usuario");
+                                MessageBox.Show("Usuário removido com sucesso");
+                                this.Close();
                             }
                             gridUsuario.CarregarUsuarios();
                         }
@@ -150,13 +158,21 @@ namespace Fundicaolino.telas
                         {
                             Producao producaoSelecionada = (Producao)gridProducao.dgProducao.SelectedRows[0].DataBoundItem;
                             var validacao = Program.Gerenciador.RemoverProducao(producaoSelecionada);
-                            if (validacao.Valido)
+                            if (!validacao.Valido)
                             {
-                                MessageBox.Show("Produção removida com sucesso");
+                                String mensagemValidacao = "";
+                                foreach (var chave in validacao.Mensagens.Keys)
+                                {
+                                    String msg = validacao.Mensagens[chave];
+                                    mensagemValidacao += msg;
+                                    mensagemValidacao += Environment.NewLine;
+                                }
+                                MessageBox.Show(mensagemValidacao);
                             }
                             else
                             {
-                                MessageBox.Show("Ocorreu um problema ao remover a Produção");
+                                MessageBox.Show("Usuário removido com sucesso");
+                                this.Close();
                             }
                             gridProducao.CarregarProducoes();
                         }
@@ -173,12 +189,20 @@ namespace Fundicaolino.telas
                                 var validacao = Program.Gerenciador.RemoverProcesso(processoSelecionado);
                                 if (validacao.Valido)
                                 {
-                                    MessageBox.Show("Processo removido com sucesso");
+                                    String mensagemValidacao = "";
+                                    foreach (var chave in validacao.Mensagens.Keys)
+                                    {
+                                        String msg = validacao.Mensagens[chave];
+                                        mensagemValidacao += msg;
+                                        mensagemValidacao += Environment.NewLine;
+                                    }
+                                    MessageBox.Show(mensagemValidacao);
                                 }
-                                else
-                                {
-                                    MessageBox.Show("Ocorreu um problema ao remover o Processo");
-                                }
+                                                            else
+                            {
+                                MessageBox.Show("Processo removido com sucesso");
+                                this.Close();
+                            }
                                 gridProcesso.CarregarProcessos();
                             }
                         }*/
@@ -192,13 +216,21 @@ namespace Fundicaolino.telas
                         {
                             TipoProduto tipoProdutoSelecionado = (TipoProduto)gridTipodeProduto.gridTipoProduto.SelectedRows[0].DataBoundItem;
                             var validacao = Program.Gerenciador.RemoverTipodeProduto(tipoProdutoSelecionado);
-                            if (validacao.Valido)
+                            if (!validacao.Valido)
                             {
-                                MessageBox.Show("Tipo de produto removido com sucesso");
+                                String mensagemValidacao = "";
+                                foreach (var chave in validacao.Mensagens.Keys)
+                                {
+                                    String msg = validacao.Mensagens[chave];
+                                    mensagemValidacao += msg;
+                                    mensagemValidacao += Environment.NewLine;
+                                }
+                                MessageBox.Show(mensagemValidacao);
                             }
                             else
                             {
-                                MessageBox.Show("Ocorreu um problema ao remover o tipo de produto");
+                                MessageBox.Show("Tipo de produto removido com sucesso");
+                                this.Close();
                             }
                             gridTipodeProduto.CarregarTiposProdutos();
                         }
@@ -217,13 +249,21 @@ namespace Fundicaolino.telas
                         {
                             Material materialSelecionado = (Material)gridMateriaPrima.dgMateriaPrima.SelectedRows[0].DataBoundItem;
                             var validacao = Program.Gerenciador.RemoverMateriaPrima(materialSelecionado);
-                            if (validacao.Valido)
+                            if (!validacao.Valido)
                             {
-                                MessageBox.Show("Tipo de produto removido com sucesso");
+                                String mensagemValidacao = "";
+                                foreach (var chave in validacao.Mensagens.Keys)
+                                {
+                                    String msg = validacao.Mensagens[chave];
+                                    mensagemValidacao += msg;
+                                    mensagemValidacao += Environment.NewLine;
+                                }
+                                MessageBox.Show(mensagemValidacao);
                             }
                             else
                             {
-                                MessageBox.Show("Ocorreu um problema ao remover o tipo de produto");
+                                MessageBox.Show("Usuário removido com sucesso");
+                                this.Close();
                             }
                             gridMateriaPrima.CarregarMateriasPrimas();
                         }
@@ -238,13 +278,21 @@ namespace Fundicaolino.telas
                         {
                             dbProduto produtoSelecionado = (dbProduto)gridProduto.dgProduto.SelectedRows[0].DataBoundItem;
                             var validacao = Program.Gerenciador.RemoverProduto(produtoSelecionado);
-                            if (validacao.Valido)
+                            if (!validacao.Valido)
                             {
-                                MessageBox.Show("Tipo de produto removido com sucesso");
+                                String mensagemValidacao = "";
+                                foreach (var chave in validacao.Mensagens.Keys)
+                                {
+                                    String msg = validacao.Mensagens[chave];
+                                    mensagemValidacao += msg;
+                                    mensagemValidacao += Environment.NewLine;
+                                }
+                                MessageBox.Show(mensagemValidacao);
                             }
                             else
                             {
-                                MessageBox.Show("Ocorreu um problema ao remover o tipo de produto");
+                                MessageBox.Show("Usuário removido com sucesso");
+                                this.Close();
                             }
                             gridProduto.CarregarProdutos();
                         }
