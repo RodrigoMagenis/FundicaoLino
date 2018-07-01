@@ -40,7 +40,11 @@ namespace Fundicaolino.telas.Controle
                 var TESTE = dataFinal - dataInicial;
                 if (TESTE.TotalMilliseconds > 0) //verifica se a data de fim é menor que a data de inicio
                 {
-                    List<dbProduto> todosOsProdutos = Program.Gerenciador.TodosOsProdutos();
+                    IEnumerable<dbProduto> todosOsProdutos = Program.Gerenciador.TodosOsProdutos();
+                    if (XboxFiltroPorResponsavel.Checked)
+                    {
+                        todosOsProdutos = todosOsProdutos.Where(r => r.NmResponsavel == CbResponsavel.Text); // Se a opção de filtro por usuário estiver ativa
+                    }
                     var produtosSelecionados = todosOsProdutos.Where(d => d.DtProduto >= dataInicial && d.DtProduto <= dataFinal)
                         .GroupBy(t => t.TPProduto)
                         .Select(n => new
@@ -78,6 +82,26 @@ namespace Fundicaolino.telas.Controle
 
             
 
+        }
+
+        private void XboxFiltroPorResponsavel_CheckedChanged(object sender, EventArgs e)
+        {
+            if (XboxFiltroPorResponsavel.Checked)
+            {
+                CbResponsavel.Enabled = true;
+                CarregaComboBox();
+            }
+            else
+            {
+                CbResponsavel.Enabled = false;
+            }
+        }
+
+        private void CarregaComboBox()
+        {
+            CbResponsavel.DisplayMember = "NmUsuario";
+            CbResponsavel.ValueMember = "Id";
+            CbResponsavel.DataSource = Program.Gerenciador.TodosOsUsuarios();
         }
     }
 }
