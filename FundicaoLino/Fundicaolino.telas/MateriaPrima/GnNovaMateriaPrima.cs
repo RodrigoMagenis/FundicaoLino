@@ -14,7 +14,7 @@ namespace Fundicaolino.telas.MateriaPrima
 {
     public partial class GnNovaMateriaPrima : Form
     {
-        public Usuario MateriaPrimaSelecionado { get; set; }
+        public Material MateriaPrimaSelecionado { get; set; }
 
         public GnNovaMateriaPrima()
         {
@@ -46,6 +46,7 @@ namespace Fundicaolino.telas.MateriaPrima
             }
             else
             {
+                materiaPrima.Id = MateriaPrimaSelecionado.Id;
                 validacao = Program.Gerenciador.AlterarMateriaPrima(materiaPrima);
             }
 
@@ -66,7 +67,7 @@ namespace Fundicaolino.telas.MateriaPrima
 
                 else
                 {
-                    MessageBox.Show("Usuário salvo com sucesso");
+                    MessageBox.Show("Material salvo com sucesso");
                     this.Close();
                 }
 
@@ -83,5 +84,16 @@ namespace Fundicaolino.telas.MateriaPrima
         {
             this.Close();
         }
+
+        private void GnNovaMateriaPrima_Shown(object sender, EventArgs e)
+        {
+            if (MateriaPrimaSelecionado != null)
+            {
+                this.tbIdMaterial.Text = MateriaPrimaSelecionado.Id.ToString();
+                this.tbNmMaterial.Text = MateriaPrimaSelecionado.NmMaterial;
+                this.tbPesoMaterial.Text = MateriaPrimaSelecionado.VlPesoMaterial.ToString();
+            }
+        }
+
     }
 }

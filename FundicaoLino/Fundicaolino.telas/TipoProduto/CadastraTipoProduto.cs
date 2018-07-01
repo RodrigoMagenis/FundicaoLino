@@ -123,14 +123,14 @@ namespace Fundicaolino.telas
                     bool tem = false;
                     foreach (Material mat in this.tipoProduto.Materiais)
                     {
-                        if(mat.Id.Equals(material.Id))
+                        if (mat.Id.Equals(material.Id))
                         {
                             tem = true;
                             break;
                         }
                     }
 
-                    if(!tem)
+                    if (!tem)
                     {
                         mats.Add(material);
                     }
@@ -142,7 +142,7 @@ namespace Fundicaolino.telas
             {
                 dgMateriaisExistentes.DataSource = materiasPrimas;
             }
-            
+
         }
 
         private void CarregarMateriasPrimasSelecionadas()
@@ -199,6 +199,18 @@ namespace Fundicaolino.telas
         {
             this.Close();
         }
-    }
 
+        private void CadastraTipoProduto_Shown(object sender, EventArgs e)
+        {
+            if (TipoSelecionado != null)
+            {
+                this.TxIdentificador.Text = TipoSelecionado.Id.ToString();
+                this.TxNmProduto.Text = TipoSelecionado.NmTipoProduto.ToString();
+                this.TxVlPeso.Text = TipoSelecionado.VlPeso.ToString();
+                this.dgMateriasSelecionados.Text = TipoSelecionado.Materiais.ToString();
+            }
+        }
+
+    }
 }
+

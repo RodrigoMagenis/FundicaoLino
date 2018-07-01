@@ -40,13 +40,13 @@
             this.CancelarNovoUsuario = new System.Windows.Forms.Button();
             this.SalvarNovoUsuario = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgGruposSelecionados = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgGruposExistentes = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btDireita = new System.Windows.Forms.Button();
             this.btEsquerdo = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgGruposSelecionados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgGruposExistentes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,17 +111,17 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.BtAutoEncremento_Click);
             // 
-            // dataGridView2
+            // dgGruposSelecionados
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgGruposSelecionados.AllowUserToAddRows = false;
+            this.dgGruposSelecionados.AllowUserToDeleteRows = false;
+            this.dgGruposSelecionados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgGruposSelecionados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgGruposSelecionados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1});
-            resources.ApplyResources(this.dataGridView2, "dataGridView2");
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
+            resources.ApplyResources(this.dgGruposSelecionados, "dgGruposSelecionados");
+            this.dgGruposSelecionados.Name = "dgGruposSelecionados";
+            this.dgGruposSelecionados.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -167,7 +167,7 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dgGruposExistentes);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dgGruposSelecionados);
             this.Controls.Add(this.SalvarNovoUsuario);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btEsquerdo);
@@ -185,7 +185,8 @@
             this.Name = "GnUsuarioNovo";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.GnUsuarioNovo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.Shown += new System.EventHandler(this.GnUsuarioNovo_Shown);
+            ((System.ComponentModel.ISupportInitialize)(this.dgGruposSelecionados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgGruposExistentes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -205,7 +206,7 @@
         private System.Windows.Forms.Button CancelarNovoUsuario;
         private System.Windows.Forms.Button SalvarNovoUsuario;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgGruposSelecionados;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridView dgGruposExistentes;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;

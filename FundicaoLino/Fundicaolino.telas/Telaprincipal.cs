@@ -140,7 +140,6 @@ namespace Fundicaolino.telas
                             else
                             {
                                 MessageBox.Show("Usuário removido com sucesso");
-                                this.Close();
                             }
                             gridUsuario.CarregarUsuarios();
                         }
@@ -173,7 +172,6 @@ namespace Fundicaolino.telas
                             else
                             {
                                 MessageBox.Show("Usuário removido com sucesso");
-                                this.Close();
                             }
                             gridProducao.CarregarProducoes();
                         }
@@ -215,7 +213,7 @@ namespace Fundicaolino.telas
                         DialogResult resultado = MessageBox.Show("Tem certeza?", "Quer remover?", MessageBoxButtons.OKCancel);
                         if (resultado == DialogResult.OK)
                         {
-                            TipoProduto tipoProdutoSelecionado = (TipoProduto)gridTipodeProduto.gridTipoProduto.SelectedRows[0].DataBoundItem;
+                            TipoProduto tipoProdutoSelecionado = (TipoProduto)gridTipodeProduto.GridTipoProduto.SelectedRows[0].DataBoundItem;
                             var validacao = Program.Gerenciador.RemoverTipodeProduto(tipoProdutoSelecionado);
                             if (!validacao.Valido)
                             {
@@ -231,7 +229,6 @@ namespace Fundicaolino.telas
                             else
                             {
                                 MessageBox.Show("Tipo de produto removido com sucesso");
-                                this.Close();
                             }
                             gridTipodeProduto.CarregarTiposProdutos();
                         }
@@ -264,7 +261,6 @@ namespace Fundicaolino.telas
                             else
                             {
                                 MessageBox.Show("Usuário removido com sucesso");
-                                this.Close();
                             }
                             gridMateriaPrima.CarregarMateriasPrimas();
                         }
@@ -293,7 +289,6 @@ namespace Fundicaolino.telas
                             else
                             {
                                 MessageBox.Show("Usuário removido com sucesso");
-                                this.Close();
                             }
                             gridProduto.CarregarProdutos();
                         }
@@ -456,6 +451,138 @@ namespace Fundicaolino.telas
             panel4.Controls.Add(consultaResponsavel);
             consultaResponsavel.Show();
             tela = 12;
+        }
+
+        private void GenericaEditar_Click(object sender, EventArgs e)
+        {
+            switch (tela)
+            {
+                case 1:
+                    break;
+                case 2://Usuario
+                    var gridUsuario = (GridUsuario)panel4.Controls[0];
+                    if (gridUsuario.VerificaSelecao())
+                    {
+                        Usuario UsuarioSelecionado = (Usuario)gridUsuario.dgUsuario.SelectedRows[0].DataBoundItem;
+                        AbreTelaInclusaoAlteracaoUsuario(UsuarioSelecionado);
+                    }
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    var producao = (GridProducao)panel4.Controls[0];
+                    if (producao.VerificaSelecao())
+                    {
+                        Producao producaoSelecionada = (Producao)producao.dgProducao.SelectedRows[0].DataBoundItem;
+                        AbreTelaInclusaoAlteracaoProducao(producaoSelecionada);
+                    }
+                    break;
+                case 6://processo
+
+                    break;
+                case 7:
+                    var tipoProduto = (dgTipodeProdutoFundo)panel4.Controls[0];
+                    if (tipoProduto.VerificaSelecao())
+                    {
+                        TipoProduto TipoProdutoSelecionado = (TipoProduto)tipoProduto.GridTipoProduto.SelectedRows[0].DataBoundItem;
+                        AbreTelaInclusaoAlteracaoTipoProduto(TipoProdutoSelecionado);
+                    }
+                    break;
+                case 8:
+                    break;
+                case 9:
+                    break;
+                case 10:
+                    var gridMateriaPrima = (GridMateriaPrima)panel4.Controls[0];
+                    if (gridMateriaPrima.VerificaSelecao())
+                    {
+                        Material MateriaPrimaSelecionada = (Material)gridMateriaPrima.dgMateriaPrima.SelectedRows[0].DataBoundItem;
+                        AbreTelaInclusaoAlteracaoMaterial(MateriaPrimaSelecionada);
+                    }
+                        break;
+                case 11:
+                    var gridProduto = (GridProduto)panel4.Controls[0];
+                    if (gridProduto.VerificaSelecao())
+                        {
+                        dbProduto produtoSelecionado = (dbProduto)gridProduto.dgProduto.SelectedRows[0].DataBoundItem;
+                            AbreTelaInclusaoAlteracaoProduto(produtoSelecionado);
+                        }
+                    
+                    break;
+                default:
+                    break;
+
+            }
+        }
+        
+        private void AbreTelaInclusaoAlteracaoProducao(Producao producoes)
+            {
+                GnCadProducao tela = new GnCadProducao();
+                tela.MdiParent = this.MdiParent;
+                tela.ProducaoSelecionada = producoes;
+                tela.FormClosed += Tela_FormClosedProducao;
+                tela.Show();
+
+            }
+        private void AbreTelaInclusaoAlteracaoProduto(dbProduto produtos)
+            {
+                GnProdutoNovo tela = new GnProdutoNovo();
+                tela.MdiParent = this.MdiParent;
+                tela.produtoSelecionado = produtos;
+                tela.FormClosed += Tela_FormClosedProduto;
+                tela.Show();
+            }
+        private void AbreTelaInclusaoAlteracaoUsuario(Usuario usuarioSelecionado)
+            {
+                GnUsuarioNovo tela = new GnUsuarioNovo();
+                tela.MdiParent = this.MdiParent;
+                tela.UsuarioSelecionado = usuarioSelecionado;
+                tela.FormClosed += Tela_FormClosedUsuario ;
+                tela.Show();
+            }
+        private void AbreTelaInclusaoAlteracaoMaterial(Material materialSelecionado)
+            {
+                GnNovaMateriaPrima tela = new GnNovaMateriaPrima();
+                tela.MdiParent = this.MdiParent;
+                tela.MateriaPrimaSelecionado = materialSelecionado;
+                tela.FormClosed += Tela_FormClosedMateriaPrima;
+                tela.Show();
+            }
+        private void AbreTelaInclusaoAlteracaoTipoProduto(TipoProduto tipoProdutoSelecionado)
+            {
+                CadastraTipoProduto tela = new CadastraTipoProduto();
+                tela.MdiParent = this.MdiParent;
+                tela.TipoSelecionado = tipoProdutoSelecionado;
+                tela.FormClosed += Tela_FormClosedTipoProduto;
+                tela.Show();
+            }
+        
+            private void Tela_FormClosedProducao(object sender, FormClosedEventArgs e)
+        {
+            var gridProducao = (GridProducao)panel4.Controls[0];
+            gridProducao.CarregarProducoes();
+        }
+        private void Tela_FormClosedProduto(object sender, FormClosedEventArgs e)
+        {
+            var gridProduto = (GridProduto)panel4.Controls[0];
+            gridProduto.CarregarProdutos();
+        }
+        private void Tela_FormClosedTipoProduto(object sender, FormClosedEventArgs e)
+        {
+            var gridTipoProduto = (dgTipodeProdutoFundo)panel4.Controls[0];
+            gridTipoProduto.CarregarTiposProdutos();
+        }
+        private void Tela_FormClosedMateriaPrima(object sender, FormClosedEventArgs e)
+        {
+            var gridMateriaPrima = (GridMateriaPrima)panel4.Controls[0];
+            gridMateriaPrima.CarregarMateriasPrimas();
+        }
+        private void Tela_FormClosedUsuario(object sender, FormClosedEventArgs e)
+        {
+            var gridUsuario = (GridUsuario)panel4.Controls[0];
+            gridUsuario.CarregarUsuarios();
         }
     }
 }
