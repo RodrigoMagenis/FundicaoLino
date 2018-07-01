@@ -14,16 +14,33 @@ namespace Fundicaolino.negocio
         public Validacao RemoverUsuario(Usuario usuarioSelecionado)
         {
             Validacao validacao = new Validacao();
-            banco.Usuarios.Remove(usuarioSelecionado);
-            banco.SaveChanges();
+            List<dbProduto> todosProdutos = this.TodosOsProdutos();
+            int relacionamentos = todosProdutos.Where(c => c.Responsavel == usuarioSelecionado).Count();
+            if (relacionamentos == 0)
+            {
+                banco.Usuarios.Remove(usuarioSelecionado);
+                banco.SaveChanges();
+            }
+            else
+            {
+                validacao.Mensagens.Add("Relacionamento","Não é possível excluir esse usuário porque exitem dados relacionados");
+            }
             return validacao;
         }
         public Validacao RemoverTipodeProduto(TipoProduto tipodeProdutoSelecionado)
         {
             Validacao validacao = new Validacao();
-            banco.TipoProdutos.Remove(tipodeProdutoSelecionado);
-            banco.SaveChanges();
-            
+            List<dbProduto> todosProdutos = this.TodosOsProdutos();
+            int relacionamentos = todosProdutos.Where(c => c.TPProduto == tipodeProdutoSelecionado).Count();
+            if (relacionamentos == 0)
+            {
+                banco.TipoProdutos.Remove(tipodeProdutoSelecionado);
+                banco.SaveChanges();
+            }
+            else
+            {
+                validacao.Mensagens.Add("Relacionamento", "Não é possível excluir esse Tipo porque exitem dados relacionados");
+            }
             return validacao;
         }
         public Validacao RemoverProduto(dbProduto produtoSelecionado)
@@ -35,14 +52,14 @@ namespace Fundicaolino.negocio
         }
         public Validacao RemoverProducao(Producao producaoSelecionada)
         {
-            Validacao validacao = new Validacao();
+            Validacao validacao = new Validacao(); //criar dependencia na exclusão
             banco.Producoes.Remove(producaoSelecionada);
             banco.SaveChanges();
             return validacao;
         }
         public Validacao RemoverProcesso(Processo processoSelecionado)
         {
-            Validacao validacao = new Validacao();
+            Validacao validacao = new Validacao(); //criar dependencia na exclusão
             banco.Processos.Remove(processoSelecionado);
             banco.SaveChanges();
             return validacao;
@@ -50,8 +67,32 @@ namespace Fundicaolino.negocio
         public Validacao RemoverMateriaPrima(Material materialSelecionado)
         {
             Validacao validacao = new Validacao();
-            banco.Materiais.Remove(materialSelecionado);
-            banco.SaveChanges();
+            Boolean relacionamentos = false;
+            List<TipoProduto> todosTipos = this.TodosOsTiposProdutos();
+            foreach (TipoProduto tipos in todosTipos)
+            {
+                if (relacionamentos == true)
+                {
+                    break;
+                }
+                foreach (Material material in tipos.Materiais)
+                {
+                    if(material == materialSelecionado)
+                    {
+                        relacionamentos = true;
+                        break;
+                    }
+                }
+            }
+            if (relacionamentos)
+            {
+                banco.Materiais.Remove(materialSelecionado);
+                banco.SaveChanges();
+            }
+            else
+            {
+                validacao.Mensagens.Add("Relacionamento", "Não é possível excluir esse Material porque exitem dados relacionados");
+            }
             return validacao;
         }
         public Validacao RemoverGrupos(Grupo grupoSelecionado)
