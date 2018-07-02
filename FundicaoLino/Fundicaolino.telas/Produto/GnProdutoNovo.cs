@@ -95,15 +95,5 @@ namespace Fundicaolino.telas.Produto
 
         }
 
-        private void GnProdutoNovo_Shown(object sender, EventArgs e)
-        {
-            if (produtoSelecionado != null)
-            {
-                this.textBox1.Text = produtoSelecionado.Id.ToString();
-                this.cbCodigoTipodeProduto.Text = produtoSelecionado.NmTipoProduto.ToString();
-                this.cbResponsavel.Text = produtoSelecionado.Responsavel.ToString();
-               
-            }
-        }
     }
 }

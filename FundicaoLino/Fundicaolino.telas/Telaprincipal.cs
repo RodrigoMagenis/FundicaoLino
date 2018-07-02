@@ -310,6 +310,7 @@ namespace Fundicaolino.telas
                     GnGrupoNovo telaNovoGrupo = new GnGrupoNovo();
                     telaNovoGrupo.MdiParent = this;
                     panel4.Controls.Add(telaNovoGrupo);
+                    telaNovoGrupo.FormClosing += atualizarGridGrupo;
                     telaNovoGrupo.Show();
                     break;
                 case 2:
@@ -317,6 +318,7 @@ namespace Fundicaolino.telas
                     GnUsuarioNovo telaNovoUsuario = new GnUsuarioNovo();
                     telaNovoUsuario.MdiParent = this ;
                     panel4.Controls.Add(telaNovoUsuario);
+                    telaNovoUsuario.FormClosing += atualizarGridUsuario;
                     telaNovoUsuario.Show();
                     break;
                 case 5:
@@ -324,6 +326,7 @@ namespace Fundicaolino.telas
                     GnCadProducao CadastraNovaProducao = new GnCadProducao();
                     CadastraNovaProducao.MdiParent = this;
                     panel4.Controls.Add(CadastraNovaProducao);
+                    CadastraNovaProducao.FormClosing += atualizarGridProducao;
                     CadastraNovaProducao.Show();
                     break;
                 case 6:
@@ -331,6 +334,7 @@ namespace Fundicaolino.telas
                     GnGerProcesso cadastraNovoProcesso = new GnGerProcesso();
                     cadastraNovoProcesso.MdiParent = this;
                     panel4.Controls.Add(cadastraNovoProcesso);
+                    cadastraNovoProcesso.FormClosing += atualizarGridProcesso;
                     cadastraNovoProcesso.Show();
                     break;
                 case 7:
@@ -338,81 +342,125 @@ namespace Fundicaolino.telas
                     CadastraTipoProduto cadastraNovoTipoProduto = new CadastraTipoProduto();
                     cadastraNovoTipoProduto.MdiParent = this;
                     panel4.Controls.Add(cadastraNovoTipoProduto);
+                    cadastraNovoTipoProduto.FormClosing += atualizarGridTipoProduto;
                     cadastraNovoTipoProduto.Show();
                     break;
                 case 10:
                     GnNovaMateriaPrima gnNovaMateriaPrima = new GnNovaMateriaPrima();
                     gnNovaMateriaPrima.MdiParent = this;
                     panel4.Controls.Add(gnNovaMateriaPrima);
+                    gnNovaMateriaPrima.FormClosing += atualizarGridMateriaPrima;
                     gnNovaMateriaPrima.Show();
                     break;
                 case 11:
                     GnProdutoNovo gnProdutoNovo = new GnProdutoNovo();
                     gnProdutoNovo.MdiParent = this;
                     panel4.Controls.Add(gnProdutoNovo);
+                    gnProdutoNovo.FormClosing += atualizarGridProduto;
                     gnProdutoNovo.Show();
                     break;
             }
         }
 
+        private void atualizarGridProduto(object sender, FormClosingEventArgs e)
+        {
+            this.gridProduto.CarregarProdutos();
+        }
 
+        private void atualizarGridMateriaPrima(object sender, FormClosingEventArgs e)
+        {
+            this.gridMateriaPrima.CarregarMateriasPrimas();
+        }
 
+        private void atualizarGridTipoProduto(object sender, FormClosingEventArgs e)
+        {
+            this.gridTipoProduto.CarregarTiposProdutos();
+        }
+
+        private void atualizarGridProcesso(object sender, FormClosingEventArgs e)
+        {
+           // this.gridProcesso.CarregarProcessos();
+           // #feature
+        }
+
+        private void atualizarGridProducao(object sender, FormClosingEventArgs e)
+        {
+            this.gridProducao.CarregarProducoes();
+        }
+
+        private void atualizarGridUsuario(object sender, FormClosingEventArgs e)
+        {
+            this.gridUsuario.CarregarUsuarios();
+        }
+
+        private void atualizarGridGrupo(object sender, FormClosingEventArgs e)
+        {
+            this.gridGrupo.CarregarGrupos();
+        }
+
+        private GridGrupo gridGrupo;
         private void Genericagerenciargrupo_Click(object sender, EventArgs e)
         {
-            GridGrupo gridGrupo = new GridGrupo();
+            gridGrupo = new GridGrupo();
             gridGrupo.MdiParent = this;
             panel4.Controls.Add(gridGrupo);
             gridGrupo.Show();
             tela = 1;
         }
 
+        private GridUsuario gridUsuario;
         private void Genericagerenciarusuario_Click(object sender, EventArgs e)
         {
-            GridUsuario gridUsuario = new GridUsuario();
+            gridUsuario = new GridUsuario();
             gridUsuario.MdiParent = this;
             panel4.Controls.Add(gridUsuario);
             gridUsuario.Show();
             tela = 2;
         }
 
+        private GraficoProdutosProduzidos ProducaoChart;
         private void GenericaControleProducao_Click(object sender, EventArgs e)
         {
-            GraficoProdutosProduzidos ProducaoChart = new GraficoProdutosProduzidos();
+            ProducaoChart = new GraficoProdutosProduzidos();
             ProducaoChart.MdiParent = this;
             panel4.Controls.Add(ProducaoChart);
             ProducaoChart.Show();
             tela = 3;
         }
-
+        private GridProducao gridProducao;
         private void btCadastraProducao_Click(object sender, EventArgs e)
         {
-            GridProducao gridProducao = new GridProducao();
+            gridProducao = new GridProducao();
             gridProducao.MdiParent = this;
             panel4.Controls.Add(gridProducao);
             gridProducao.Show();
             tela = 5;
         }
+
+        private GridProcesso gridProcesso;
         private void Genericacadastrarprocesso_Click(object sender, EventArgs e)
         {
-            GridProcesso gridProcesso = new GridProcesso();
+            gridProcesso = new GridProcesso();
             gridProcesso.MdiParent = this;
             panel4.Controls.Add(gridProcesso);
             gridProcesso.Show();
             tela = 6;
         }
 
+        private dgTipodeProdutoFundo gridTipoProduto;
         private void Genericacadastrarproduto_Click(object sender, EventArgs e)
         {
-            dgTipodeProdutoFundo gridTipoProduto = new dgTipodeProdutoFundo();
+            gridTipoProduto = new dgTipodeProdutoFundo();
             gridTipoProduto.MdiParent = this;
             panel4.Controls.Add(gridTipoProduto);
             gridTipoProduto.Show();
             tela = 7;
         }
 
+        private GridFiladeProducao gridFilaProducao;
         private void Genericaexibirfiladeproducao_Click(object sender, EventArgs e)
         {
-            GridFiladeProducao gridFilaProducao = new GridFiladeProducao();
+            gridFilaProducao = new GridFiladeProducao();
             gridFilaProducao.MdiParent = this;
             panel4.Controls.Add(gridFilaProducao);
             gridFilaProducao.Show();
@@ -425,28 +473,30 @@ namespace Fundicaolino.telas
             tela = 9;
         }
 
+        GridMateriaPrima gridMateriaPrima;
         private void btCadastraMateriaPrima_Click(object sender, EventArgs e)
         {
-            GridMateriaPrima gridMateriaPrima = new GridMateriaPrima();
+            gridMateriaPrima = new GridMateriaPrima();
             gridMateriaPrima.MdiParent = this;
             panel4.Controls.Add(gridMateriaPrima);
             gridMateriaPrima.Show();
             tela = 10;
         }
 
+        GridProduto gridProduto;
         private void btGerenciarProdutos_Click(object sender, EventArgs e)
         {
-            GridProduto gridProduto = new GridProduto();
+            gridProduto = new GridProduto();
             gridProduto.MdiParent = this;
             panel4.Controls.Add(gridProduto);
             gridProduto.Show();
             tela = 11;
         }
 
+        ConsultaResponsavel consultaResponsavel;
         private void pesquisar_Click(object sender, EventArgs e)
         {
-
-            ConsultaResponsavel consultaResponsavel = new ConsultaResponsavel();
+            consultaResponsavel = new ConsultaResponsavel();
             consultaResponsavel.MdiParent = this;
             panel4.Controls.Add(consultaResponsavel);
             consultaResponsavel.Show();
@@ -501,19 +551,7 @@ namespace Fundicaolino.telas
                         Material MateriaPrimaSelecionada = (Material)gridMateriaPrima.dgMateriaPrima.SelectedRows[0].DataBoundItem;
                         AbreTelaInclusaoAlteracaoMaterial(MateriaPrimaSelecionada);
                     }
-                        break;
-                case 11:
-                    var gridProduto = (GridProduto)panel4.Controls[0];
-                    if (gridProduto.VerificaSelecao())
-                        {
-                        dbProduto produtoSelecionado = (dbProduto)gridProduto.dgProduto.SelectedRows[0].DataBoundItem;
-                            AbreTelaInclusaoAlteracaoProduto(produtoSelecionado);
-                        }
-                    
                     break;
-                default:
-                    break;
-
             }
         }
         
@@ -524,16 +562,8 @@ namespace Fundicaolino.telas
                 tela.ProducaoSelecionada = producoes;
                 tela.FormClosed += Tela_FormClosedProducao;
                 tela.Show();
+            }
 
-            }
-        private void AbreTelaInclusaoAlteracaoProduto(dbProduto produtos)
-            {
-                GnProdutoNovo tela = new GnProdutoNovo();
-                tela.MdiParent = this.MdiParent;
-                tela.produtoSelecionado = produtos;
-                tela.FormClosed += Tela_FormClosedProduto;
-                tela.Show();
-            }
         private void AbreTelaInclusaoAlteracaoUsuario(Usuario usuarioSelecionado)
             {
                 GnUsuarioNovo tela = new GnUsuarioNovo();
@@ -564,21 +594,19 @@ namespace Fundicaolino.telas
             var gridProducao = (GridProducao)panel4.Controls[0];
             gridProducao.CarregarProducoes();
         }
-        private void Tela_FormClosedProduto(object sender, FormClosedEventArgs e)
-        {
-            var gridProduto = (GridProduto)panel4.Controls[0];
-            gridProduto.CarregarProdutos();
-        }
+        
         private void Tela_FormClosedTipoProduto(object sender, FormClosedEventArgs e)
         {
             var gridTipoProduto = (dgTipodeProdutoFundo)panel4.Controls[0];
             gridTipoProduto.CarregarTiposProdutos();
         }
+
         private void Tela_FormClosedMateriaPrima(object sender, FormClosedEventArgs e)
         {
             var gridMateriaPrima = (GridMateriaPrima)panel4.Controls[0];
             gridMateriaPrima.CarregarMateriasPrimas();
         }
+
         private void Tela_FormClosedUsuario(object sender, FormClosedEventArgs e)
         {
             var gridUsuario = (GridUsuario)panel4.Controls[0];
