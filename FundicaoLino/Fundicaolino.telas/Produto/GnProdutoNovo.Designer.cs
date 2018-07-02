@@ -151,7 +151,6 @@
             this.Text = "GnProdutoNovo";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.GnProdutoNovo_Load);
-            this.Shown += new System.EventHandler(this.GnProdutoNovo_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
