@@ -38,6 +38,7 @@ namespace Fundicaolino.telas
             if (dgUsuario.SelectedRows.Count <= 0)
             {
                 MessageBox.Show("Selecione uma linha");
+                
                 return false;
             }
             return true;

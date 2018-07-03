@@ -120,7 +120,7 @@ namespace Fundicaolino.telas
                 this.TxIdentificador.Text = UsuarioSelecionado.Id.ToString();
                 this.TxNomeUsuario.Text = UsuarioSelecionado.NmUsuario.ToString();
                 this.TxMatricula.Text = UsuarioSelecionado.Idmatricula.ToString();
-                this.dgGruposSelecionados.Text = UsuarioSelecionado.GrupoUsuario.ToString();
+                //this.dgGruposSelecionados.Text = UsuarioSelecionado.GrupoUsuario.ToString();
             }
         }
     }
