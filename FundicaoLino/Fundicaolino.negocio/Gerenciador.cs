@@ -153,6 +153,11 @@ namespace Fundicaolino.negocio
                 validacao.Mensagens.Add("matricula", "Requer uma matrícula");
             }
 
+            if (banco.Usuarios.Where(x => x.Idmatricula == UsuarioAlterado.Idmatricula).Any() && validacao.Mensagens.Count == 0 && UsuarioAlterado.NmUsuario != UsuarioBanco.NmUsuario)
+            {
+                validacao.Mensagens.Add("matricula", "Essa matricula já está em uso");
+            }
+
             if (validacao.Valido)
             {
                 //UsuarioBanco.Idgrupo = UsuarioAlterado.Idgrupo;
@@ -293,7 +298,7 @@ namespace Fundicaolino.negocio
                 validacao.Mensagens.Add("nome", "O nome do tipo do produto deve ser informado");
             }
 
-            if (banco.TipoProdutos.Where(x => x.NmTipoProduto == tipoProduto.NmTipoProduto).Any() && validacao.Mensagens.Count == 0)
+            if (banco.TipoProdutos.Where(x => x.NmTipoProduto == tipoProduto.NmTipoProduto).Any() && validacao.Mensagens.Count == 0 && tipoProduto.NmTipoProduto != tipoProdutoBanco.NmTipoProduto)
             {
                 validacao.Mensagens.Add("nome", "A quantidade não pode ser negativa");
             }
@@ -355,7 +360,7 @@ namespace Fundicaolino.negocio
                 validacao.Mensagens.Add("nome", "O nome da Matéria prima deve ser informado");
             }
 
-            if (banco.Materiais.Where(x => x.NmMaterial == materiaPrima.NmMaterial).Any() && validacao.Mensagens.Count == 0)
+            if (banco.Materiais.Where(x => x.NmMaterial == materiaPrima.NmMaterial).Any() && validacao.Mensagens.Count == 0 )
             {
                 validacao.Mensagens.Add("nome", "Esse Material já foi cadastrado no sistema");
             }
@@ -390,7 +395,7 @@ namespace Fundicaolino.negocio
                 validacao.Mensagens.Add("nome", "O nome da Matéria prima deve ser informado");
             }
 
-            if (banco.Materiais.Where(x => x.NmMaterial == materiaPrima.NmMaterial).Any() && validacao.Mensagens.Count == 0)
+            if (banco.Materiais.Where(x => x.NmMaterial == materiaPrima.NmMaterial).Any() && validacao.Mensagens.Count == 0 && materiaPrima.NmMaterial != materialBanco.NmMaterial )
             {
                 validacao.Mensagens.Add("nome", "Esse Material já foi cadastrado no sistema");
             }
@@ -429,9 +434,9 @@ namespace Fundicaolino.negocio
             /*--------------------------------------------------------------------------------------------------------------*/
 
             /* Retorna todos os resultados - Usado nas grids */
-            public List<Grupo> TodosOsGrupos()
+        public List<Grupo> TodosOsGrupos()
         {
-                return this.banco.Grupos.ToList();
+            return this.banco.Grupos.ToList();
         }
 
         public List<Usuario> TodosOsUsuarios()

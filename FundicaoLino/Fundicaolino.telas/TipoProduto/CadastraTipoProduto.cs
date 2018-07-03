@@ -208,6 +208,11 @@ namespace Fundicaolino.telas
                 this.TxNmProduto.Text = TipoSelecionado.NmTipoProduto.ToString();
                 this.TxVlPeso.Text = TipoSelecionado.VlPeso.ToString();
                 this.dgMateriasSelecionados.Text = TipoSelecionado.Materiais.ToString();
+                //tipoProduto = Program.Gerenciador.TodosOsTiposProdutos().Where(t => t.Id == TipoSelecionado.Id).First();
+                //var materiasDoTipo = tipoProduto.Materiais;
+                //foreach()
+                //tipoProduto.Materiais.Add(materiasDoTipo);
+                CarregarDataGrids();
             }
         }
 
