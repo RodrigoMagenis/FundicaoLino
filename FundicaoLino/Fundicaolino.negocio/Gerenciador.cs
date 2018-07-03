@@ -451,7 +451,7 @@ namespace Fundicaolino.negocio
 
         public List<TipoProduto> TodosOsTiposProdutos()
         {
-            return this.banco.TipoProdutos.ToList();
+            return this.banco.TipoProdutos.Include("Materiais").ToList();
         }
 
         public List<Material> TodasAsMateriasPrimas()

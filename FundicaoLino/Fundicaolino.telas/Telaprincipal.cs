@@ -312,6 +312,7 @@ namespace Fundicaolino.telas
                     panel4.Controls.Add(telaNovoGrupo);
                     telaNovoGrupo.FormClosing += atualizarGridGrupo;
                     telaNovoGrupo.Show();
+                    this.DesabilitarBotoes();
                     break;
                 case 2:
                     //gridUsuario.Close();
@@ -320,6 +321,7 @@ namespace Fundicaolino.telas
                     panel4.Controls.Add(telaNovoUsuario);
                     telaNovoUsuario.FormClosing += atualizarGridUsuario;
                     telaNovoUsuario.Show();
+                    this.DesabilitarBotoes();
                     break;
                 case 5:
                     //gridProducao.Close();
@@ -328,6 +330,7 @@ namespace Fundicaolino.telas
                     panel4.Controls.Add(CadastraNovaProducao);
                     CadastraNovaProducao.FormClosing += atualizarGridProducao;
                     CadastraNovaProducao.Show();
+                    this.DesabilitarBotoes();
                     break;
                 case 6:
                     //gridProcesso.Close();
@@ -336,6 +339,7 @@ namespace Fundicaolino.telas
                     panel4.Controls.Add(cadastraNovoProcesso);
                     cadastraNovoProcesso.FormClosing += atualizarGridProcesso;
                     cadastraNovoProcesso.Show();
+                    this.DesabilitarBotoes();
                     break;
                 case 7:
                     //gridProduto.Close();
@@ -344,6 +348,7 @@ namespace Fundicaolino.telas
                     panel4.Controls.Add(cadastraNovoTipoProduto);
                     cadastraNovoTipoProduto.FormClosing += atualizarGridTipoProduto;
                     cadastraNovoTipoProduto.Show();
+                    this.DesabilitarBotoes();
                     break;
                 case 10:
                     GnNovaMateriaPrima gnNovaMateriaPrima = new GnNovaMateriaPrima();
@@ -351,6 +356,7 @@ namespace Fundicaolino.telas
                     panel4.Controls.Add(gnNovaMateriaPrima);
                     gnNovaMateriaPrima.FormClosing += atualizarGridMateriaPrima;
                     gnNovaMateriaPrima.Show();
+                    this.DesabilitarBotoes();
                     break;
                 case 11:
                     GnProdutoNovo gnProdutoNovo = new GnProdutoNovo();
@@ -358,6 +364,7 @@ namespace Fundicaolino.telas
                     panel4.Controls.Add(gnProdutoNovo);
                     gnProdutoNovo.FormClosing += atualizarGridProduto;
                     gnProdutoNovo.Show();
+                    this.DesabilitarBotoes();
                     break;
             }
         }
@@ -365,37 +372,44 @@ namespace Fundicaolino.telas
         private void atualizarGridProduto(object sender, FormClosingEventArgs e)
         {
             this.gridProduto.CarregarProdutos();
+            this.HabilitaBotoes();
         }
 
         private void atualizarGridMateriaPrima(object sender, FormClosingEventArgs e)
         {
             this.gridMateriaPrima.CarregarMateriasPrimas();
+            this.HabilitaBotoes();
         }
 
         private void atualizarGridTipoProduto(object sender, FormClosingEventArgs e)
         {
             this.gridTipoProduto.CarregarTiposProdutos();
+            this.HabilitaBotoes();
         }
 
         private void atualizarGridProcesso(object sender, FormClosingEventArgs e)
         {
-           // this.gridProcesso.CarregarProcessos();
-           // #feature
+            // this.gridProcesso.CarregarProcessos();
+            // #feature
+            this.HabilitaBotoes();
         }
 
         private void atualizarGridProducao(object sender, FormClosingEventArgs e)
         {
             this.gridProducao.CarregarProducoes();
+            this.HabilitaBotoes();
         }
 
         private void atualizarGridUsuario(object sender, FormClosingEventArgs e)
         {
             this.gridUsuario.CarregarUsuarios();
+            this.HabilitaBotoes();
         }
 
         private void atualizarGridGrupo(object sender, FormClosingEventArgs e)
         {
             this.gridGrupo.CarregarGrupos();
+            this.HabilitaBotoes();
         }
 
         private GridGrupo gridGrupo;
@@ -508,6 +522,7 @@ namespace Fundicaolino.telas
             switch (tela)
             {
                 case 1:
+                    this.DesabilitarBotoes();
                     break;
                 case 2://Usuario
                     var gridUsuario = (GridUsuario)panel4.Controls[0];
@@ -516,12 +531,16 @@ namespace Fundicaolino.telas
                         Usuario UsuarioSelecionado = (Usuario)gridUsuario.dgUsuario.SelectedRows[0].DataBoundItem;
                         AbreTelaInclusaoAlteracaoUsuario(UsuarioSelecionado);
                     }
+                    this.DesabilitarBotoes();
                     break;
                 case 3:
+                    this.DesabilitarBotoes();
                     break;
                 case 4:
+                    this.DesabilitarBotoes();
                     break;
                 case 5:
+                    this.DesabilitarBotoes();
                     var producao = (GridProducao)panel4.Controls[0];
                     if (producao.VerificaSelecao())
                     {
@@ -530,9 +549,10 @@ namespace Fundicaolino.telas
                     }
                     break;
                 case 6://processo
-
+                    this.DesabilitarBotoes();
                     break;
                 case 7:
+                    this.DesabilitarBotoes();
                     var tipoProduto = (dgTipodeProdutoFundo)panel4.Controls[0];
                     if (tipoProduto.VerificaSelecao())
                     {
@@ -541,10 +561,13 @@ namespace Fundicaolino.telas
                     }
                     break;
                 case 8:
+                    this.DesabilitarBotoes();
                     break;
                 case 9:
+                    this.DesabilitarBotoes();
                     break;
                 case 10:
+                    this.DesabilitarBotoes();
                     var gridMateriaPrima = (GridMateriaPrima)panel4.Controls[0];
                     if (gridMateriaPrima.VerificaSelecao())
                     {
@@ -558,8 +581,9 @@ namespace Fundicaolino.telas
         private void AbreTelaInclusaoAlteracaoProducao(Producao producoes)
             {
                 GnCadProducao tela = new GnCadProducao();
-                tela.MdiParent = this.MdiParent;
+                tela.MdiParent = this;
                 tela.ProducaoSelecionada = producoes;
+                panel4.Controls.Add(tela);
                 tela.FormClosed += Tela_FormClosedProducao;
                 tela.Show();
             }
@@ -569,22 +593,25 @@ namespace Fundicaolino.telas
                 GnUsuarioNovo tela = new GnUsuarioNovo();
                 tela.MdiParent = this.MdiParent;
                 tela.UsuarioSelecionado = usuarioSelecionado;
+              //  panel4.Controls.Add(tela);
                 tela.FormClosed += Tela_FormClosedUsuario ;
                 tela.Show();
             }
         private void AbreTelaInclusaoAlteracaoMaterial(Material materialSelecionado)
             {
                 GnNovaMateriaPrima tela = new GnNovaMateriaPrima();
-                tela.MdiParent = this.MdiParent;
+                tela.MdiParent = this;
                 tela.MateriaPrimaSelecionado = materialSelecionado;
+                panel4.Controls.Add(tela);
                 tela.FormClosed += Tela_FormClosedMateriaPrima;
                 tela.Show();
             }
         private void AbreTelaInclusaoAlteracaoTipoProduto(TipoProduto tipoProdutoSelecionado)
             {
                 CadastraTipoProduto tela = new CadastraTipoProduto();
-                tela.MdiParent = this.MdiParent;
+                tela.MdiParent = this;
                 tela.TipoSelecionado = tipoProdutoSelecionado;
+                panel4.Controls.Add(tela);
                 tela.FormClosed += Tela_FormClosedTipoProduto;
                 tela.Show();
             }
@@ -593,24 +620,41 @@ namespace Fundicaolino.telas
         {
             var gridProducao = (GridProducao)panel4.Controls[0];
             gridProducao.CarregarProducoes();
+            this.HabilitaBotoes();
         }
         
         private void Tela_FormClosedTipoProduto(object sender, FormClosedEventArgs e)
         {
             var gridTipoProduto = (dgTipodeProdutoFundo)panel4.Controls[0];
             gridTipoProduto.CarregarTiposProdutos();
+            this.HabilitaBotoes();
         }
 
         private void Tela_FormClosedMateriaPrima(object sender, FormClosedEventArgs e)
         {
             var gridMateriaPrima = (GridMateriaPrima)panel4.Controls[0];
             gridMateriaPrima.CarregarMateriasPrimas();
+            this.HabilitaBotoes();
         }
 
         private void Tela_FormClosedUsuario(object sender, FormClosedEventArgs e)
         {
             var gridUsuario = (GridUsuario)panel4.Controls[0];
             gridUsuario.CarregarUsuarios();
+            this.HabilitaBotoes();
+        }
+
+        private void HabilitaBotoes()
+        {
+            this.GenericaExluir.Enabled = true;
+            this.GenericoNovo.Enabled = true;
+            this.GenericaEditar.Enabled = true;
+        }
+        private void DesabilitarBotoes()
+        {
+            this.GenericaExluir.Enabled = false;
+            this.GenericoNovo.Enabled = false;
+            this.GenericaEditar.Enabled = false;
         }
     }
 }
