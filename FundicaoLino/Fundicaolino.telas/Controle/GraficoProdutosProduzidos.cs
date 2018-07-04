@@ -33,6 +33,7 @@ namespace Fundicaolino.telas.Controle
         {
             //ProducaoChart.ChartAreas.Clear();
             ProducaoChart.Series.Clear();
+            ProducaoChart.ResetAutoValues();
             try
             {
                 DateTime dataInicial = dpDataInicial.Value.Date;

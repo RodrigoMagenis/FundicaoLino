@@ -223,7 +223,7 @@
             this.GenericaControleProducao.Name = "GenericaControleProducao";
             this.GenericaControleProducao.Size = new System.Drawing.Size(163, 23);
             this.GenericaControleProducao.TabIndex = 2;
-            this.GenericaControleProducao.Text = "Analizar a produção";
+            this.GenericaControleProducao.Text = "Analisar a produção";
             this.GenericaControleProducao.UseVisualStyleBackColor = true;
             this.GenericaControleProducao.Click += new System.EventHandler(this.GenericaControleProducao_Click);
             // 
