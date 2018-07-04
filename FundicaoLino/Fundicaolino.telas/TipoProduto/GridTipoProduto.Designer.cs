@@ -32,7 +32,6 @@
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NmTipoProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VlPeso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdMateriais = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.GridTipoProduto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,8 +43,7 @@
             this.GridTipoProduto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.NmTipoProduto,
-            this.VlPeso,
-            this.IdMateriais});
+            this.VlPeso});
             this.GridTipoProduto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GridTipoProduto.Location = new System.Drawing.Point(0, 0);
             this.GridTipoProduto.Name = "GridTipoProduto";
@@ -77,14 +75,6 @@
             this.VlPeso.Name = "VlPeso";
             this.VlPeso.ReadOnly = true;
             // 
-            // IdMateriais
-            // 
-            this.IdMateriais.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.IdMateriais.DataPropertyName = "IdMateriais";
-            this.IdMateriais.HeaderText = "Codigo Material";
-            this.IdMateriais.Name = "IdMateriais";
-            this.IdMateriais.ReadOnly = true;
-            // 
             // dgTipodeProdutoFundo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -102,10 +92,9 @@
         }
 
         #endregion
+        public System.Windows.Forms.DataGridView GridTipoProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn NmTipoProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn VlPeso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdMateriais;
-        public System.Windows.Forms.DataGridView GridTipoProduto;
     }
 }

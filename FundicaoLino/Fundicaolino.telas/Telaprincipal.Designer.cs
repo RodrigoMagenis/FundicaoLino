@@ -283,6 +283,7 @@
             // 
             // GeniricaAlterarsituacao
             // 
+            this.GeniricaAlterarsituacao.Enabled = false;
             this.GeniricaAlterarsituacao.Location = new System.Drawing.Point(505, 13);
             this.GeniricaAlterarsituacao.Name = "GeniricaAlterarsituacao";
             this.GeniricaAlterarsituacao.Size = new System.Drawing.Size(86, 46);
