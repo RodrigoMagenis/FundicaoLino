@@ -260,7 +260,7 @@ namespace Fundicaolino.telas
                             }
                             else
                             {
-                                MessageBox.Show("Usuário removido com sucesso");
+                                MessageBox.Show("Material removido com sucesso");
                             }
                             gridMateriaPrima.CarregarMateriasPrimas();
                         }
